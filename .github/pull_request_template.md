@@ -2,7 +2,7 @@
 
 <!-- Add description for PR -->
 
-#### Development Checklist
+#### Deployment URL : <URL>
 
 [ ] Documentation added at appropriate places
 [ ] UI & Responsiveness verified if needed
