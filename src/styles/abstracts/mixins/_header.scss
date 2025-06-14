@@ -1,0 +1,18 @@
+@use '../variables/breakpoints' as *;
+
+@mixin breakpoint($size) {
+    // Phone
+    @media (min-width: $phone-max-width) {
+        @content;
+    }
+
+    //Tablet
+    @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+        @content;
+    }
+
+    // Desktop
+    @media (min-width: $desktop-min-width) {
+        @content;
+    }
+}
