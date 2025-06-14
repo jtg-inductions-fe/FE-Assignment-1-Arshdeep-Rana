@@ -1,8 +1,15 @@
 import '../styles/main.scss';
 
-document.querySelector('.header__hamburger').addEventListener('click', () => {
-    let siderbar = document.querySelector('.header__sidebar');
+let siderbar = document.querySelector('.header__sidebar');
+let hamburger = document.querySelector('.header__hamburger');
+let blurOverlay = document.querySelector('.blur-overlay');
 
-    if (siderbar.style.display == 'none') siderbar.style.display = 'flex';
-    else siderbar.style.display = 'none';
+document.querySelector('.header__hamburger').addEventListener('click', () => {
+    if (siderbar.style.display == 'none' && hamburger.style.display != 'none') {
+        siderbar.style.display = 'flex';
+        blurOverlay.style.backdropFilter = 'blur(10px)';
+    } else {
+        siderbar.style.display = 'none';
+        blurOverlay.style.backdropFilter = '';
+    }
 });
