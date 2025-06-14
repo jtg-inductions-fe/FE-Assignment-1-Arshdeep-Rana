@@ -1,5 +1,4 @@
-@use '../abstracts/variables/colors' as *;
-@use '../abstracts/variables/breakpoints' as *;
+@use '../abstracts/variables/' as *;
 
 .blur-overlay {
     width: 100vw;
@@ -15,6 +14,7 @@
     justify-content: space-between;
 
     &__sidebar {
+        display: none;
         width: 100%;
 
         position: absolute;
@@ -22,12 +22,11 @@
         z-index: 55;
         height: 100vh;
 
-        display: flex;
         justify-content: center;
         gap: 5rem;
         flex-direction: column;
         align-items: center;
-        display: none;
+
         // backdrop-filter: blur(10px);
     }
 
@@ -154,6 +153,7 @@ a {
             width: 60%;
             right: auto;
             left: 0;
+
             gap: 8rem;
         }
         &__sidebar a:nth-child(5),
