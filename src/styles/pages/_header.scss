@@ -1,5 +1,10 @@
 @use '../abstracts/variables/' as *;
 
+a:hover,
+a div:hover {
+    color: black;
+    transition: 500ms;
+}
 .blur-overlay {
     width: 100vw;
     height: 100vh;
@@ -33,6 +38,7 @@
     &__placeholder {
         display: none;
     }
+
     &__nav-links,
     &__sidebar div {
         font-size: 1rem;
@@ -40,11 +46,7 @@
         font-family: circular-std;
         color: #19182580;
     }
-    &__nav-links li:hover,
-    &__sidebar div:hover {
-        color: black;
-        transition: 800ms;
-    }
+
     &__nav-links {
         min-width: 26.75rem;
         min-height: 1.603rem;
@@ -102,14 +104,9 @@ a {
 
 // Desktop
 @media only screen and (width >= $desktop-min-width) {
-    .header__nav-links {
-        display: block;
-        list-style-type: none;
-        display: flex;
-        gap: 3rem;
-        align-items: center;
+    .blur-overlay {
+        display: none;
     }
-
     .header {
         padding: 3.9rem 6.2rem 0 9.2rem;
         &__sidebar {
@@ -123,6 +120,14 @@ a {
         &__nav-links {
             font-size: 0.9rem;
             order: 2;
+        }
+
+        &__nav-links {
+            display: block;
+            list-style-type: none;
+            display: flex;
+            gap: 3rem;
+            align-items: center;
         }
 
         &__hamburger {
@@ -156,6 +161,7 @@ a {
 
             gap: 8rem;
         }
+
         &__sidebar a:nth-child(5),
         &__sidebar a:nth-child(6) {
             display: none;
@@ -178,6 +184,7 @@ a {
             justify-content: center;
             align-items: center;
         }
+
         &__placeholder {
             order: 3;
             height: 2.5rem;
