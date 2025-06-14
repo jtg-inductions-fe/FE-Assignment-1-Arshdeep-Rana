@@ -1,0 +1,244 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('/public/icomoon-fonts/fonts/icomoon.eot?ftqkor');
+    src:
+        url('/public/icomoon-fonts/fonts/icomoon.eot?ftqkor#iefix')
+            format('embedded-opentype'),
+        url('/public/icomoon-fonts/fonts/icomoon.ttf?ftqkor') format('truetype'),
+        url('/public/icomoon-fonts/fonts/icomoon.woff?ftqkor') format('woff'),
+        url('/public/icomoon-fonts/fonts/icomoon.svg?ftqkor#icomoon')
+            format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+[class^='icon-'],
+[class*=' icon-'] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Group-1 .path1:before {
+    content: '\e900';
+    color: rgb(93, 80, 198);
+}
+
+.icon-Group-1 .path2:before {
+    content: '\e901';
+    margin-left: -1em;
+    color: rgb(241, 242, 242);
+}
+
+.icon-Group:before {
+    content: '\e902';
+    color: #5d50c6;
+}
+
+.icon-Group-8 .path1:before {
+    content: '\e903';
+    color: rgb(93, 80, 198);
+}
+
+.icon-Group-8 .path2:before {
+    content: '\e904';
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+
+.icon-Vector-8:before {
+    content: '\e905';
+}
+
+.icon-Bold-Outline-1:before {
+    content: '\e906';
+}
+
+.icon-Bold-Outline:before {
+    content: '\e907';
+    color: #fff;
+}
+
+.icon-Vector-7:before {
+    content: '\e908';
+    color: #facd49;
+}
+
+.icon-arrow-circle-down9-1:before {
+    content: '\e909';
+}
+
+.icon-play-circle5-1:before {
+    content: '\e90a';
+    color: #5d50c6;
+}
+
+.icon-work-1:before {
+    content: '\e90b';
+    color: #f85e9f;
+}
+
+.icon-Vector:before {
+    content: '\e910';
+    color: #5d50c6;
+}
+
+.icon-Vector-9:before {
+    content: '\e90c';
+}
+
+.icon-Vector-4:before {
+    content: '\e90d';
+    color: #fff;
+}
+
+.icon-Vector-5:before {
+    content: '\e90e';
+    color: #fff;
+}
+
+.icon-Vector-3:before {
+    content: '\e90f';
+    color: #fff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button {
+    font: inherit;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+.heading {
+    font-size: x-large;
+    font-family: circular-std;
+}
+
+.orange {
+    color: #ff5722;
+}
+
+.sub-heading {
+    font-family: inter;
+    font-size: x-large;
+}
+
+.pink {
+    color: #f85e9f;
+}
+
+.yellow {
+    color: #facd49;
+}
+
+.purple {
+    color: #5d50c6;
+}
+
+@font-face {
+    font-family: circular-std;
+    src: url(/public/fonts/CircularStd-Medium.woff);
+}
+@font-face {
+    font-family: inter;
+    src: url(/public/fonts/Inter-ThinBETA.woff);
+}
+.header {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 34px;
+}
+.header__nav-links {
+    display: none;
+}
+.header__btns {
+    display: none;
+}
+.header__logo {
+    font-size: 2.5rem;
+    background: linear-gradient(to left, #5d50c6, #f85e9f);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.header__hamburger {
+    font-size: 2.5rem;
+}
+
+@media only screen and (width >= 64.063rem) {
+    .header__nav-links {
+        display: block;
+        list-style-type: none;
+        display: flex;
+        gap: 7rem;
+    }
+    .header__logo {
+        order: 1;
+    }
+    .header__nav-links {
+        min-width: 26.75rem;
+        min-height: 1.603rem;
+        font-size: 1rem;
+        order: 2;
+        font-family: circular-std;
+        color: rgba(25, 24, 37, 0.5019607843);
+    }
+    .header__nav-links li:hover {
+        color: black;
+        transition: 800ms;
+    }
+    .header__hamburger {
+        display: none;
+    }
+    .header__btns {
+        display: block;
+        order: 3;
+    }
+    .auth {
+        font-family: circular-std;
+    }
+    .auth__login {
+        border: none;
+        background-color: inherit;
+        width: 7.188rem;
+        height: 3.063rem;
+    }
+    .auth__signup {
+        border: #5d50c6;
+        background-color: #5d50c6;
+        color: white;
+        width: 7.188rem;
+        height: 3.063rem;
+        border-radius: 6.25rem;
+    }
+}
+
+/*# sourceMappingURL=main.css.map */
