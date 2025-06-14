@@ -1,10 +1,10 @@
-@use '../abstracts/variables/colors' as colors;
+@use '../abstracts/variables/' as *;
 
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 100%;
+    font-size: 62.5%;
 }
 
 *,
@@ -24,33 +24,33 @@ button {
 }
 
 p {
-    text-wrap: pretty;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
-
 // Only for purpose of showcase of base setup
 
 .heading {
     font-size: x-large;
-    font-family: circular-std;
+    font-family: $circular-md;
 }
 
 .orange {
-    color: colors.$orange-color;
+    color: $orange-color;
 }
 
 .sub-heading {
-    font-family: inter;
+    font-family: $inter-regular;
     font-size: x-large;
 }
 
 .pink {
-    color: colors.$pink-color;
+    color: $pink-color;
 }
 
 .yellow {
-    color: colors.$yellow-color;
+    color: $yellow-color;
 }
 
 .purple {
-    color: colors.$purple-color;
+    color: $purple-color;
 }

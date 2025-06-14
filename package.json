@@ -7,7 +7,6 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "sass": "sass --watch ./src/styles/main.scss ./src/styles/main.css",
         "build": "vite build",
         "preview": "vite preview",
         "lint": "npx eslint .",
