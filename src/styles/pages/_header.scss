@@ -60,7 +60,6 @@ a div:hover {
         min-height: 1.603rem;
         display: none;
     }
-
     &__btns {
         display: none;
         font-size: 1rem;
@@ -193,6 +192,78 @@ a {
             align-items: center;
         }
 
+        &__placeholder {
+            order: 3;
+            height: 2.5rem;
+            width: 2.5rem;
+            display: block;
+            background-color: inherit;
+        }
+
+        &__nav-links {
+            display: none;
+        }
+    }
+}
+
+// Desktop
+@media only screen and (width >= $desktop-min-width) {
+    .header__nav-links {
+        display: block;
+        list-style-type: none;
+        display: flex;
+        gap: 7rem;
+    }
+
+    .header {
+        &__sidebar {
+            display: none;
+        }
+
+        &__logo {
+            order: 1;
+        }
+
+        &__nav-links {
+            order: 2;
+        }
+
+        &__hamburger {
+            display: none;
+        }
+
+        &__btns {
+            display: block;
+            order: 3;
+        }
+    }
+
+    .auth {
+        display: block;
+    }
+}
+
+//Tablet
+@media (width >= $tablet-min-width) and (width <= $tablet-max-width) {
+    .header {
+        &__sidebar {
+            right: auto;
+            left: 34px;
+        }
+
+        &__hamburger {
+            order: 1;
+        }
+
+        &__logo {
+            order: 2;
+        }
+
+        &__btns {
+            display: block;
+            position: absolute;
+            right: 34px;
+        }
         &__placeholder {
             order: 3;
             height: 2.5rem;
