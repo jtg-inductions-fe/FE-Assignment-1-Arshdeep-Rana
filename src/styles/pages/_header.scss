@@ -1,10 +1,13 @@
 @use '../abstracts/variables/' as *;
 
+//When hovered over navigation links the color changes to black
 a:hover,
 a div:hover {
     color: black;
     transition: 500ms;
 }
+
+//blur overlay is takes the entire space of viewport, to make sure everything is blurred when sidebar is open
 .blur-overlay {
     width: 100vw;
     height: 100vh;
@@ -12,10 +15,15 @@ a div:hover {
     z-index: 50;
 }
 
+//Mobile first approach
 .header {
+    //pixel perfect (tested)
     padding: 2.5rem 1rem 0 1rem;
+
     width: 100vw;
+
     display: flex;
+
     justify-content: space-between;
 
     &__sidebar {
@@ -31,8 +39,6 @@ a div:hover {
         gap: 5rem;
         flex-direction: column;
         align-items: center;
-
-        // backdrop-filter: blur(10px);
     }
 
     &__placeholder {
