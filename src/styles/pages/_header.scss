@@ -1,13 +1,21 @@
 @use '../abstracts/variables/' as *;
 
+<<<<<<< HEAD
 // Link hover effect
+=======
+//When hovered over navigation links the color changes to black
+>>>>>>> 601ba52 (AR_RU_02 : header : header with sidebar completed)
 a:hover,
 a div:hover {
     color: black;
     transition: color 0.5s ease;
 }
 
+<<<<<<< HEAD
 // Overlay covers entire viewport for blur effect
+=======
+//blur overlay is takes the entire space of viewport, to make sure everything is blurred when sidebar is open
+>>>>>>> 601ba52 (AR_RU_02 : header : header with sidebar completed)
 .blur-overlay {
     width: 100vw;
     height: 100vh;
@@ -20,11 +28,19 @@ a div:hover {
     pointer-events: none;
 }
 
+<<<<<<< HEAD
 // Header layout (mobile-first)
+=======
+//Mobile first approach
+>>>>>>> 601ba52 (AR_RU_02 : header : header with sidebar completed)
 .header {
+    //pixel perfect (tested)
     padding: 2.5rem 1rem 0 1rem;
+
     width: 100vw;
+
     display: flex;
+
     justify-content: space-between;
     position: relative;
 
@@ -40,8 +56,11 @@ a div:hover {
         gap: 5rem;
         flex-direction: column;
         align-items: center;
+<<<<<<< HEAD
         background-color: white;
         transition: all 0.3s ease-in-out;
+=======
+>>>>>>> 601ba52 (AR_RU_02 : header : header with sidebar completed)
     }
 
     &__placeholder {
