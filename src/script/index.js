@@ -1,5 +1,7 @@
 import '../styles/main.scss';
 
+
+
 // Grab references to elements
 const sidebar = document.querySelector('.header__sidebar');
 const hamburger = document.querySelector('.header__hamburger');

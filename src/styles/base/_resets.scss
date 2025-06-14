@@ -1,0 +1,61 @@
+@use '../abstracts/variables/colors' as colors;
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+button {
+    border: none;
+    background-color: inherit;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button {
+    font: inherit;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+// Only for purpose of showcase of base setup
+
+.heading {
+    font-size: x-large;
+    font-family: circular-std;
+}
+
+.orange {
+    color: colors.$orange-color;
+}
+
+.sub-heading {
+    font-family: inter;
+    font-size: x-large;
+}
+
+.pink {
+    color: colors.$pink-color;
+}
+
+.yellow {
+    color: colors.$yellow-color;
+}
+
+.purple {
+    color: colors.$purple-color;
+}

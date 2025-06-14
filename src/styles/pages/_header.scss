@@ -60,6 +60,7 @@ a div:hover {
         min-height: 1.603rem;
         display: none;
     }
+
     &__btns {
         display: none;
         font-size: 1rem;
@@ -212,10 +213,12 @@ a {
         display: block;
         list-style-type: none;
         display: flex;
-        gap: 7rem;
+        gap: 3rem;
+        align-items: center;
     }
 
     .header {
+        padding: 3.9rem 6.2rem 0 9.2rem;
         &__sidebar {
             display: none;
         }
@@ -225,6 +228,7 @@ a {
         }
 
         &__nav-links {
+            font-size: 0.9rem;
             order: 2;
         }
 
@@ -234,21 +238,33 @@ a {
 
         &__btns {
             display: block;
+
+            right: 9.2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             order: 3;
         }
     }
 
     .auth {
-        display: block;
+        display: flex;
     }
 }
 
 //Tablet
 @media (width >= $tablet-min-width) and (width <= $tablet-max-width) {
     .header {
+        padding: 2.2rem 4.4rem 0 3.9rem;
         &__sidebar {
+            width: 60%;
             right: auto;
-            left: 34px;
+            left: 0;
+            gap: 8rem;
+        }
+        &__sidebar a:nth-child(5),
+        &__sidebar a:nth-child(6) {
+            display: none;
         }
 
         &__hamburger {
@@ -260,9 +276,13 @@ a {
         }
 
         &__btns {
+            font-size: 0.9rem;
             display: block;
             position: absolute;
-            right: 34px;
+            right: 3.9rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         &__placeholder {
             order: 3;
