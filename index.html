@@ -12,47 +12,39 @@
         <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
     </head>
     <body>
-        <!-- blur-overlay to make the background blur when sidebar is open -->
+        <!-- Blur overlay to apply blur effect when sidebar is open -->
         <div class="blur-overlay"></div>
 
         <!-- Header section -->
         <header class="header">
-            <!-- Logo of the website -->
+            <!-- Website logo -->
             <div class="header__logo">
                 <span class="icon-Vector-9"></span>
             </div>
 
-            <!-- Hamburger -->
-            <button class="header__hamburger">
+            <!-- Hamburger menu icon -->
+            <button class="header__hamburger" aria-label="Open sidebar">
                 <span class="icon-Vector"></span>
             </button>
 
-            <!-- Header navigation links -->
+            <!-- Navigation links -->
             <ul class="header__nav-links">
-                <li>
-                    <a href="">Home</a>
-                </li>
-                <li>
-                    <a href="">Discover</a>
-                </li>
-                <li>
-                    <a href="">Special Deals</a>
-                </li>
-                <li>
-                    <a href="">Contact</a>
-                </li>
+                <li><a href="">Home</a></li>
+                <li><a href="">Discover</a></li>
+                <li><a href="">Special Deals</a></li>
+                <li><a href="">Contact</a></li>
             </ul>
 
-            <!-- Buttons for login and sign up -->
+            <!-- Authentication buttons -->
             <div class="header__btns auth">
                 <button class="auth__login">Log In</button>
                 <button class="auth__signup">Sign Up</button>
             </div>
 
-            <!-- Placeholder is added here to make sure the logo is always centered -->
+            <!-- Placeholder to center logo on tablet layout -->
             <div class="header__placeholder"></div>
 
-            <!-- Header sidebar : opens when clicked on the hamburger -->
+            <!-- Sidebar (shown on mobile/tablet via hamburger) -->
             <div class="header__sidebar">
                 <a href=""><div>Home</div></a>
                 <a href=""><div>Discover</div></a>

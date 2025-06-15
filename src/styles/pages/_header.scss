@@ -1,44 +1,47 @@
 @use '../abstracts/variables/' as *;
 
-//When hovered over navigation links the color changes to black
+// Link hover effect
 a:hover,
 a div:hover {
     color: black;
-    transition: 500ms;
+    transition: color 0.5s ease;
 }
 
-//blur overlay is takes the entire space of viewport, to make sure everything is blurred when sidebar is open
+// Overlay covers entire viewport for blur effect
 .blur-overlay {
     width: 100vw;
     height: 100vh;
     position: fixed;
+    top: 0;
+    left: 0;
     z-index: 50;
+    backdrop-filter: none;
+    transition: backdrop-filter 0.3s ease;
+    pointer-events: none;
 }
 
-//Mobile first approach
+// Header layout (mobile-first)
 .header {
-    //pixel perfect (tested)
     padding: 2.5rem 1rem 0 1rem;
-
     width: 100vw;
-
     display: flex;
-
     justify-content: space-between;
+    position: relative;
 
     &__sidebar {
         display: none;
         width: 100%;
-
         position: absolute;
+        top: 0;
         right: 0;
         z-index: 55;
         height: 100vh;
-
         justify-content: center;
         gap: 5rem;
         flex-direction: column;
         align-items: center;
+        background-color: white;
+        transition: all 0.3s ease-in-out;
     }
 
     &__placeholder {
@@ -48,7 +51,6 @@ a div:hover {
     &__nav-links,
     &__sidebar div {
         font-size: 1rem;
-
         font-family: circular-std;
         color: #19182580;
     }
@@ -81,6 +83,7 @@ a div:hover {
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: transform 0.3s ease;
     }
 
     .auth {
@@ -100,6 +103,10 @@ a div:hover {
             height: 3rem;
             border-radius: 6.25rem;
         }
+        &__signup:hover {
+            background-color: $pink-color;
+            transition: 500ms;
+        }
     }
 }
 
@@ -108,13 +115,15 @@ a {
     color: inherit;
 }
 
-// Desktop
+// Desktop styles
 @media only screen and (width >= $desktop-min-width) {
     .blur-overlay {
         display: none;
     }
+
     .header {
         padding: 3.9rem 6.2rem 0 9.2rem;
+
         &__sidebar {
             display: none;
         }
@@ -126,14 +135,10 @@ a {
         &__nav-links {
             font-size: 0.9rem;
             order: 2;
-        }
-
-        &__nav-links {
-            display: block;
-            list-style-type: none;
             display: flex;
             gap: 3rem;
             align-items: center;
+            list-style-type: none;
         }
 
         &__hamburger {
@@ -141,13 +146,11 @@ a {
         }
 
         &__btns {
-            display: block;
-
-            right: 9.2rem;
             display: flex;
             justify-content: center;
             align-items: center;
             order: 3;
+            right: 9.2rem;
         }
     }
 
@@ -156,15 +159,15 @@ a {
     }
 }
 
-//Tablet
+// Tablet styles
 @media (width >= $tablet-min-width) and (width <= $tablet-max-width) {
     .header {
         padding: 2.2rem 4.4rem 0 3.9rem;
+
         &__sidebar {
             width: 60%;
-            right: auto;
             left: 0;
-
+            right: auto;
             gap: 8rem;
         }
 
@@ -183,7 +186,6 @@ a {
 
         &__btns {
             font-size: 0.9rem;
-            display: block;
             position: absolute;
             right: 3.9rem;
             display: flex;
