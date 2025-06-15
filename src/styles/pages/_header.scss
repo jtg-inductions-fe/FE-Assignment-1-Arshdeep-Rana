@@ -34,13 +34,9 @@ a div:hover {
 //Mobile first approach
 >>>>>>> 601ba52 (AR_RU_02 : header : header with sidebar completed)
 .header {
-    //pixel perfect (tested)
     padding: 2.5rem 1rem 0 1rem;
-
     width: 100vw;
-
     display: flex;
-
     justify-content: space-between;
     position: relative;
 
@@ -48,6 +44,7 @@ a div:hover {
         display: none;
         width: 100%;
         position: absolute;
+        top: 0;
         top: 0;
         right: 0;
         z-index: 55;
@@ -102,6 +99,7 @@ a div:hover {
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: transform 0.3s ease;
         transition: transform 0.3s ease;
     }
 
@@ -238,6 +236,7 @@ a {
 
     .header {
         padding: 3.9rem 6.2rem 0 9.2rem;
+
         &__sidebar {
             display: none;
         }
@@ -256,13 +255,11 @@ a {
         }
 
         &__btns {
-            display: block;
-
-            right: 9.2rem;
             display: flex;
             justify-content: center;
             align-items: center;
             order: 3;
+            right: 9.2rem;
         }
     }
 
@@ -271,12 +268,14 @@ a {
     }
 }
 
-//Tablet
+// Tablet styles
 @media (width >= $tablet-min-width) and (width <= $tablet-max-width) {
     .header {
         padding: 2.2rem 4.4rem 0 3.9rem;
+
         &__sidebar {
             width: 60%;
+            left: 0;
             right: auto;
             left: 0;
             gap: 8rem;
@@ -296,7 +295,6 @@ a {
 
         &__btns {
             font-size: 0.9rem;
-            display: block;
             position: absolute;
             right: 3.9rem;
             display: flex;
