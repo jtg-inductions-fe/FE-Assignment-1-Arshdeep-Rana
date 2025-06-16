@@ -1,43 +1,6 @@
-@use '../abstracts/variables/fonts' as *;
+@use '../abstracts/variables/' as *;
+@use '../abstracts/mixins/' as *;
 
-@font-face {
-    font-family: $circular-md;
-    src: url(/fonts/CircularStd-Medium.woff);
-    font-display: swap;
-}
-
-@font-face {
-    font-family: $inter-thin;
-    src: url(/fonts/Inter-ThinBETA.woff);
-    font-display: swap;
-}
-
-@font-face {
-    font-family: $circular-bold;
-    src: url(/fonts/CircularStd-Bold.woff);
-    font-display: swap;
-}
-
-@font-face {
-    font-family: $circular-book;
-    src: url(/fonts/CircularStd-Book.woff);
-    font-display: swap;
-}
-
-@font-face {
-    font-family: $inter-extra-light;
-    src: url(/fonts/Inter-ExtraLightBETA.woff);
-    font-display: swap;
-}
-
-@font-face {
-    font-family: $inter-light;
-    src: url(/fonts/Inter-LightBETA.woff);
-    font-display: swap;
-}
-
-@font-face {
-    font-family: $inter-regular;
-    src: url(/fonts/Inter-Regular.woff);
-    font-display: swap;
-}
+@include font-face($circular-md, '/fonts/CircularStd-Medium.woff');
+@include font-face($circular-bold1, '/fonts/CircularStd-Bold.woff');
+@include font-face($circular-bold2, '/fonts/CircularStd-Black.woff');
