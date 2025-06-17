@@ -1,39 +1,31 @@
 @use '../abstracts/variables/' as *;
+@use '../abstracts/mixins/' as *;
 
-// Link hover effect
 a:hover,
 a div:hover {
     color: black;
     transition: color 0.5s ease;
 }
 
-.temp {
-    height: 10000px;
-    width: 100vw;
-    background-color: red;
-}
-
-// Overlay covers entire viewport for blur effect
 .blur-overlay {
     width: 100vw;
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 50;
+    z-index: $z-index;
     backdrop-filter: none;
     transition: backdrop-filter 0.3s ease;
     pointer-events: none;
 }
 
-// Header layout (mobile-first)
+// mobile-first
 .header {
-    background-color: pink;
+    z-index: calc($z-index + 10);
     position: fixed;
-    padding: 2.5rem 1rem 0 1rem;
+    padding: 3.9rem 2rem;
     width: 100vw;
-    display: flex;
-    justify-content: space-between;
+    @include flex(space-between, center);
 
     &__sidebar {
         display: none;
@@ -42,7 +34,7 @@ a div:hover {
         top: 0;
         top: 0;
         right: 0;
-        z-index: 55;
+        z-index: calc($z-index + 5);
         height: 100vh;
         justify-content: center;
         gap: 5rem;
@@ -58,62 +50,63 @@ a div:hover {
 
     &__nav-links,
     &__sidebar div {
-        font-size: 1rem;
+        font-size: 1.4rem;
         font-family: circular-md;
         color: #19182580;
     }
 
     &__nav-links {
-        min-width: 26.75rem;
-        min-height: 1.603rem;
+        width: 42.8rem;
+        height: 1.7rem;
         display: none;
     }
 
     &__btns {
         display: none;
-        font-size: 1rem;
     }
 
     &__logo {
-        font-size: 2.5rem;
+        font-size: 4rem;
         text-align: center;
-        background: linear-gradient(to left, $purple-color, $pink-color);
+        background: linear-gradient(to left, $purple, $pink);
         background-clip: text;
         -webkit-text-fill-color: transparent;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex(center, center);
     }
 
     &__hamburger {
-        font-size: 2.5rem;
-        z-index: 60;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        font-size: 4rem;
+        z-index: calc($z-index + 10);
+        @include flex(center, center);
         transition: transform 0.3s ease;
-        transition: transform 0.3s ease;
+        // transition: transform 0.3s ease;
     }
 
     .auth {
         font-family: circular-md;
         &__login {
-            border: none;
-            background-color: inherit;
-            width: 7.188rem;
-            height: 3.063rem;
+            @include button(
+                inherit,
+                6.25rem,
+                none,
+                1.6rem 3.2rem,
+                black,
+                1.4rem
+            );
         }
 
         &__signup {
-            border: $purple-color;
-            background-color: $purple-color;
-            color: white;
-            width: 7rem;
-            height: 3rem;
-            border-radius: 6.25rem;
+            @include button(
+                $purple,
+                6.25rem,
+                none,
+                1.6rem 3.2rem,
+                white,
+                1.4rem
+            );
         }
         &__signup:hover {
-            background-color: $pink-color;
+            background-color: $pink;
             transition: 500ms;
         }
     }
@@ -125,13 +118,14 @@ a {
 }
 
 // Desktop styles
-@media only screen and (width >= $desktop-min-width) {
+
+@include desktop {
     .blur-overlay {
         display: none;
     }
 
     .header {
-        padding: 3.9rem 6.2rem 0 9.2rem;
+        padding: 3.9rem 6.2rem;
 
         &__sidebar {
             display: none;
@@ -142,11 +136,11 @@ a {
         }
 
         &__nav-links {
-            font-size: 0.9rem;
+            font-size: 1.4rem;
             order: 2;
-            display: flex;
+            @include flex(center, center);
             gap: 3rem;
-            align-items: center;
+
             list-style-type: none;
         }
 
@@ -155,23 +149,21 @@ a {
         }
 
         &__btns {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flex(center, center);
             order: 3;
-            right: 9.2rem;
+            // right: 9.2rem;
         }
     }
 
     .auth {
-        display: flex;
+        @include flex(center, center);
     }
 }
 
-// Tablet styles
-@media (width >= $tablet-min-width) and (width <= $tablet-max-width) {
+@include tablet {
     .header {
-        padding: 2.2rem 4.4rem 0 3.9rem;
+        flex-wrap: nowrap;
+        padding: 3.6rem 6.4rem;
 
         &__sidebar {
             width: 60%;
@@ -187,118 +179,25 @@ a {
 
         &__hamburger {
             order: 1;
+            z-index: calc($z-index + 10);
+            flex: 0 1 auto;
         }
 
         &__logo {
             order: 2;
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            flex: 1 1 auto;
+            min-width: 0;
         }
 
         &__btns {
-            font-size: 0.9rem;
-            position: absolute;
-            right: 3.9rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        &__placeholder {
             order: 3;
-            height: 2.5rem;
-            width: 2.5rem;
-            display: block;
-            background-color: inherit;
-        }
-
-        &__nav-links {
-            display: none;
-        }
-    }
-}
-
-// Desktop
-@media only screen and (width >= $desktop-min-width) {
-    .header__nav-links {
-        display: block;
-        list-style-type: none;
-        display: flex;
-        gap: 3rem;
-        align-items: center;
-    }
-
-    .header {
-        padding: 3.9rem 6.2rem 0 9.2rem;
-
-        &__sidebar {
-            display: none;
-        }
-
-        &__logo {
-            order: 1;
-        }
-
-        &__nav-links {
-            font-size: 0.9rem;
-            order: 2;
-        }
-
-        &__hamburger {
-            display: none;
-        }
-
-        &__btns {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            order: 3;
-            right: 9.2rem;
-        }
-    }
-
-    .auth {
-        display: flex;
-    }
-}
-
-// Tablet styles
-@media (width >= $tablet-min-width) and (width <= $tablet-max-width) {
-    .header {
-        padding: 2.2rem 4.4rem 0 3.9rem;
-
-        &__sidebar {
-            width: 60%;
-            left: 0;
-            right: auto;
-            left: 0;
-            gap: 8rem;
-        }
-        &__sidebar a:nth-child(5),
-        &__sidebar a:nth-child(6) {
-            display: none;
-        }
-
-        &__hamburger {
-            order: 1;
-        }
-
-        &__logo {
-            order: 2;
-        }
-
-        &__btns {
-            font-size: 0.9rem;
-            position: absolute;
-            right: 3.9rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        &__placeholder {
-            order: 3;
-            height: 2.5rem;
-            width: 2.5rem;
-            display: block;
-            background-color: inherit;
+            position: relative;
+            //   font-size: 1.4rem;
+            @include flex(center, center);
+            flex: 0 1 auto;
         }
 
         &__nav-links {

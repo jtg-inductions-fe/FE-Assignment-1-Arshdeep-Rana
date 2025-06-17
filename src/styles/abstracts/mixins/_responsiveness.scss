@@ -1,0 +1,19 @@
+@use '../variables/breakpoints' as *;
+
+@mixin mobile {
+    @media (width <= map-get($breakpoints, mobile)) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (width <= map-get($breakpoints, tablet)) and (width > map-get($breakpoints, mobile)) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (width > map-get($breakpoints, tablet)) {
+        @content;
+    }
+}

@@ -1,14 +1,11 @@
 import '../styles/main.scss';
 
-// Grab references to elements
 const sidebar = document.querySelector('.header__sidebar');
 const hamburger = document.querySelector('.header__hamburger');
 const blurOverlay = document.querySelector('.blur-overlay');
 
-// Track sidebar state
 let isSidebarOpen = false;
 
-// Toggle sidebar visibility
 const toggleSidebar = () => {
     isSidebarOpen = !isSidebarOpen;
 
@@ -23,5 +20,24 @@ const toggleSidebar = () => {
     }
 };
 
-// Set up click event
+//event listener
 hamburger.addEventListener('click', toggleSidebar);
+
+document.addEventListener('keydown', (e) => {
+    let signup = document.querySelector('.auth__signup');
+    let logo = document.querySelector('.header__logo');
+    if (e.key == 'Tab') {
+        //  e.preventDefault();
+
+        if (document.activeElement == signup) {
+            logo.focus();
+        }
+
+        if (isSidebarOpen) {
+            let signup = document.querySelector('.signup');
+            if (document.activeElement == signup) {
+                hamburger.focus();
+            }
+        }
+    }
+});
