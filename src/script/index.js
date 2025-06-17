@@ -1,14 +1,9 @@
 import '../styles/main.scss';
 
-<<<<<<< HEAD
-
-
 // Grab references to elements
 const sidebar = document.querySelector('.header__sidebar');
 const hamburger = document.querySelector('.header__hamburger');
 const blurOverlay = document.querySelector('.blur-overlay');
-
-
 
 // Track sidebar state
 let isSidebarOpen = false;
