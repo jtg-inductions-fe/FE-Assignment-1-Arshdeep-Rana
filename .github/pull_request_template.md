@@ -20,15 +20,6 @@
 
 #### Screenshots (if applicable)
 
-<table>
-    <tr>
-        <th>Desktop</th>
-        <th>Tablet</th>
-        <th>Mobile</th>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-</table>
+| Desktop | Tablet | Mobile |
+| ------- | ------ | ------ |
+|         |        |        |

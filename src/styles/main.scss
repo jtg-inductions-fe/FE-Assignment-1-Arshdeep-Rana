@@ -1,10 +1,8 @@
 @use 'vendors';
 @use 'base';
-@use 'abstracts';
+@use 'abstracts' as *;
 @use 'themes';
 @use 'pages';
-
-@use './abstracts/variables/' as *;
 
 // Only for purpose of showcase of base setup
 
@@ -24,7 +22,7 @@
 }
 
 .orange {
-    color: $orange;
+    color: $outrageous-orange;
 }
 
 .sub-heading {
@@ -33,13 +31,13 @@
 }
 
 .pink {
-    color: $pink;
+    color: $french-rose;
 }
 
 .yellow {
-    color: $yellow;
+    color: $kournikova-yellow;
 }
 
 .purple {
-    color: $purple;
+    color: $slate-blue;
 }
