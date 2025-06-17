@@ -1,12 +1,8 @@
 /* Mixin for font-face
- @param {string} $name
- Name of the font-family
- @param {string} $src
- Path of the font file.
- @param {number} $font-weight
- Font-weight of text
- @param {string} $font-style
- font-style of the text */
+ $name - Name of the font-family
+ $src - Path of the font file.
+ $font-weight - Font-weight of text
+ $font-style - font-style of the text */
 
 @mixin font-face($name, $src, $font-weight, $font-style) {
     @font-face {
