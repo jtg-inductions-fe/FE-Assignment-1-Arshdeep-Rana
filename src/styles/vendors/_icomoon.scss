@@ -1,3 +1,5 @@
+@use '../abstracts/variables/colors' as *;
+
 @font-face {
     font-family: 'icomoon';
     src:
@@ -30,7 +32,7 @@
 
 .icon-Group-1 .path1:before {
     content: '\e900';
-    color: rgb(93, 80, 198);
+    color: $purple;
 }
 .icon-Group-1 .path2:before {
     content: '\e901';
@@ -39,16 +41,16 @@
 }
 .icon-Group:before {
     content: '\e902';
-    color: #5d50c6;
+    color: $purple;
 }
 .icon-Group-8 .path1:before {
     content: '\e903';
-    color: rgb(93, 80, 198);
+    color: $purple;
 }
 .icon-Group-8 .path2:before {
     content: '\e904';
     margin-left: -1em;
-    color: rgb(255, 255, 255);
+    color: white;
 }
 .icon-Vector-8:before {
     content: '\e905';
@@ -58,35 +60,35 @@
 }
 .icon-Bold-Outline:before {
     content: '\e907';
-    color: #fff;
+    color: white;
 }
 .icon-Vector-7:before {
     content: '\e908';
-    color: #facd49;
+    color: $yellow;
 }
 .icon-arrow-circle-down9-1:before {
     content: '\e909';
 }
 .icon-play-circle5-1:before {
     content: '\e90a';
-    color: #5d50c6;
+    color: $purple;
 }
 .icon-work-1:before {
     content: '\e90b';
-    color: #f85e9f;
+    color: $pink;
 }
 .icon-Vector-9:before {
     content: '\e90c';
 }
 .icon-Vector-4:before {
     content: '\e90d';
-    color: #fff;
+    color: white;
 }
 .icon-Vector-5:before {
     content: '\e90e';
-    color: #fff;
+    color: white;
 }
 .icon-Vector-3:before {
     content: '\e90f';
-    color: #fff;
+    color: white;
 }

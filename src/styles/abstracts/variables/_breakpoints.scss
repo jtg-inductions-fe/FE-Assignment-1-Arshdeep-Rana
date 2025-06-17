@@ -1,4 +1,5 @@
-$phone-max-width: 43rem;
-$tablet-min-width: 43.2rem;
-$tablet-max-width: 102.4rem;
-$desktop-min-width: 102.6rem;
+$breakpoints: (
+    'mobile': 430px,
+    'tablet': 1024px,
+    'desktop': 1440px,
+);

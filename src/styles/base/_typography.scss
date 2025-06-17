@@ -1,7 +1,17 @@
 @use '../abstracts/variables/' as *;
 @use '../abstracts/mixins/' as *;
 
-@include font-face($circular-md, '/fonts/CircularStd-Medium.woff');
-@include font-face($circular-bold1, '/fonts/CircularStd-Bold.woff');
-@include font-face($circular-bold2, '/fonts/CircularStd-Black.woff');
-@include font-face($inter, '/fonts/Inter-Regular.woff');
+@include font-face($circular-md, '/fonts/CircularStd-Medium.woff', 100, normal);
+@include font-face(
+    $circular-bold1,
+    '/fonts/CircularStd-Bold.woff',
+    700,
+    normal
+);
+@include font-face(
+    $circular-bold2,
+    '/fonts/CircularStd-Black.woff',
+    900,
+    normal
+);
+@include font-face($inter, '/fonts/Inter-Regular.woff', 400, normal);

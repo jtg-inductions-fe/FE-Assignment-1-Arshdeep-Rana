@@ -1,9 +1,15 @@
-//created a mixin to create font-faces
+/// Mixin for font-face
+/// @param {string} $name
+/// Name of the font-family
+/// @param {string} $src
+/// Path of the font file.
 
-@mixin font-face($name, $src) {
+@mixin font-face($name, $src, $font-weight, $font-style) {
     @font-face {
         font-family: $name;
         src: url($src);
         font-display: swap;
+        font-weight: $font-weight;
+        font-style: $font-style;
     }
 }

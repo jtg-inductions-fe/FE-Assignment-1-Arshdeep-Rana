@@ -23,7 +23,11 @@ button {
     font: inherit;
 }
 
-p {
+p,
+h1,
+h2,
+h3,
+span {
     overflow-wrap: break-word;
     word-wrap: break-word;
 }
