@@ -8,4 +8,6 @@
 @mixin button($border-radius: 10rem, $padding: 1.6rem 3.2rem) {
     border-radius: $border-radius;
     padding: $padding;
+    color: $color;
+    font-size: $font-size;
 }
