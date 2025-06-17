@@ -7,6 +7,12 @@ a div:hover {
     transition: color 0.5s ease;
 }
 
+.temp {
+    height: 10000px;
+    width: 100vw;
+    background-color: red;
+}
+
 // Overlay covers entire viewport for blur effect
 .blur-overlay {
     width: 100vw;
@@ -22,11 +28,12 @@ a div:hover {
 
 // Header layout (mobile-first)
 .header {
+    background-color: pink;
+    position: fixed;
     padding: 2.5rem 1rem 0 1rem;
     width: 100vw;
     display: flex;
     justify-content: space-between;
-    position: relative;
 
     &__sidebar {
         display: none;
