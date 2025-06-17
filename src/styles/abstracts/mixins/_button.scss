@@ -1,6 +1,15 @@
-@mixin button($background-color, $border-radius, $border, $padding) {
+@mixin button(
+    $background-color,
+    $border-radius,
+    $border,
+    $padding,
+    $color,
+    $font-size
+) {
     background-color: $background-color;
     border: $border;
     border-radius: $border-radius;
     padding: $padding;
+    color: $color;
+    font-size: $font-size;
 }
