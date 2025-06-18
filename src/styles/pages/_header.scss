@@ -178,6 +178,10 @@
 
 // Desktop
 @include desktop {
+    .blur-overlay {
+        display: none;
+    }
+
     .header {
         // Hide
         &__hamburger,
@@ -220,6 +224,11 @@
 
         &__auth {
             order: 3;
+        }
+
+        &__signup:hover {
+            background-color: $french-rose;
+            transition: 0.7s;
         }
     }
     .nav-links {
