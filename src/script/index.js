@@ -11,9 +11,8 @@ function toggleSidebar() {
     navLinks.classList.toggle('header__nav-links--open', isSidebarOpen);
     overlay.classList.toggle('blur-overlay--active', isSidebarOpen);
 
-    // Optionally switch icon class (e.g., between icon-Vector and close)
     hamburger.firstElementChild.classList.toggle('icon-Vector');
-    hamburger.firstElementChild.classList.toggle('icon-cross'); // You’ll need to define `.icon-close`
+    hamburger.firstElementChild.classList.toggle('icon-cross');
 }
 
 hamburger.addEventListener('click', toggleSidebar);
