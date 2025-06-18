@@ -1,43 +1,22 @@
 import '../styles/main.scss';
 
-const sidebar = document.querySelector('.header__sidebar');
 const hamburger = document.querySelector('.header__hamburger');
-const blurOverlay = document.querySelector('.blur-overlay');
+const navLinks = document.querySelector('.header__nav-links');
+const overlay = document.querySelector('.blur-overlay');
 
 let isSidebarOpen = false;
 
-const toggleSidebar = () => {
+function toggleSidebar() {
     isSidebarOpen = !isSidebarOpen;
+    navLinks.classList.toggle('header__nav-links--open', isSidebarOpen);
+    overlay.classList.toggle('blur-overlay--active', isSidebarOpen);
 
-    if (isSidebarOpen) {
-        sidebar.style.display = 'flex';
-        blurOverlay.style.backdropFilter = 'blur(10px)';
-        hamburger.style.transform = 'rotate(90deg)';
-    } else {
-        sidebar.style.display = 'none';
-        blurOverlay.style.backdropFilter = 'none';
-        hamburger.style.transform = 'rotate(0deg)';
-    }
-};
+    // Optionally switch icon class (e.g., between icon-Vector and close)
+    hamburger.firstElementChild.classList.toggle('icon-Vector');
+    hamburger.firstElementChild.classList.toggle('icon-cross'); // You’ll need to define `.icon-close`
+}
 
-//event listener
 hamburger.addEventListener('click', toggleSidebar);
-
-document.addEventListener('keydown', (e) => {
-    let signup = document.querySelector('.auth__signup');
-    let logo = document.querySelector('.header__logo');
-    if (e.key == 'Tab') {
-        //  e.preventDefault();
-
-        if (document.activeElement == signup) {
-            logo.focus();
-        }
-
-        if (isSidebarOpen) {
-            let signup = document.querySelector('.signup');
-            if (document.activeElement == signup) {
-                hamburger.focus();
-            }
-        }
-    }
+overlay.addEventListener('click', () => {
+    if (isSidebarOpen) toggleSidebar();
 });

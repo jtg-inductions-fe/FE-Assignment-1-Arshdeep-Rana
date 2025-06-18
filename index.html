@@ -18,41 +18,33 @@
         <!-- Header section -->
         <header class="header">
             <!-- Website logo -->
-            <a class="header__logo" href="">
+            <a href="#" class="header__logo">
                 <span class="icon-Vector-9"></span>
             </a>
 
-            <!-- Hamburger menu icon -->
-            <button class="header__hamburger" aria-label="Open sidebar">
+            <!--Hamburger button-->
+            <button class="header__hamburger">
                 <span class="icon-Vector"></span>
             </button>
 
-            <!-- Navigation links -->
-            <ul class="header__nav-links">
-                <li><a href="">Home</a></li>
-                <li><a href="">Discover</a></li>
-                <li><a href="">Special Deals</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>
-
-            <!-- Authentication buttons -->
-            <div class="header__btns auth">
-                <button class="auth__login">Log In</button>
-                <button class="auth__signup">Sign Up</button>
+            <!--Navigation Links-->
+            <div class="header__nav-links nav-links">
+                <a href="#">Home</a>
+                <a href="#">Discover</a>
+                <a href="#">Special Deals</a>
+                <a href="#">Contact</a>
+                <a href="#" class="nav-links__login">Log In</a>
+                <a href="#" class="nav-links__signup">Sign Up</a>
             </div>
 
-            <!-- Placeholder to center logo on tablet layout -->
+            <!--Auth btns-->
+            <div class="header__auth">
+                <button class="header__login">Log In</button>
+                <button class="header__signup">Sign Up</button>
+            </div>
+
+            <!--Placeholder div to center logo in tablet-->
             <div class="header__placeholder"></div>
-
-            <!-- Sidebar (shown on mobile & tbalet by hamburger) -->
-            <div class="header__sidebar">
-                <a href=""><div>Home</div></a>
-                <a href=""><div>Discover</div></a>
-                <a href=""><div>Special Deals</div></a>
-                <a href=""><div>Contact</div></a>
-                <a href=""><div>Login</div></a>
-                <a href="" class="signup"><div>Sign Up</div></a>
-            </div>
         </header>
 
         <script type="module" src="./src/script/index.js"></script>

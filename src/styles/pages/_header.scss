@@ -1,206 +1,210 @@
 @use '../abstracts/variables/' as *;
 @use '../abstracts/mixins/' as *;
 
-a:hover,
-a div:hover {
-    color: black;
-    transition: color 0.5s ease;
+// Icomoon font styling
+.icon-Vector::before {
+    color: $slate-blue;
 }
 
-.blur-overlay {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: $z-index;
-    backdrop-filter: none;
-    transition: backdrop-filter 0.3s ease;
-    pointer-events: none;
+.icon-cross {
+    color: $slate-blue;
 }
 
-// mobile-first
+.icon-Vector-9 {
+    background: linear-gradient(to left, $slate-blue, $french-rose);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+// Mobile-first
 .header {
-    z-index: calc($z-index + 10);
-    position: fixed;
     padding: 3.9rem 2rem;
-    width: 100vw;
     @include flex(space-between, center);
 
-    &__sidebar {
-        display: none;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        top: 0;
-        right: 0;
-        z-index: calc($z-index + 5);
-        height: 100vh;
-        justify-content: center;
-        gap: 5rem;
-        flex-direction: column;
-        align-items: center;
-        background-color: white;
-        transition: all 0.3s ease-in-out;
+    &__logo,
+    &__hamburger {
+        @include flex(center, center);
+        font-size: 4rem;
     }
 
+    &__auth,
     &__placeholder {
         display: none;
     }
 
-    &__nav-links,
-    &__sidebar div {
-        font-size: 1.4rem;
-        font-family: circular-md;
-        color: #19182580;
+    // Auth buttons styling
+
+    &__login {
+        @include text($circular-md, $black, 1.4rem, $font-weight-700, 0);
+        @include button($white, 10rem, none, 1.6rem 3.2rem);
+    }
+
+    &__signup {
+        @include text($circular-md, $white, 1.4rem, $font-weight-700, 0);
+        @include button($slate-blue, 10rem, none, 1.6rem 3.2rem);
     }
 
     &__nav-links {
-        width: 42.8rem;
-        height: 1.7rem;
-        display: none;
-    }
-
-    &__btns {
-        display: none;
-    }
-
-    &__logo {
-        font-size: 4rem;
-        text-align: center;
-        background: linear-gradient(to left, $purple, $pink);
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
+        @include text(
+            $circular-md,
+            $midnight-express,
+            1.4rem,
+            $font-weight-400,
+            0
+        );
+        position: absolute;
+        width: 4rem;
+        background-color: $white;
+        box-shadow: 2px 2px 12px 2px $midnight-express;
+        top: 10rem;
         @include flex(center, center);
+        flex-direction: column;
+        gap: 5rem;
+        width: 50%;
+        padding: 2rem 0;
+        height: fit-content;
+        right: 2rem;
+        border-radius: 2rem;
     }
 
-    &__hamburger {
-        font-size: 4rem;
-        z-index: calc($z-index + 10);
-        @include flex(center, center);
-        transition: transform 0.3s ease;
-        // transition: transform 0.3s ease;
-    }
+    &__nav-links {
+        transition:
+            transform 0.3s ease,
+            opacity 0.3s ease;
+        transform: translateX(100%);
+        opacity: 0;
+        pointer-events: none;
 
-    .auth {
-        font-family: circular-md;
-        &__login {
-            @include button(
-                inherit,
-                6.25rem,
-                none,
-                1.6rem 3.2rem,
-                black,
-                1.4rem
-            );
-        }
-
-        &__signup {
-            @include button(
-                $purple,
-                6.25rem,
-                none,
-                1.6rem 3.2rem,
-                white,
-                1.4rem
-            );
-        }
-        &__signup:hover {
-            background-color: $pink;
-            transition: 500ms;
+        &--open {
+            transform: translateX(0);
+            opacity: 1;
+            pointer-events: auto;
         }
     }
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-// Desktop styles
-
-@include desktop {
-    .blur-overlay {
-        display: none;
-    }
-
-    .header {
-        padding: 3.9rem 6.2rem;
-
-        &__sidebar {
-            display: none;
-        }
-
-        &__logo {
-            order: 1;
-        }
-
-        &__nav-links {
-            font-size: 1.4rem;
-            order: 2;
-            @include flex(center, center);
-            gap: 3rem;
-
-            list-style-type: none;
-        }
-
-        &__hamburger {
-            display: none;
-        }
-
-        &__btns {
-            @include flex(center, center);
-            order: 3;
-            // right: 9.2rem;
-        }
-    }
-
-    .auth {
-        @include flex(center, center);
-    }
-}
-
+// Tablet
 @include tablet {
     .header {
-        flex-wrap: nowrap;
-        padding: 3.6rem 6.4rem;
-
-        &__sidebar {
-            width: 60%;
-            left: 0;
-            right: auto;
-            gap: 8rem;
+        padding: 3.2rem 6.4rem;
+        // Display
+        &__auth {
+            display: block;
+            @include flex(center, center);
+            flex-wrap: nowrap;
+            gap: 1rem;
         }
 
-        &__sidebar a:nth-child(5),
-        &__sidebar a:nth-child(6) {
-            display: none;
-        }
+        // Flex ordering
 
         &__hamburger {
             order: 1;
-            z-index: calc($z-index + 10);
-            flex: 0 1 auto;
         }
 
         &__logo {
             order: 2;
-            display: flex !important;
-            justify-content: center;
-            align-items: center;
-            flex: 1 1 auto;
-            min-width: 0;
+            align-self: center;
         }
 
-        &__btns {
+        &__placeholder {
+            display: block;
+            height: 4rem;
+            width: 4rem;
             order: 3;
-            position: relative;
-            //   font-size: 1.4rem;
-            @include flex(center, center);
-            flex: 0 1 auto;
+        }
+
+        &__auth {
+            position: absolute;
+            right: 3.2rem;
         }
 
         &__nav-links {
+            position: absolute;
+            width: 4rem;
+            background-color: $white;
+            box-shadow: 2px 2px 12px 2px $midnight-express;
+            top: 10rem;
+            @include flex(center, center);
+            flex-direction: column;
+            gap: 5rem;
+            width: 35%;
+            height: 50%;
+            left: 6.4rem;
+            border-radius: 2rem;
+        }
+        &__nav-links {
+            transition:
+                transform 0.3s ease,
+                opacity 0.3s ease;
+            transform: translateX(-100%);
+            opacity: 0;
+            pointer-events: none;
+
+            &--open {
+                transform: translateX(0);
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
+    }
+
+    .nav-links {
+        &__login,
+        &__signup {
+            display: none;
+        }
+    }
+}
+
+// Desktop
+@include desktop {
+    .header {
+        // Hide
+        &__hamburger,
+        &__placeholder {
+            display: none;
+        }
+
+        // Show
+        &__nav-links {
+            padding: 0;
+            opacity: 1;
+            transition: none;
+            transform: none;
+            min-width: 48.2rem;
+            position: relative;
+            background-color: inherit;
+            box-shadow: none;
+            @include flex(space-between, center);
+            height: 1.7rem;
+            border-radius: 0;
+            flex-direction: row;
+            top: auto;
+            left: auto;
+            right: auto;
+        }
+
+        &__auth {
+            @include flex(center, center);
+            position: relative;
+        }
+
+        // Flex ordering
+        &__logo {
+            order: 1;
+        }
+
+        &__nav-links {
+            order: 2;
+        }
+
+        &__auth {
+            order: 3;
+        }
+    }
+    .nav-links {
+        &__login,
+        &__signup {
             display: none;
         }
     }
