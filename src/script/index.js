@@ -11,8 +11,11 @@ function toggleSidebar() {
     navLinks.classList.toggle('header__nav-links--open', isSidebarOpen);
     overlay.classList.toggle('blur-overlay--active', isSidebarOpen);
 
-    hamburger.firstElementChild.classList.toggle('icon-Vector');
-    hamburger.firstElementChild.classList.toggle('icon-cross');
+    const iconEl = hamburger.firstElementChild;
+    if (iconEl) {
+        iconEl.classList.toggle('icon-Vector');
+        iconEl.classList.toggle('icon-cross');
+    }
 }
 
 hamburger.addEventListener('click', toggleSidebar);
