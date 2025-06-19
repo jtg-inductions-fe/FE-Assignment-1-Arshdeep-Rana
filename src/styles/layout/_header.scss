@@ -23,7 +23,7 @@
     z-index: $z-index + 10;
     backdrop-filter: blur(20px);
     background-color: transparent;
-    padding: 3.9rem 2rem;
+    padding: 3.9rem 1.5rem;
     @include flex(space-between, center);
 
     &__logo,
@@ -48,7 +48,7 @@
 
     &__signup {
         @include text($circular-md, $white, 1.4rem, $font-weight-700, 0);
-        @include button($slate-blue, 10rem, none, 1.6rem 3.2rem);
+        @include button($slate-blue, 10rem, none, 1.5rem 3.2rem);
     }
 
     &__nav-links {
@@ -94,14 +94,14 @@
 // Tablet
 @include tablet {
     .header {
-        padding: 3.2rem 6.4rem;
+        padding: 3.6rem 6.2rem;
 
         // Display
         &__auth {
             display: block;
             @include flex(center, center);
             flex-wrap: nowrap;
-            gap: 1rem;
+            gap: 0.2rem;
         }
 
         // Flex ordering
@@ -124,7 +124,7 @@
 
         &__auth {
             position: absolute;
-            right: 3.2rem;
+            right: 6.4rem;
         }
 
         &__nav-links {
@@ -170,9 +170,14 @@
 @include desktop {
     .header {
         // Hide
-        &__hamburger,
-        &__placeholder {
+        padding: 7.2rem 15rem;
+        &__hamburger {
             display: none;
+        }
+
+        &__placeholder {
+            display: block;
+            order: 3;
         }
 
         // Show
@@ -196,7 +201,8 @@
 
         &__auth {
             @include flex(center, center);
-            position: relative;
+            position: absolute;
+            right: 10rem;
         }
 
         // Flex ordering
