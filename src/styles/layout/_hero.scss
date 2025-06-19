@@ -132,6 +132,7 @@
 
         &__triangles {
             display: block;
+            top: 140rem;
         }
 
         &__content {
@@ -180,7 +181,7 @@
 
         &__content {
             // justify-content: left;
-            align-items: first baseline;
+            align-items: baseline;
             gap: 4rem;
             text-align: left;
             width: 40%;
@@ -197,7 +198,7 @@
             @include flex(center, center);
             gap: 1.5rem;
             flex-wrap: nowrap;
-            text-wrap: nowrap;
+            white-space: nowrap;
         }
     }
 }
