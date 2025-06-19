@@ -1,0 +1,7 @@
+@mixin card($height, $width, $border, $border-radius, $background-color) {
+    max-height: $height;
+    max-width: $width;
+    border: $border;
+    border-radius: $border-radius;
+    background-color: $background-color;
+}

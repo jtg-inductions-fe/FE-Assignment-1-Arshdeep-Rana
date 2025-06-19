@@ -1,0 +1,125 @@
+@use '../abstracts/mixins/' as *;
+@use '../abstracts/variables/' as *;
+
+// Global
+
+.section-title {
+    @include text($circular-md, $french-rose, 1.6rem, $font-weight-400, 0.5rem);
+}
+
+.section-sub-heading {
+    @include text($circular-md, $black, 3.2rem, $font-weight-400, 0);
+}
+
+// Icons
+.services-card-1__img,
+.services-card-2__img,
+.services-card-3__img {
+    height: 6.4rem;
+    width: 6.4rem;
+}
+
+// Mobile
+.services {
+    padding: 2rem 2rem;
+    @include flex(space-between, center);
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+
+    &__cards-container {
+        @include flex(center, center);
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    //cards
+    &__card-1,
+    &__card-2,
+    &__card-3 {
+        @include card(27.9rem, 39.8rem, 1px solid #1918251a, 3.2rem, $white);
+        @include flex(center, center);
+
+        flex-direction: column;
+
+        justify-content: space-around;
+        padding: 4rem;
+        gap: 2rem;
+    }
+}
+
+.services-card-1__title,
+.services-card-2__title,
+.services-card-3__title {
+    @include text($circular-md, $black, 2.4rem, $font-weight-400, 0);
+}
+
+.services-card-1__desc,
+.services-card-2__desc,
+.services-card-3__desc {
+    @include text($inter, #19182580, 1.8rem, $font-weight-400, 0);
+}
+
+//tablet
+
+@include tablet {
+    .services {
+        &__cards-container {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        &__card-1,
+        &__card-2,
+        &__card-3 {
+            height: 44.3rem;
+            width: 28.8rem;
+            max-height: 44.3rem;
+            max-width: 28.8rem;
+        }
+    }
+}
+
+//desktop
+@include desktop {
+    .services {
+        padding: 0 15rem 0 15rem;
+        flex-direction: row;
+
+        &__card-1,
+        &__card-2 {
+            height: 44.3rem;
+            width: 38.6rem;
+            max-height: 44.3rem;
+            max-width: 38.6rem;
+        }
+
+        &__card-3 {
+            display: none;
+        }
+        &__cards-container {
+            flex-direction: row;
+        }
+
+        &__content {
+            @include flex(start, start);
+            flex-direction: column;
+            width: fit-content;
+        }
+    }
+    .section-title {
+        @include text(
+            $circular-md,
+            $french-rose,
+            2.3rem,
+            $font-weight-400,
+            0.5rem
+        );
+        text-align: left;
+        padding-left: 0.5rem;
+    }
+    .section-sub-heading {
+        @include text($circular-md, $black, 4.4rem, $font-weight-700, 0);
+        text-align: left;
+    }
+}

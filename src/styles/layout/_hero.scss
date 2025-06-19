@@ -12,7 +12,6 @@
 
 // Mobile
 .hero {
-    // padding-top: 12rem;
     padding: 14.6rem 1.2rem 0 1.2rem; //to make space for header (mobile)
 
     @include flex(center, center);
@@ -26,17 +25,14 @@
         width: 100%;
     }
 
-    &__img {
-        height: auto;
-        width: 100%;
-        min-height: 50%;
-    }
-
     &__explore-btn {
         @include button($white, 10rem, none, 1.6rem 3.2rem);
         box-shadow:
             5px 5px 20px 1px $midnight-express,
             0 0 0 0 black;
+        font-size: 1.4rem;
+        @include flex(center, center);
+        gap: 1.8rem;
     }
 
     &__heading {
@@ -46,16 +42,18 @@
         text-overflow: ellipsis;
         max-height: 50rem;
         max-width: 100%;
+        line-height: normal;
     }
 
     &__sub-heading {
+        padding: 2.2rem 1rem;
         @include text($inter, $midnight-express, 1.6rem, $font-weight-400, 0);
         max-block-size: 20rem;
         overflow: hidden;
         padding: 0 1rem;
     }
     &__btns {
-        padding-top: 2.4rem;
+        padding-top: 1.4rem;
         @include flex(center, center);
         gap: 2.4rem;
         flex-direction: column;
@@ -85,6 +83,7 @@
     width: 100%;
     &__get-started {
         @include button($slate-blue, 10rem, none, 2.4rem 3.2rem);
+        text-wrap: nowrap;
         width: 100%;
         @include text($circular-md, #eeeeee, 1.4rem, $font-weight-400, 0);
         box-shadow: 10px 12px 35px 10px $midnight-express;
@@ -92,11 +91,13 @@
     &__watch-demo {
         @include button($white, 10rem, none, 2.4rem 3.2rem);
         width: 100%;
+        @include flex(center, center);
     }
 }
 
 .watch-demo__text {
     @include text($circular-md, $black, 1.4rem, $font-weight-400, 0);
+    align-content: center;
 }
 
 .explore-btn__content {
