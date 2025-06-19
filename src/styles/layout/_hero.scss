@@ -1,0 +1,158 @@
+@use '../abstracts/mixins/' as *;
+@use '../abstracts/variables/' as *;
+
+//icomoon styling
+.icon-work-1 {
+    color: $french-rose;
+}
+
+.icon-play-circle5-1 {
+    font-size: 2.4rem;
+}
+.icon-play-circle5-1 {
+    color: $slate-blue;
+}
+
+// Mobile
+.hero {
+    // padding-top: 12rem;
+    padding: 12rem 1.6rem 0 1.6rem; //to make space for header (mobile)
+
+    @include flex(center, center);
+    flex-direction: column;
+    gap: 3.2rem;
+
+    &__content {
+        @include flex(center, center);
+        flex-direction: column;
+        text-align: center;
+    }
+
+    &__img {
+        height: 36.6rem;
+        width: 39.6rem;
+    }
+
+    &__explore-btn {
+        @include button($white, 10rem, none, 1.6rem 3.2rem);
+        box-shadow:
+            5px 5px 20px 1px $midnight-express,
+            0 0 0 0 black;
+    }
+
+    &__heading {
+        padding-top: 1.6rem;
+        @include text($circular-md, $black, 4rem, $font-weight-400, 0);
+    }
+
+    &__heading span {
+        color: $french-rose;
+    }
+
+    &__sub-heading {
+        @include text($inter, $midnight-express, 1.6rem, $font-weight-400, 0);
+    }
+    &__btns {
+        padding-top: 2.4rem;
+        @include flex(center, center);
+        gap: 2.4rem;
+        flex-direction: column;
+    }
+}
+
+.actions {
+    width: 100%;
+    &__get-started {
+        @include button($slate-blue, 10rem, none, 2.4rem 3.2rem);
+        width: 100%;
+        @include text($circular-md, #eeeeee, 1.4rem, $font-weight-400, 0);
+        box-shadow: 10px 12px 35px 10px $midnight-express;
+    }
+    &__watch-demo {
+        @include button($white, 10rem, none, 2.4rem 3.2rem);
+        width: 100%;
+    }
+}
+
+.watch-demo__text {
+    @include text($circular-md, $black, 1.4rem, $font-weight-400, 0);
+}
+
+.explore-btn__content {
+    @include text($circular-md, $french-rose, 1.4rem, $font-weight-400, 0);
+}
+
+@include tablet {
+    .hero {
+        gap: 4.3rem;
+
+        &__img {
+            height: 71.3rem;
+            width: 77.2rem;
+        }
+
+        &__heading {
+            font-size: 5.6rem;
+        }
+
+        &__sub-heading {
+            font-size: 1.8rem;
+        }
+
+        &__btns {
+            flex-direction: row;
+            width: auto;
+            gap: 1.6rem;
+        }
+    }
+
+    .actions {
+        &__watch-demo {
+            @include flex(center, center);
+            gap: 1rem;
+            flex-wrap: nowrap;
+            text-wrap: nowrap;
+        }
+    }
+}
+
+@include desktop {
+    .hero {
+        padding: 15rem 12.6rem 0 12.6rem;
+        flex-direction: row-reverse;
+
+        &__img {
+            height: 71.3rem;
+            width: 77.2rem;
+        }
+
+        &__heading {
+            font-size: 5.6rem;
+        }
+
+        &__sub-heading {
+            font-size: 1.8rem;
+        }
+
+        &__btns {
+            flex-direction: row;
+            width: auto;
+            gap: 1.6rem;
+        }
+
+        &__content {
+            // justify-content: left;
+            align-items: first baseline;
+            text-align: left;
+        }
+    }
+
+    .actions {
+        &__watch-demo {
+            @include flex(center, center);
+            gap: 1.5rem;
+            flex-wrap: nowrap;
+            text-wrap: nowrap;
+        }
+    }
+}
