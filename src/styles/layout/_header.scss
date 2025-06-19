@@ -15,16 +15,6 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.blur-overlay {
-    position: absolute;
-    z-index: $z-index; // 50
-    height: 100vh;
-    width: 100vw;
-}
-
-.blur-overlay--active {
-    backdrop-filter: blur(20px);
-}
 
 // Mobile-first
 .header {
@@ -178,10 +168,6 @@
 
 // Desktop
 @include desktop {
-    .blur-overlay {
-        display: none;
-    }
-
     .header {
         // Hide
         &__hamburger,
