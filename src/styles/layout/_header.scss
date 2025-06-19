@@ -88,7 +88,7 @@
 // Tablet
 @include tablet {
     .header {
-        padding: 3.6rem 6.2rem;
+        padding: 3.6rem 6.2rem 2rem 6.2rem;
 
         // Display
         &__auth {
@@ -163,7 +163,7 @@
 @include desktop {
     .header {
         // Hide
-        padding: 7.2rem 15rem;
+        padding: 7.2rem 15rem 2rem 15rem;
         &__hamburger {
             display: none;
         }
