@@ -16,7 +16,7 @@
 // Mobile
 .hero {
     // padding-top: 12rem;
-    padding: 12rem 1.6rem 0 1.6rem; //to make space for header (mobile)
+    padding: 14.6rem 1.2rem 0 1.2rem; //to make space for header (mobile)
 
     @include flex(center, center);
     flex-direction: column;
@@ -26,11 +26,13 @@
         @include flex(center, center);
         flex-direction: column;
         text-align: center;
+        width: 100%;
     }
 
     &__img {
-        height: 36.6rem;
-        width: 39.6rem;
+        height: auto;
+        width: 100%;
+        min-height: 50%;
     }
 
     &__explore-btn {
@@ -41,8 +43,12 @@
     }
 
     &__heading {
+        height: fit-content;
         padding-top: 1.6rem;
         @include text($circular-md, $black, 4rem, $font-weight-400, 0);
+        text-overflow: ellipsis;
+        max-height: 50rem;
+        max-width: 100%;
     }
 
     &__heading span {
@@ -51,6 +57,8 @@
 
     &__sub-heading {
         @include text($inter, $midnight-express, 1.6rem, $font-weight-400, 0);
+        max-block-size: 20rem;
+        overflow: hidden;
     }
     &__btns {
         padding-top: 2.4rem;
@@ -72,7 +80,7 @@
     @include flex(center, center);
     gap: 2.7rem;
     flex-wrap: wrap;
-    padding-top: 6.4rem;
+    padding: 6.4rem 1rem;
 }
 
 .actions {
@@ -102,8 +110,10 @@
         gap: 4.3rem;
 
         &__img {
-            height: 71.3rem;
-            width: 77.2rem;
+            height: auto;
+            width: 100%;
+            min-width: 50%;
+            padding: 3rem 12rem;
         }
 
         &__heading {
@@ -123,6 +133,10 @@
         &__triangles {
             display: block;
         }
+
+        &__content {
+            width: 100%;
+        }
     }
     .co-partners {
         padding: 6.4rem 16.4rem;
@@ -140,12 +154,14 @@
 
 @include desktop {
     .hero {
-        padding: 15rem 12.6rem 0 12.6rem;
+        padding: 15rem 15rem 0 15rem;
         flex-direction: row-reverse;
 
         &__img {
-            height: 71.3rem;
-            width: 77.2rem;
+            height: auto;
+            width: 100%;
+            min-width: 50%;
+            padding: 3rem 12rem;
         }
 
         &__heading {
@@ -165,7 +181,9 @@
         &__content {
             // justify-content: left;
             align-items: first baseline;
+            gap: 4rem;
             text-align: left;
+            width: 40%;
         }
         &__triangles {
             display: block;
