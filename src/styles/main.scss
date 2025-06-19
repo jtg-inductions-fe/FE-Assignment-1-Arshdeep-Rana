@@ -4,7 +4,7 @@
 @use 'themes';
 @use 'pages';
 
-// Only for purpose of showcase of base setup
+// Classes used for demo purposes
 
 .circular-md {
     font-size: x-large;
@@ -42,15 +42,8 @@
     color: $slate-blue;
 }
 
-.icon-play-circle5-1::before {
-    color: $slate-blue;
-}
-.icon-Vector-7::before {
-    color: $kournikova-yellow;
-}
-.icon-Group-8 .path1::before {
-    color: $slate-blue;
-}
-.icon-Group-8 .path2::before {
+.white {
     color: $white;
 }
+
+// Demo classes ends here
