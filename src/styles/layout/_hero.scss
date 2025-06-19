@@ -58,6 +58,21 @@
         gap: 2.4rem;
         flex-direction: column;
     }
+
+    &__triangles {
+        position: absolute;
+        top: 100rem;
+        left: 1rem;
+        display: none;
+    }
+}
+
+.co-partners {
+    width: 100%;
+    @include flex(center, center);
+    gap: 2.7rem;
+    flex-wrap: wrap;
+    padding-top: 6.4rem;
 }
 
 .actions {
@@ -104,6 +119,13 @@
             width: auto;
             gap: 1.6rem;
         }
+
+        &__triangles {
+            display: block;
+        }
+    }
+    .co-partners {
+        padding: 6.4rem 16.4rem;
     }
 
     .actions {
@@ -144,6 +166,11 @@
             // justify-content: left;
             align-items: first baseline;
             text-align: left;
+        }
+        &__triangles {
+            display: block;
+
+            top: 70rem;
         }
     }
 
