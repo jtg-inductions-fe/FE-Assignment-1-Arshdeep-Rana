@@ -188,4 +188,12 @@
             width: fit-content;
         }
     }
+
+    .co-partners {
+        margin-top: 10rem;
+        gap: 8rem;
+        &__img {
+            height: 3.5rem;
+        }
+    }
 }

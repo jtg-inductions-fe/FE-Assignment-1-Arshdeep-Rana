@@ -1,0 +1,31 @@
+@use '../abstracts/mixins/' as *;
+@use '../abstracts/variables/' as *;
+
+.travel-right {
+    @include flex(center, center);
+    flex-direction: column;
+    gap: 3.2rem;
+}
+.travel__icon {
+    height: 10rem;
+    width: 12rem;
+    position: absolute;
+    bottom: 10rem;
+    left: 15rem;
+
+    display: none;
+}
+
+@include desktop {
+    .travel-right {
+        display: flex;
+        flex-direction: column;
+        gap: 6.4rem;
+        width: 40%;
+        height: 50%;
+        align-items: baseline;
+    }
+    .travel__icon {
+        display: block;
+    }
+}
