@@ -55,6 +55,7 @@
 
 @include desktop {
     .container {
+        padding: 0 15rem;
         flex-direction: row;
 
         &__content {
@@ -77,6 +78,6 @@
 
     .container.travel {
         padding-left: 0;
-        justify-content: start;
+        justify-content: space-between;
     }
 }
