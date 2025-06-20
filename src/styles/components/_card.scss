@@ -1,0 +1,70 @@
+@use '../abstracts/mixins/' as *;
+@use '../abstracts/variables/' as *;
+
+.card-container {
+    width: 100%;
+    @include flex(center, center);
+    flex-direction: column;
+    gap: 1.6rem;
+    flex-wrap: wrap;
+}
+
+.travel-card {
+    position: relative;
+    border: 1px solid #1918251a;
+    width: 100%;
+    border-radius: 3.2rem;
+    @include flex(center, center);
+    flex-direction: column;
+    gap: 1.6rem;
+
+    height: 15.1rem;
+    padding: 3.2rem;
+
+    &__title {
+        @include text(
+            $circular-md,
+            $outrageous-orange,
+            3.5rem,
+            $font-weight-400,
+            0
+        );
+    }
+
+    &__desc {
+        @include text($inter, $black, 1.8rem, $font-weight-400, 0);
+    }
+}
+
+.travel-card:hover {
+    box-shadow:
+        0px 0px 0px 0px #0000001a,
+        0px 41px 89px 0px #0000001a;
+}
+
+@include tablet {
+    .travel-card {
+        width: 40rem;
+    }
+    .card-container {
+        flex-direction: row;
+    }
+}
+
+@include desktop {
+    .travel-card {
+        width: 20.9rem;
+        text-align: center;
+        &__title {
+            font-size: 3.5rem;
+        }
+
+        &__sub-title {
+            font-size: 1.8rem;
+        }
+    }
+    .card-container {
+        flex-direction: row;
+        justify-content: start;
+    }
+}
