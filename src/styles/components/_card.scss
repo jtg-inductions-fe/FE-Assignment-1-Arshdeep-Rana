@@ -7,7 +7,6 @@
     flex-direction: column;
     gap: 1.6rem;
     flex-wrap: wrap;
-    max-width: 45rem;
 }
 
 .travel-card {
@@ -67,5 +66,6 @@
     .card-container {
         flex-direction: row;
         justify-content: start;
+        max-width: 45rem;
     }
 }
