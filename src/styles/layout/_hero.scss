@@ -196,7 +196,8 @@
         &__triangles {
             display: block;
 
-            top: 70rem;
+            top: 87rem;
+            left: 4rem;
         }
     }
 
@@ -207,6 +208,14 @@
         &__watch-demo {
             padding: 1.6rem 3.2rem;
             white-space: nowrap;
+        }
+    }
+
+    .co-partners {
+        margin-top: 10rem;
+        gap: 8rem;
+        &__img {
+            height: 3.5rem;
         }
     }
 }
