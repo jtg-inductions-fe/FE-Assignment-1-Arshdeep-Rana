@@ -1,1 +1,49 @@
-// TODO: Add styles as per the requirement
+@use 'vendors';
+@use 'base';
+@use 'abstracts' as *;
+@use 'themes';
+@use 'pages';
+
+// Classes used for demo purposes
+
+.circular-md {
+    font-size: x-large;
+    font-family: $circular-md;
+}
+
+.circular-bold1 {
+    font-size: x-large;
+    font-family: $circular-bold1;
+}
+
+.circular-bold2 {
+    font-size: x-large;
+    font-family: $circular-bold2;
+}
+
+.orange {
+    color: $outrageous-orange;
+}
+
+.sub-heading {
+    font-family: $inter;
+    font-size: x-large;
+}
+
+.pink {
+    color: $french-rose;
+}
+
+.yellow {
+    color: $kournikova-yellow;
+}
+
+.purple {
+    color: $slate-blue;
+}
+
+.white {
+    color: $white;
+}
+
+// Demo classes ends here
