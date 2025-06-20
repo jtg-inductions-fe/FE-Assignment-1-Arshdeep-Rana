@@ -1,19 +1,8 @@
 @use '../abstracts/variables/' as *;
 @use '../abstracts/mixins/' as *;
 
-// Icomoon font styling
-.icon-Vector::before {
-    color: $slate-blue;
-}
-
 .icon-cross {
     color: $slate-blue;
-}
-
-.icon-Vector-9 {
-    background: linear-gradient(to left, $slate-blue, $french-rose);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 // Mobile-first
@@ -53,13 +42,6 @@
 
     &__nav-links {
         z-index: $z-index + 10;
-        @include text(
-            $circular-md,
-            $midnight-express,
-            1.4rem,
-            $font-weight-400,
-            0
-        );
         position: absolute;
         width: 4rem;
         background-color: $white;
@@ -73,6 +55,19 @@
         height: fit-content;
         right: 2rem;
         border-radius: 2rem;
+        a {
+            @include text(
+                $circular-md,
+                $midnight-express,
+                1.4rem,
+                $font-weight-400,
+                0
+            );
+        }
+        a:hover {
+            color: $black;
+            transition: 0.5s;
+        }
     }
 
     &__nav-links {
@@ -81,7 +76,6 @@
             opacity 0.3s ease;
         transform: translateX(100%);
         opacity: 0;
-        pointer-events: none;
 
         &--open {
             transform: translateX(0);
@@ -148,7 +142,6 @@
                 opacity 0.3s ease;
             transform: translateX(-100%);
             opacity: 0;
-            pointer-events: none;
 
             &--open {
                 transform: translateX(0);

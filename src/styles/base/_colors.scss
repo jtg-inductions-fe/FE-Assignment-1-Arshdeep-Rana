@@ -1,0 +1,27 @@
+@use '../abstracts/variables/colors' as *;
+
+.purple {
+    color: $slate-blue;
+}
+
+.yellow {
+    color: $kournikova-yellow;
+}
+
+.white {
+    color: $white;
+}
+
+.black {
+    color: $black;
+}
+
+.orange {
+    color: $outrageous-orange;
+}
+
+.gradient-left-to-right {
+    background: linear-gradient(to left, $slate-blue, $french-rose);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
