@@ -46,6 +46,14 @@
         padding: 4rem;
         gap: 2rem;
     }
+
+    &__card-1:hover,
+    &__card-2:hover,
+    &__card-3:hover {
+        box-shadow:
+            0px 0px 0px 0px #0000001a,
+            0px 41px 89px 0px #0000001a;
+    }
 }
 
 .services-card-1__title,
@@ -72,6 +80,8 @@
         &__card-1,
         &__card-2,
         &__card-3 {
+            padding: 4rem 8rem;
+            margin-top: 6rem;
             height: 44.3rem;
             width: 28.8rem;
             max-height: 44.3rem;
@@ -84,6 +94,7 @@
 @include desktop {
     .services {
         padding: 0 15rem 0 15rem;
+        margin-top: 16rem;
         flex-direction: row;
 
         &__card-1,

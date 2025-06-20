@@ -1,0 +1,82 @@
+@use '../abstracts/mixins/' as *;
+@use '../abstracts/variables/' as *;
+
+.container {
+    margin-top: 10rem;
+    padding: 0 1.6rem;
+    @include flex(center, center);
+    flex-direction: column;
+    gap: 3.2rem;
+
+    &__content {
+        @include flex(center, center);
+        flex-direction: column;
+        text-align: center;
+        gap: 1.6rem;
+    }
+
+    &__title {
+        @include text(
+            $circular-md,
+            $french-rose,
+            1.6rem,
+            $font-weight-400,
+            0.5rem
+        );
+    }
+
+    &__sub-title {
+        @include text($circular-md, $black, 3.2rem, $font-weight-400, 0);
+    }
+
+    &__desc {
+        @include text($inter, $midnight-express, 1.6rem, $font-weight-400, 0);
+    }
+}
+
+@include tablet {
+    .container {
+        padding: 0 9.6rem;
+        gap: 6.4rem;
+
+        &__title {
+            font-size: 2.3rem;
+        }
+
+        &__sub-title {
+            font-size: 4rem;
+        }
+
+        &__desc {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+@include desktop {
+    .container {
+        flex-direction: row;
+
+        &__content {
+            align-items: baseline;
+            text-align: left;
+        }
+
+        &__title {
+            font-size: 2.3rem;
+        }
+
+        &__sub-title {
+            font-size: 4.4rem;
+        }
+
+        &__desc {
+            font-size: 1.8rem;
+        }
+    }
+
+    .container.travel {
+        padding-left: 0;
+        justify-content: start;
+    }
+}
