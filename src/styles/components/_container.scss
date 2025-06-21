@@ -1,0 +1,15 @@
+@use '../abstracts/' as *;
+.container {
+    margin-left: $container-margin-mobile-x;
+    margin-right: $container-margin-mobile-x;
+
+    @include tablet {
+        margin-left: $container-margin-tablet-x;
+        margin-right: $container-margin-tablet-x;
+    }
+
+    @include desktop {
+        margin-left: $container-margin-desktop-x;
+        margin-right: $container-margin-desktop-x;
+    }
+}
