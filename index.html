@@ -13,35 +13,46 @@
     </head>
     <body>
         <!-- Header section -->
-        <header class="header">
+        <header class="header white-bg">
             <!-- Website logo -->
             <a href="#" class="header__logo">
-                <span class="icon-Vector-9 gradient-left-to-right"></span>
+                <span class="icon-Vector-9 gradient-purple-to-pink"></span>
             </a>
 
             <!--Hamburger button-->
-            <button class="header__hamburger">
-                <span class="icon-Vector purple"></span>
+            <button class="header__hamburger js-header__hamburger">
+                <span class="icon-Vector purple-text js-sidebar__icon"></span>
             </button>
 
             <!--Navigation Links-->
-            <div class="header__nav-links nav-links">
-                <a href="#">Home</a>
-                <a href="#">Discover</a>
-                <a href="#">Special Deals</a>
-                <a href="#">Contact</a>
-                <a href="#" class="nav-links__login">Log In</a>
-                <a href="#" class="nav-links__signup">Sign Up</a>
-            </div>
-
-            <!--Auth btns-->
-            <div class="header__auth">
-                <button class="header__login">Log In</button>
-                <button class="header__signup">Sign Up</button>
-            </div>
+            <nav
+                class="header__nav-links js-header__nav-links nav-links white-bg grey-text circular-md font-weight-400"
+            >
+                <div
+                    class="nav-links__container white-bg js-nav-links__container"
+                >
+                    <a href="#">Home</a>
+                    <a href="#">Discover</a>
+                    <a href="#">Special Deals</a>
+                    <a href="#">Contact</a>
+                </div>
+                <!--Auth btns-->
+                <div class="header__auth">
+                    <button
+                        class="header__login circular-md primary-button white-bg black-text font-weight-400"
+                    >
+                        Log In
+                    </button>
+                    <button
+                        class="header__signup circular-md primary-button purple-bg white-text font-weight-400"
+                    >
+                        Sign Up
+                    </button>
+                </div>
+            </nav>
 
             <!--Placeholder div to center logo in tablet-->
-            <div class="header__placeholder"></div>
+            <!-- <div class="header__placeholder"></div> -->
         </header>
 
         <script type="module" src="./src/script/index.js"></script>

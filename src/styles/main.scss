@@ -1,6 +1,7 @@
 @use 'vendors';
 @use 'base';
-@use 'abstracts' as *;
+@use 'abstracts';
 @use 'themes';
 @use 'pages';
 @use 'layout';
+@use 'components';

@@ -1,76 +1,100 @@
 @use '../abstracts/variables/' as *;
 @use '../abstracts/mixins/' as *;
 
-.icon-cross {
-    color: $slate-blue;
-}
-
-// Mobile-first
 .header {
     width: 100vw;
+
     position: fixed;
-    z-index: $z-index + 10;
+    z-index: $z-index-header;
     backdrop-filter: blur(20px);
-    background-color: transparent;
+
     padding: 3.9rem 1.5rem;
-    @include flex(space-between, center);
+    @include tablet {
+        padding: 3.6rem 6.2rem;
+    }
+
+    @include desktop {
+        padding: 6.2rem 15rem;
+    }
+
+    @include flex(space-between);
 
     &__logo,
     &__hamburger {
-        z-index: $z-index + 10; // 60
-
-        @include flex(center, center);
+        @include flex();
         font-size: 4rem;
     }
+    @include tablet {
+        &__hamburger {
+            order: 1;
+        }
 
-    &__auth,
-    &__placeholder {
-        display: none;
+        &__logo {
+            order: 2;
+            position: absolute;
+            left: 50%;
+        }
+
+        &__auth {
+            order: 3;
+            @include flex();
+        }
+    }
+    @include desktop {
+        &__logo {
+            order: 1;
+        }
+
+        &__nav-links {
+            order: 2;
+        }
+
+        &__auth {
+            order: 3;
+        }
+
+        &__hamburger {
+            display: none;
+        }
     }
 
-    // Auth buttons styling
-
-    &__login {
-        @include text($circular-md, $black, 1.4rem, $font-weight-700, 0);
-        @include button($white, 10rem, none, 1.6rem 3.2rem);
+    @include tablet {
+        &__auth {
+            display: block;
+            @include flex($gap: 0.2rem);
+            flex-wrap: nowrap;
+        }
     }
 
-    &__signup {
-        @include text($circular-md, $white, 1.4rem, $font-weight-700, 0);
-        @include button($slate-blue, 10rem, none, 1.5rem 3.2rem);
+    &__auth {
+        font-size: 1.4rem;
     }
 
     &__nav-links {
-        z-index: $z-index + 10;
+        z-index: $z-index-nav-links;
         position: absolute;
-        width: 4rem;
-        background-color: $white;
-        box-shadow: 2px 2px 12px 2px $midnight-express;
+        box-shadow: $box-shadow-hover-effect;
         top: 10rem;
-        @include flex(center, center);
-        flex-direction: column;
-        gap: 5rem;
+        @include flex($flex-direction: column, $gap: 5rem);
+
         width: 50%;
-        padding: 2rem 0;
+        padding: 5rem 0;
         height: fit-content;
         right: 2rem;
         border-radius: 2rem;
         a {
-            @include text(
-                $circular-md,
-                $midnight-express,
-                1.4rem,
-                $font-weight-400,
-                0
-            );
+            font-size: 1.4rem;
+            color: inherit;
         }
         a:hover {
             color: $black;
             transition: 0.5s;
         }
-    }
 
-    &__nav-links {
+        .nav-links__container {
+            @include flex($flex-direction: column, $gap: 5rem);
+        }
+
         transition:
             transform 0.3s ease,
             opacity 0.3s ease;
@@ -83,60 +107,50 @@
             pointer-events: auto;
         }
     }
-}
 
-// Tablet
-@include tablet {
-    .header {
-        padding: 3.6rem 6.2rem;
+    &__auth {
+        @include flex($flex-direction: column);
+    }
 
-        // Display
-        &__auth {
-            display: block;
-            @include flex(center, center);
-            flex-wrap: nowrap;
-            gap: 0.2rem;
-        }
+    @include tablet {
+        &__nav-links {
+            padding: 0;
+            opacity: 1;
+            transition: none;
+            transform: none;
+            max-width: fit-content;
+            white-space: nowrap;
+            position: relative;
 
-        // Flex ordering
-
-        &__hamburger {
-            order: 1;
-        }
-
-        &__logo {
-            order: 2;
-            align-self: center;
-        }
-
-        &__placeholder {
-            display: block;
-            height: 4rem;
-            width: 4rem;
+            box-shadow: none;
+            @include flex(space-between, $gap: 5%);
+            border-radius: 0;
+            top: auto;
+            left: auto;
+            right: auto;
             order: 3;
         }
 
-        &__auth {
+        &__nav-links .nav-links__container {
             position: absolute;
-            right: 6.4rem;
+            z-index: $z-index-nav-links;
+            width: fit-content;
+            top: 8rem;
+            box-shadow: $box-shadow-hover-effect;
+            @include flex($flex-direction: column, $gap: 5rem);
+            height: fit-content;
+            right: 50vw;
+            border-radius: 2rem;
+            padding: 50% 55%;
         }
 
-        &__nav-links {
-            z-index: $z-index + 10;
-            position: absolute;
-            width: 4rem;
-            background-color: $white;
-            box-shadow: 2px 2px 12px 2px $midnight-express;
-            top: 10rem;
-            @include flex(center, center);
-            flex-direction: column;
-            gap: 5rem;
-            width: 35%;
-            height: fit-content;
-            left: 6.4rem;
-            border-radius: 2rem;
+        &__auth {
+            position: relative;
+            @include flex;
         }
-        &__nav-links {
+    }
+    @include tablet {
+        &__nav-links .nav-links__container {
             transition:
                 transform 0.3s ease,
                 opacity 0.3s ease;
@@ -151,75 +165,46 @@
         }
     }
 
-    .nav-links {
-        &__login,
-        &__signup {
-            display: none;
-        }
-    }
-}
-
-// Desktop
-@include desktop {
-    .header {
-        // Hide
-        padding: 7.2rem 15rem;
-        &__hamburger {
-            display: none;
-        }
-
-        &__placeholder {
-            display: block;
-            order: 3;
-        }
-
-        // Show
+    @include desktop {
         &__nav-links {
             padding: 0;
             opacity: 1;
             transition: none;
             transform: none;
-            min-width: 48.2rem;
+            width: 70%;
+            white-space: nowrap;
             position: relative;
-            background-color: inherit;
+
             box-shadow: none;
-            @include flex(space-between, center);
-            height: 1.7rem;
+            @include flex(space-between);
             border-radius: 0;
-            flex-direction: row;
             top: auto;
             left: auto;
             right: auto;
         }
 
+        &__nav-links .nav-links__container {
+            @include flex($gap: 6.4rem);
+        }
         &__auth {
-            @include flex(center, center);
-            position: absolute;
-            right: 10rem;
-        }
-
-        // Flex ordering
-        &__logo {
-            order: 1;
-        }
-
-        &__nav-links {
-            order: 2;
-        }
-
-        &__auth {
-            order: 3;
-        }
-
-        &__signup:hover {
-            background-color: $french-rose;
-            transition: 0.7s;
+            @include flex();
         }
     }
-    .nav-links {
-        &__login,
-        &__signup {
-            display: none;
-        }
+
+    &__signup:hover {
+        background-color: $french-rose;
+        transition: 0.7s;
+        box-shadow: $box-shadow-hover-effect;
     }
+
+    &__login:hover {
+        color: $slate-blue;
+        transition: 0.7s;
+        box-shadow: $box-shadow-hover-effect;
+    }
+}
+
+// This class : no-scroll is to handle scroll when sidebar is open
+.no-scroll {
+    overflow: hidden;
 }

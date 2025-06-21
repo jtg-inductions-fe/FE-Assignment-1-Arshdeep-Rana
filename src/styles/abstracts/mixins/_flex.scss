@@ -1,5 +1,21 @@
-@mixin flex($justify-content, $align-items) {
+/* 
+    Mixin for display flex
+    $justify-content - justify-content property of flex containers (default : center)
+    $align-items - align-items property of flex containers (default : center)
+    $flex-direction- flex-direction property of flex containers (default : row)
+    $gap - gap property of flex containers (default : 1.6rem)
+    Note : 1.6rem is the most consistent gap in flex containers in this website design
+*/
+
+@mixin flex(
+    $justify-content: center,
+    $align-items: center,
+    $flex-direction: row,
+    $gap: 1.6rem
+) {
     display: flex;
     justify-content: $justify-content;
     align-items: $align-items;
+    flex-direction: $flex-direction;
+    gap: $gap;
 }
