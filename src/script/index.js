@@ -39,3 +39,6 @@ function toggleSidebar() {
 }
 
 hamburger.addEventListener('click', toggleSidebar);
+overlay.addEventListener('click', () => {
+    if (isSidebarOpen) toggleSidebar();
+});
