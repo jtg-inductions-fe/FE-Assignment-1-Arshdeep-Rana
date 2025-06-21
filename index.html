@@ -12,28 +12,49 @@
         <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
     </head>
     <body>
-        <!-- This is for demo purposes only, will be replaced in other branches -->
+        <!-- Header section -->
+        <header class="header white-bg">
+            <!-- Website logo -->
+            <a href="#" class="header__logo">
+                <span class="icon-Vector-9 gradient-purple-to-pink"></span>
+            </a>
 
-        <div class="circular-md">
-            Some text here of circular std family medium
-        </div>
+            <!--Hamburger button-->
+            <button class="header__hamburger js-header__hamburger">
+                <span class="icon-Vector purple-text js-sidebar__icon"></span>
+            </button>
 
-        <div class="circular-bold1">Some text of circular std family small</div>
+            <!--Navigation Links-->
+            <nav
+                class="header__nav-links js-header__nav-links nav-links white-bg grey-text circular-md font-weight-400"
+            >
+                <div
+                    class="nav-links__container white-bg js-nav-links__container"
+                >
+                    <a href="#">Home</a>
+                    <a href="#">Discover</a>
+                    <a href="#">Special Deals</a>
+                    <a href="#">Contact</a>
+                </div>
+                <!--Auth btns-->
+                <div class="header__auth">
+                    <button
+                        class="header__login circular-md primary-button white-bg black-text font-weight-400"
+                    >
+                        Log In
+                    </button>
+                    <button
+                        class="header__signup circular-md primary-button purple-bg white-text font-weight-400"
+                    >
+                        Sign Up
+                    </button>
+                </div>
+            </nav>
 
-        <div class="circular-bold2">Some text of circular large family</div>
+            <!--Placeholder div to center logo in tablet-->
+            <!-- <div class="header__placeholder"></div> -->
+        </header>
 
-        <div class="sub-heading">some text here of inter font family</div>
-        <span class="icon-play-circle5-1 purple"></span>
-        <span class="icon-Vector-7 yellow"></span>
-        <img src="/assets/images/hero/company4.png" alt="" />
-        <div class="orange">Some text of orange color</div>
-        <span class="icon-Group-8"
-            ><span class="path1 purple"></span><span class="path2 white"></span
-        ></span>
-
-        <div class="pink">Some text of pink color</div>
-        <div class="yellow">Some text of yellow color</div>
-        <div class="purple">Some text of purple color</div>
         <script type="module" src="./src/script/index.js"></script>
 
         <!-- For browsers that have JS diabled  -->

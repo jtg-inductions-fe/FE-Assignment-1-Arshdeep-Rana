@@ -1,0 +1,9 @@
+@use '../abstracts/variables/' as *;
+
+.circular-md {
+    font-family: $circular-md;
+}
+
+.font-weight-400 {
+    font-weight: $font-weight-400;
+}

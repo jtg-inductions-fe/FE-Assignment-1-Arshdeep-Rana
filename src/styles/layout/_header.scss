@@ -1,0 +1,210 @@
+@use '../abstracts/variables/' as *;
+@use '../abstracts/mixins/' as *;
+
+.header {
+    width: 100vw;
+
+    position: fixed;
+    z-index: $z-index-header;
+    backdrop-filter: blur(20px);
+
+    padding: 3.9rem 1.5rem;
+    @include tablet {
+        padding: 3.6rem 6.2rem;
+    }
+
+    @include desktop {
+        padding: 6.2rem 15rem;
+    }
+
+    @include flex(space-between);
+
+    &__logo,
+    &__hamburger {
+        @include flex();
+        font-size: 4rem;
+    }
+    @include tablet {
+        &__hamburger {
+            order: 1;
+        }
+
+        &__logo {
+            order: 2;
+            position: absolute;
+            left: 50%;
+        }
+
+        &__auth {
+            order: 3;
+            @include flex();
+        }
+    }
+    @include desktop {
+        &__logo {
+            order: 1;
+        }
+
+        &__nav-links {
+            order: 2;
+        }
+
+        &__auth {
+            order: 3;
+        }
+
+        &__hamburger {
+            display: none;
+        }
+    }
+
+    @include tablet {
+        &__auth {
+            display: block;
+            @include flex($gap: 0.2rem);
+            flex-wrap: nowrap;
+        }
+    }
+
+    &__auth {
+        font-size: 1.4rem;
+    }
+
+    &__nav-links {
+        z-index: $z-index-nav-links;
+        position: absolute;
+        box-shadow: $box-shadow-hover-effect;
+        top: 10rem;
+        @include flex($flex-direction: column, $gap: 5rem);
+
+        width: 50%;
+        padding: 5rem 0;
+        height: fit-content;
+        right: 2rem;
+        border-radius: 2rem;
+        a {
+            font-size: 1.4rem;
+            color: inherit;
+        }
+        a:hover {
+            color: $black;
+            transition: 0.5s;
+        }
+
+        .nav-links__container {
+            @include flex($flex-direction: column, $gap: 5rem);
+        }
+
+        transition:
+            transform 0.3s ease,
+            opacity 0.3s ease;
+        transform: translateX(100%);
+        opacity: 0;
+
+        &--open {
+            transform: translateX(0);
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+
+    &__auth {
+        @include flex($flex-direction: column);
+    }
+
+    @include tablet {
+        &__nav-links {
+            padding: 0;
+            opacity: 1;
+            transition: none;
+            transform: none;
+            max-width: fit-content;
+            white-space: nowrap;
+            position: relative;
+
+            box-shadow: none;
+            @include flex(space-between, $gap: 5%);
+            border-radius: 0;
+            top: auto;
+            left: auto;
+            right: auto;
+            order: 3;
+        }
+
+        &__nav-links .nav-links__container {
+            position: absolute;
+            z-index: $z-index-nav-links;
+            width: fit-content;
+            top: 8rem;
+            box-shadow: $box-shadow-hover-effect;
+            @include flex($flex-direction: column, $gap: 5rem);
+            height: fit-content;
+            right: 50vw;
+            border-radius: 2rem;
+            padding: 50% 55%;
+        }
+
+        &__auth {
+            position: relative;
+            @include flex;
+        }
+    }
+    @include tablet {
+        &__nav-links .nav-links__container {
+            transition:
+                transform 0.3s ease,
+                opacity 0.3s ease;
+            transform: translateX(-100%);
+            opacity: 0;
+
+            &--open {
+                transform: translateX(0);
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
+    }
+
+    @include desktop {
+        &__nav-links {
+            padding: 0;
+            opacity: 1;
+            transition: none;
+            transform: none;
+            width: 70%;
+            white-space: nowrap;
+            position: relative;
+
+            box-shadow: none;
+            @include flex(space-between);
+            border-radius: 0;
+            top: auto;
+            left: auto;
+            right: auto;
+        }
+
+        &__nav-links .nav-links__container {
+            @include flex($gap: 6.4rem);
+        }
+        &__auth {
+            @include flex();
+        }
+    }
+
+    &__signup:hover {
+        background-color: $french-rose;
+        transition: 0.7s;
+        box-shadow: $box-shadow-hover-effect;
+    }
+
+    &__login:hover {
+        color: $slate-blue;
+        transition: 0.7s;
+        box-shadow: $box-shadow-hover-effect;
+    }
+}
+
+// This class : no-scroll is to handle scroll when sidebar is open
+.no-scroll {
+    overflow: hidden;
+}

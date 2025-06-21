@@ -1,0 +1,6 @@
+@use '../abstracts/mixins/' as *;
+// Primary buttons are : Sign Up, Log In, Explore the world, Get Started, Watch Demo, arrow buttons
+
+.primary-button {
+    @include button();
+}
