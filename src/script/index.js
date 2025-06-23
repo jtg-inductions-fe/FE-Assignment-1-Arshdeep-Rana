@@ -24,13 +24,13 @@ const iconEl = document.querySelector('.js-sidebar__icon');
  * Stores the previous isTablet state for detecting breakpoint changes.
  * @type {boolean}
  */
-let wasTablet = window.matchMedia('(min-width: 581px)').matches;
+let wasTablet = window.matchMedia('(min-width: 600px)').matches;
 
 /**
  * Sets or updates the responsive class on <body> based on the current viewport width.
  * Also resets sidebar state only if breakpoint (mobile/tablet) has changed.
  *
- * - Adds class 'is-tablet' if the width is greater than 581px
+ * - Adds class 'is-tablet' if the width is greater than 600px
  * - Removes it otherwise
  * - Resets sidebar, scroll, and icon state ONLY when transitioning between mobile and tablet
  *
@@ -38,7 +38,7 @@ let wasTablet = window.matchMedia('(min-width: 581px)').matches;
  * @returns {void}
  */
 function setResponsiveClass() {
-    const isTablet = window.matchMedia('(min-width: 581px)').matches;
+    const isTablet = window.matchMedia('(min-width: 600px)').matches;
     document.body.classList.toggle('is-tablet', isTablet);
 
     // Only reset sidebar and icon if breakpoint changed
