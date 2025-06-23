@@ -1,2 +1,5 @@
-$z-index-header: 50;
-$z-index-nav-links: 60;
+$z-index: (
+    header: 50,
+    nav-links: 80,
+    hamburger: 80,
+);

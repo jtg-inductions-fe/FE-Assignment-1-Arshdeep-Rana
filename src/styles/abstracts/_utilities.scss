@@ -1,6 +1,14 @@
-@use '../abstracts/variables/colors' as *;
+@use './variables/' as *;
 
-// Classes for color property of text
+.circular-md {
+    font-family: $circular-md;
+}
+.overflow-hidden {
+    overflow: hidden;
+}
+.font-weight-400 {
+    font-weight: $font-weight-400;
+}
 
 .purple-text {
     color: $slate-blue;
@@ -23,9 +31,8 @@
 }
 
 .grey-text {
-    color: $midnight-express;
+    color: $midnight-express-50;
 }
-// Classes for background-color property
 
 .purple-bg {
     background-color: $slate-blue;
@@ -54,15 +61,9 @@
 .transparent-bg {
     background-color: transparent;
 }
-// Gradients
+
 .gradient-purple-to-pink {
     background: linear-gradient(to left, $slate-blue, $french-rose);
     background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-
-.box-shadow-btns {
-    box-shadow:
-        0px 0px 0px 0px #0000001a,
-        0px 41px 89px 0px #0000001a;
 }

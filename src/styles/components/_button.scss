@@ -1,6 +1,18 @@
-@use '../abstracts/mixins/' as *;
-// Primary buttons are : Sign Up, Log In, Explore the world, Get Started, Watch Demo, arrow buttons
+@use '../abstracts/' as *;
+.button {
+    cursor: pointer;
+    &:focus-visible {
+        outline: 2px solid $midnight-express-50;
+    }
+}
 
 .primary-button {
-    @include button();
+    @extend .button;
+    border-radius: 10rem;
+    padding: 1.6rem 2.3rem;
+}
+
+.primary-button:hover {
+    box-shadow: $box-shadow-hover-effect;
+    transition: 0.4s;
 }
