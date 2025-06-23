@@ -50,7 +50,7 @@
     }
 
     &__auth {
-        font-size: $font-size-md;
+        font-size: $font-size-xs;
         @include flex($flex-direction: column, $gap: 1rem);
 
         @include tablet {
@@ -85,7 +85,7 @@
             opacity 0.3s ease;
 
         a {
-            font-size: $font-size-md;
+            font-size: $font-size-s;
             color: inherit;
             transition: 0.5s;
             &:hover {
