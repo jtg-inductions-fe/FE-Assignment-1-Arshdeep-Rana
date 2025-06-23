@@ -56,19 +56,20 @@
             text-align: left;
             align-items: baseline;
             gap: 5rem;
-            width: 42rem;
+            max-width: 42rem;
         }
     }
 
     &__explore-button {
         font-size: $font-size-xs;
         border: 1px solid #eeeeee;
+        @include flex($gap: 0.5rem);
         i {
             font-size: 2.4rem;
         }
 
         @include desktop {
-            font-size: $font-size-s;
+            font-size: $font-size-sm;
         }
     }
 
@@ -115,7 +116,6 @@
             flex-direction: row;
         }
         &__get-started {
-            @extend .primary-button;
             width: 100%;
             padding: 2.4rem 3.2rem;
             @include tablet {
@@ -129,9 +129,9 @@
         }
         &__watch-demo {
             border: 1px solid #eeeeee;
-            @extend .primary-button;
             width: 100%;
             padding: 2.4rem 3.2rem;
+            @include flex($gap: 0.5rem);
             i {
                 font-size: 2.4rem;
                 @include tablet {
@@ -152,7 +152,7 @@
 .co-partners {
     padding-top: 6rem;
     width: 100%;
-    @include flex(center, center);
+    @include flex;
     flex-wrap: wrap;
     gap: 2rem;
     &__img {
@@ -160,9 +160,10 @@
         width: fit-content;
     }
     @include tablet {
-        padding: 13.4rem 19.5rem;
-        width: 100%;
-        @include flex(center, center);
+        margin: auto;
+        max-width: 70%;
+        padding: 13.4rem 0;
+        @include flex;
         flex-wrap: wrap;
         gap: 2rem;
         &__img {
