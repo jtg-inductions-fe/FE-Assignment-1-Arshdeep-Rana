@@ -7,12 +7,22 @@
 }
 
 .primary-button {
-    @extend .button;
     border-radius: 10rem;
     padding: 1.6rem 2.3rem;
+    background-color: $slate-blue;
+    color: $white;
+    font-family: $circular-md;
+    transition: 0.4s;
+}
+.secondary-button {
+    border-radius: 10rem;
+    padding: 1.6rem 2.3rem;
+    background-color: $white;
+    font-family: $circular-md;
+    transition: 0.4s;
 }
 
-.primary-button:hover {
+.primary-button:hover,
+.secondary-button:hover {
     box-shadow: $box-shadow-hover-effect;
-    transition: 0.4s;
 }

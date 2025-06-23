@@ -8,9 +8,7 @@
     backdrop-filter: blur(20px);
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
-
     @include flex(space-between, $flex-wrap: nowrap);
-
     @include tablet {
         padding-top: 3.2rem;
         padding-bottom: 3.2rem;
@@ -89,23 +87,11 @@
         a {
             font-size: $font-size-md;
             color: inherit;
-
+            transition: 0.5s;
             &:hover {
                 color: $black;
-                transition: 0.5s;
             }
         }
-
-        .nav-links__container {
-            @include flex($flex-direction: column, $gap: 5rem);
-        }
-
-        &--open {
-            transform: translateX(0);
-            opacity: 1;
-            pointer-events: auto;
-        }
-
         @include tablet {
             padding: 0;
             opacity: 1;
@@ -115,37 +101,13 @@
             white-space: nowrap;
             position: relative;
             box-shadow: none;
-            @include flex(space-between, $gap: 5%);
+            @include flex(space-between);
             border-radius: 0;
             top: auto;
             left: auto;
             right: auto;
             order: 3;
         }
-
-        @include tablet {
-            .nav-links__container {
-                position: absolute;
-                width: 100vw;
-                top: 8rem;
-                box-shadow: $box-shadow-hover-effect;
-                @include flex($gap: 10%);
-                height: fit-content;
-                padding: 4rem;
-                transition:
-                    transform 0.3s ease,
-                    opacity 0.3s ease;
-                transform: translateX(-100%);
-                opacity: 0;
-                right: -6.4rem;
-                &--open {
-                    transform: translateX(0);
-                    opacity: 1;
-                    pointer-events: auto;
-                }
-            }
-        }
-
         @include desktop {
             padding: 0;
             opacity: 1;
@@ -163,10 +125,37 @@
             order: 2;
         }
 
-        @include desktop {
-            .nav-links__container {
+        .nav-links__container {
+            @include flex($flex-direction: column, $gap: 5rem);
+            transition:
+                transform 0.3s ease,
+                opacity 0.3s ease;
+            @include tablet {
+                position: absolute;
+                width: 100vw;
+                top: 8rem;
+                box-shadow: $box-shadow-hover-effect;
+                @include flex($gap: 10%);
+                height: fit-content;
+                padding: 4rem;
+                transform: translateX(-100%);
+                opacity: 0;
+                right: -6.4rem;
+                &--open {
+                    transform: translateX(0);
+                    opacity: 1;
+                    pointer-events: auto;
+                }
+            }
+            @include desktop {
                 @include flex($gap: 6.4rem);
             }
+        }
+
+        &--open {
+            transform: translateX(0);
+            opacity: 1;
+            pointer-events: auto;
         }
     }
 
