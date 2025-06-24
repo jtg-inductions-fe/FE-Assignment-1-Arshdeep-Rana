@@ -100,3 +100,12 @@
         font-size: 4.4rem;
     }
 }
+.section-desc {
+    font-size: $font-size-sm;
+    @include tablet {
+        font-size: $font-size-md;
+    }
+    @include desktop {
+        font-size: $font-size-md;
+    }
+}
