@@ -78,7 +78,7 @@
 }
 
 .section-heading {
-    font-size: $font-size-s;
+    font-size: $font-size-sm;
     letter-spacing: 0.4rem;
 
     @include tablet {
@@ -96,14 +96,14 @@
     @include tablet {
         font-size: $font-size-xl;
     }
-    @include tablet {
+    @include desktop {
         font-size: 4.4rem;
     }
 }
 
 .card {
     border-radius: 3.2rem;
-    border: 1px solid $midnight-express-50;
+    border: 1px solid #1918251a;
 }
 
 .card:hover {
