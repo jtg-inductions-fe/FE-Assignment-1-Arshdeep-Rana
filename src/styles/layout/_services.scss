@@ -32,7 +32,7 @@
     }
     &__card {
         text-align: center;
-        @extend .card;
+        line-height: normal;
         @include flex(
             $flex-direction: column,
             $flex-wrap: nowrap,
@@ -57,8 +57,7 @@
             max-width: 38.6rem;
             max-height: 44.3rem;
         }
-        @include desktop {
-        }
+
         .card__title {
             font-size: 2.4rem;
             @include tablet {
@@ -71,12 +70,17 @@
         .card__desc {
             font-size: 1.8rem;
         }
+
+        .card__content-wrapper {
+            @include flex($gap: 3.2rem);
+        }
     }
     &__cards-container {
         width: 100%;
         @include flex($flex-direction: column, $gap: 1.6rem, $flex-wrap: wrap);
         @include tablet {
             flex-direction: row;
+            padding-top: 3rem;
         }
         @include desktop {
             width: fit-content;
@@ -89,4 +93,5 @@
 .card__img {
     height: 6.4rem;
     width: 6.4rem;
+    object-fit: contain;
 }
