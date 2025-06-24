@@ -162,7 +162,9 @@
     &__img {
         max-height: 2rem;
         width: fit-content;
-        object-fit: contain;
+        img {
+            object-fit: contain;
+        }
     }
     @include tablet {
         margin: auto;
