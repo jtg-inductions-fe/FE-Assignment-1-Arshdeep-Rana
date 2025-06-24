@@ -39,6 +39,9 @@
         @include tablet {
             padding: 6rem 5rem 0 5rem;
         }
+        @include desktop {
+            padding-top: 2rem;
+        }
     }
 
     &__content {
@@ -53,6 +56,7 @@
         }
 
         @include desktop {
+            padding-top: 1.5rem;
             text-align: left;
             align-items: baseline;
             gap: 5rem;
@@ -62,7 +66,7 @@
 
     &__explore-button {
         font-size: $font-size-xs;
-        border: 1px solid #eeeeee;
+        border: $grey-border;
         @include flex($gap: 0.5rem);
         i {
             font-size: 2.4rem;
@@ -128,7 +132,7 @@
             }
         }
         &__watch-demo {
-            border: 1px solid #eeeeee;
+            border: $grey-border;
             width: 100%;
             padding: 2.4rem 3.2rem;
             @include flex($gap: 0.5rem);
