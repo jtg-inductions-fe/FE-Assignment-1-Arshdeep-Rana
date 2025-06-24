@@ -101,6 +101,16 @@
     }
 }
 
+.section-desc {
+    font-size: $font-size-sm;
+    @include tablet {
+        font-size: $font-size-md;
+    }
+    @include desktop {
+        font-size: $font-size-md;
+    }
+}
+
 .card {
     border-radius: 3.2rem;
     border: $grey-border;

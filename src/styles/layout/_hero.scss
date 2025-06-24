@@ -160,8 +160,9 @@
     flex-wrap: wrap;
     gap: 2rem;
     &__img {
-        height: 2rem;
+        max-height: 2rem;
         width: fit-content;
+        object-fit: contain;
     }
     @include tablet {
         margin: auto;
