@@ -1,0 +1,21 @@
+@use '../variables/breakpoints' as *;
+
+/* 
+    Mixin for responsiveness on tablet screens
+    Contains a media query for screens greater than breakpoint for mobile and less than that of desktop 
+*/
+@mixin tablet {
+    @media (width <= map-get($breakpoints, tablet)) and (width > map-get($breakpoints, mobile)) {
+        @content;
+    }
+}
+
+/* 
+    Mixin for responsiveness on desktop screens
+    Contains a media query for screens greater than breakpoint for tablet 
+*/
+@mixin desktop {
+    @media (width > map-get($breakpoints, tablet)) {
+        @content;
+    }
+}

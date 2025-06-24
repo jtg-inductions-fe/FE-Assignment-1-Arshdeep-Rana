@@ -1,0 +1,24 @@
+@use '../abstracts/' as *;
+.button {
+    border-radius: 10rem;
+    padding: 1.6rem 2.3rem;
+    font-family: $circular-md;
+    cursor: pointer;
+    transition: 0.4s;
+    &:focus-visible {
+        outline: 2px solid $midnight-express-50;
+    }
+
+    &--primary {
+        background-color: $slate-blue;
+        color: $white;
+    }
+    &--secondary {
+        background-color: $white;
+        color: $midnight-express-50;
+    }
+}
+
+.button:hover {
+    box-shadow: $box-shadow-hover-effect;
+}
