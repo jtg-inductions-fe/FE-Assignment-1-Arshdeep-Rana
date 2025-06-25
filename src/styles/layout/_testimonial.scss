@@ -10,8 +10,6 @@
 
     @include tablet {
         padding-top: 10rem;
-        background-image: url('/public/assets/images/testimonial/testimonial-bg.png');
-        background-position: center;
     }
 }
 
@@ -38,9 +36,6 @@
     }
     &__heading-rating-wrapper {
         @include flex($flex-direction: column, $gap: 3.2rem);
-    }
-    &__desc {
-        padding: 0 10rem;
     }
 }
 
