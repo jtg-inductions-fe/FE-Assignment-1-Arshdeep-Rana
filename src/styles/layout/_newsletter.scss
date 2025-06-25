@@ -1,0 +1,116 @@
+@use '../abstracts/' as *;
+.newsletter {
+    position: relative;
+    padding-top: 2rem;
+    text-align: center;
+
+    @include tablet {
+        margin-top: 10rem;
+    }
+    @include desktop {
+        margin-top: 15rem;
+    }
+
+    &__headings-wrapper {
+        @include flex($flex-direction: column, $gap: 3.2rem);
+    }
+
+    &-wrapper {
+        padding: 0 3.2rem;
+        @include flex($flex-direction: column, $gap: 6.4rem);
+        @include tablet {
+            background-color: $custard-yellow;
+            border-radius: 3.2rem;
+            padding: 12.8rem 6.4rem;
+        }
+        @include desktop {
+            background-color: $custard-yellow;
+            border-radius: 3.2rem;
+            padding: 12.8rem 6.4rem;
+        }
+    }
+
+    &__form {
+        width: 100%;
+        @include flex($flex-direction: column, $gap: 3.2rem);
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        @include desktop {
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+    }
+    &__input {
+        color: $dark-grey;
+        @include flex($justify-content: start, $gap: 1.6rem);
+        width: 100%;
+        border-radius: 1.6rem;
+        padding: 2.4rem 3.2rem;
+        transition: 0.4s;
+        background-color: $white;
+        flex-wrap: nowrap;
+        input {
+            font-size: 1.4rem;
+            width: 80%;
+            height: 100%;
+
+            @include tablet {
+                font-size: 2.3rem;
+            }
+            @include desktop {
+                font-size: 2.3rem;
+            }
+        }
+        @include tablet {
+            width: 65%;
+        }
+        @include desktop {
+            width: 75%;
+        }
+    }
+    &__input:hover,
+    &__input:focus {
+        box-shadow: $box-shadow-hover-effect;
+    }
+    &__mail-icon {
+        font-size: 2rem;
+        @include tablet {
+            font-size: 3rem;
+        }
+        @include desktop {
+            font-size: 3rem;
+        }
+    }
+
+    &__button {
+        padding: 2.4rem 6.4rem;
+        width: 100%;
+        border-radius: 1.6rem;
+        font-size: 1.6rem;
+        @include tablet {
+            font-size: 2.3rem;
+            width: fit-content;
+        }
+        @include desktop {
+            font-size: 2.3rem;
+            width: fit-content;
+        }
+    }
+    &__triangles {
+        position: absolute;
+        top: -1rem;
+        left: -1rem;
+        display: none;
+        @include tablet {
+            max-width: 17.9rem;
+            max-height: 17.6rem;
+            display: block;
+        }
+    }
+}
