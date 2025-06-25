@@ -10,6 +10,10 @@
 
     @include tablet {
         padding-top: 10rem;
+        background-image: url('/public/assets/images/testimonial/testimonial-bg.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
     }
 }
 
