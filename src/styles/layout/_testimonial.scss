@@ -1,0 +1,102 @@
+@use '../abstracts/' as *;
+
+.testimonial {
+    padding-top: 14rem;
+    @include flex($flex-direction: column, $gap: 6.4rem);
+
+    &__headings-wrapper {
+        @include flex($flex-direction: column, $gap: 1.6rem);
+    }
+
+    @include tablet {
+        padding-top: 10rem;
+        background-image: url('/public/assets/images/testimonial/testimonial-bg.png');
+        background-position: center;
+    }
+}
+
+.slide {
+    text-align: center;
+    @include flex($flex-direction: column, $gap: 6.4rem);
+    &__pic {
+        height: 12.8rem;
+        width: 12.8rem;
+        border-radius: 100%;
+    }
+    &__content {
+        @include flex($flex-direction: column, $gap: 6.4rem);
+    }
+    &__heading {
+        font-size: 2.8rem;
+    }
+    &__sub-heading {
+        font-size: 2.3rem;
+    }
+    &__rating {
+        font-size: 3.2rem;
+        @include flex($gap: 1rem);
+    }
+    &__heading-rating-wrapper {
+        @include flex($flex-direction: column, $gap: 3.2rem);
+    }
+    &__desc {
+        padding: 0 10rem;
+    }
+}
+
+.splide {
+    &__arrows,
+    &__pagination {
+        position: relative;
+    }
+
+    &__pagination {
+        padding-top: 5rem;
+    }
+
+    &__arrows {
+        padding-top: 15rem;
+        @include tablet {
+            padding-top: 0;
+            position: static;
+        }
+        @include desktop {
+            padding-top: 0;
+            position: static;
+        }
+    }
+
+    &__arrow {
+        &--prev {
+            border: $grey-border;
+        }
+
+        &--prev,
+        &--next {
+            width: 6.4rem;
+            height: 6.4rem;
+
+            @include tablet {
+                width: 10rem;
+                height: 10rem;
+            }
+
+            @include desktop {
+                width: 10rem;
+                height: 10rem;
+            }
+        }
+    }
+
+    &__pagination {
+        @include flex($gap: 2rem);
+        &__page {
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+
+        .is-active {
+            background-color: $french-rose;
+        }
+    }
+}

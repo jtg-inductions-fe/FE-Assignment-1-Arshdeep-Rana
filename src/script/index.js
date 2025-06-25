@@ -1,5 +1,6 @@
+import '@splidejs/splide/css';
+import Splide from '@splidejs/splide';
 import '../styles/main.scss';
-
 const BREAKPOINT_TABLET = '(min-width: 600px)';
 
 const hamburger = document.querySelector('.js-header__hamburger');
@@ -71,3 +72,8 @@ function init() {
 }
 
 init();
+
+new Splide('.splide', {
+    rewind: true,
+    perPage: 1,
+}).mount();
