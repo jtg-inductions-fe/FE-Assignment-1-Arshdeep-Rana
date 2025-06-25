@@ -66,7 +66,6 @@
 
     &__explore-button {
         font-size: $font-size-xs;
-        border: $grey-border;
         @include flex($gap: 0.5rem);
         i {
             font-size: 2.4rem;
@@ -132,7 +131,6 @@
             }
         }
         &__watch-demo {
-            border: $grey-border;
             width: 100%;
             padding: 2.4rem 3.2rem;
             @include flex($gap: 0.5rem);
