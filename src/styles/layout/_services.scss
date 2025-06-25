@@ -4,7 +4,7 @@
 
 .services {
     position: relative;
-    padding-top: 6rem;
+    padding-top: 6.2rem;
     text-align: center;
     @include flex(
         $flex-direction: column,
@@ -37,12 +37,6 @@
     &__card {
         .card__title {
             font-size: $font-size-lg;
-            // width: 100%;
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 3;
-            overflow: hidden;
-            line-clamp: 3;
             @include tablet {
                 font-size: $font-size-lxl;
             }
@@ -53,6 +47,11 @@
         .card__desc {
             font-size: $font-size-md;
             line-height: 2.6rem;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+            line-clamp: 3;
         }
 
         .card__content-wrapper {
