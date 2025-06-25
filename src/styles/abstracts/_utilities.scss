@@ -100,13 +100,3 @@
         font-size: 4.4rem;
     }
 }
-
-.card {
-    border-radius: 3.2rem;
-    border: $grey-border;
-    transition: 0.5s;
-}
-
-.card:hover {
-    box-shadow: $box-shadow-hover-effect;
-}
