@@ -39,13 +39,7 @@
     }
 
     &--sm {
-        @include flex(
-            $flex-direction: column,
-            $justify-content: start,
-            $flex-wrap: nowrap,
-            $gap: 1.6rem
-        );
-        max-height: 15.1rem;
+        min-height: 15.1rem;
         padding: 3.2rem;
         width: 100%;
         flex-basis: 100%;
@@ -60,7 +54,7 @@
         }
     }
 
-    &--sm-horizontal {
+    &--horizontal {
         width: 100%;
         max-height: 29rem;
         @include flex(
@@ -68,6 +62,7 @@
             $align-items: baseline,
             $gap: 3.2rem
         );
+        text-align: left;
         padding: 3.2rem;
 
         @include tablet {
@@ -76,7 +71,20 @@
             align-items: center;
         }
         @include desktop {
+            flex-direction: row;
+            justify-content: start;
             max-height: 16.4rem;
+            align-items: center;
         }
+    }
+
+    &__content-center {
+        white-space: nowrap;
+        @include flex(
+            $flex-direction: column,
+            $justify-content: start,
+            $flex-wrap: nowrap,
+            $gap: 1.6rem
+        );
     }
 }
