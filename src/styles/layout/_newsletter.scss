@@ -56,15 +56,15 @@
         background-color: $white;
         flex-wrap: nowrap;
         input {
-            font-size: 1.4rem;
+            font-size: $font-size-xs;
             width: 100%;
             height: 100%;
 
             @include tablet {
-                font-size: 2.3rem;
+                font-size: $font-size-lg;
             }
             @include desktop {
-                font-size: 2.3rem;
+                font-size: $font-size-lg;
             }
         }
         @include tablet {
@@ -85,12 +85,12 @@
         border: $grey-border;
     }
     &__mail-icon {
-        font-size: 2rem;
+        font-size: $font-size-md;
         @include tablet {
-            font-size: 3rem;
+            font-size: $font-size-lxl;
         }
         @include desktop {
-            font-size: 3rem;
+            font-size: $font-size-lxl;
         }
     }
 
@@ -100,11 +100,11 @@
         border-radius: 1.6rem;
         font-size: 1.6rem;
         @include tablet {
-            font-size: 2.3rem;
+            font-size: $font-size-lg;
             width: fit-content;
         }
         @include desktop {
-            font-size: 2.3rem;
+            font-size: $font-size-lg;
             width: fit-content;
         }
     }
