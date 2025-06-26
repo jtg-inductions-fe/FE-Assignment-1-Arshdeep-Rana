@@ -1,0 +1,40 @@
+@use '../abstracts/' as *;
+.card {
+    border-radius: 3.2rem;
+    border: $grey-border;
+    transition: 0.5s;
+
+    &:hover {
+        box-shadow: $box-shadow-hover-effect;
+    }
+
+    &--lg {
+        text-align: center;
+        line-height: normal;
+
+        @include flex(
+            $flex-direction: column,
+            $justify-content: start,
+            $flex-wrap: nowrap,
+            $gap: 3.2rem
+        );
+        padding: 3.2rem;
+        width: 100%;
+        flex-basis: 100%;
+        align-self: stretch;
+        min-height: 27.9rem;
+
+        @include tablet {
+            padding: 6.4rem;
+            gap: 6.4rem;
+            max-width: 28.8rem;
+            max-height: 44.3rem;
+        }
+        @include desktop {
+            padding: 6.4rem;
+            gap: 6.4rem;
+            min-width: 38.6rem;
+            min-height: 44.3rem;
+        }
+    }
+}

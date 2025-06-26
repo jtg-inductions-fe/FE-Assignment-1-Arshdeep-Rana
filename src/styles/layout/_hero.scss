@@ -45,21 +45,21 @@
     }
 
     &__content {
-        @include flex($flex-direction: column, $gap: 2rem);
+        @include flex($flex-direction: column, $gap: 1.6rem);
         padding: 0 1rem;
         text-align: center;
         line-height: normal;
 
         @include tablet {
             gap: 4.4rem;
-            padding: 2rem 16%;
+            padding: 3rem 16rem;
         }
 
         @include desktop {
-            padding-top: 1.5rem;
+            padding-top: 0;
             text-align: left;
             align-items: baseline;
-            gap: 5rem;
+            gap: 5.2rem;
             max-width: 42rem;
         }
     }
@@ -68,26 +68,29 @@
         font-size: $font-size-xs;
         @include flex($gap: 0.5rem);
         i {
-            font-size: 2.4rem;
+            font-size: $font-size-lg;
         }
 
         @include desktop {
+            margin-top: 1.2rem;
             font-size: $font-size-sm;
         }
     }
 
     &__heading {
-        font-size: $font-size-xl;
+        font-size: $font-size-3xl;
         @include tablet {
-            font-size: $font-size-xxl;
+            font-size: $font-size-6xl;
             padding: 0;
         }
         @include desktop {
-            font-size: $font-size-xxxl;
+            font-size: $font-size-7xl;
         }
     }
     &__sub-heading {
+        padding-top: 1rem;
         font-size: $font-size-xs;
+        @include line-clamp(4);
         @include tablet {
             padding: 0 6rem;
             font-size: $font-size-md;
@@ -100,63 +103,61 @@
     &__buttons {
         font-size: $font-size-xs;
     }
-    .actions {
-        padding-top: 2rem;
-        width: 100%;
-        @include flex(
-            $flex-direction: column,
-            $gap: 2.4rem,
-            $flex-wrap: nowrap
-        );
-        white-space: nowrap;
+}
+.actions {
+    padding-top: 2.9rem;
+    width: 100%;
+    @include flex($flex-direction: column, $gap: 2.4rem, $flex-wrap: nowrap);
+    white-space: nowrap;
 
+    @include tablet {
+        width: fit-content;
+        flex-direction: row;
+        padding-top: 1rem;
+    }
+    @include desktop {
+        width: fit-content;
+        flex-direction: row;
+        padding-top: 2rem;
+    }
+    &__get-started {
+        width: 100%;
+        padding: 2.4rem 3.2rem;
         @include tablet {
             width: fit-content;
-            flex-direction: row;
+            padding: 1.6rem 3.2rem;
         }
         @include desktop {
             width: fit-content;
-            flex-direction: row;
+            padding: 1.6rem 3.2rem;
         }
-        &__get-started {
-            width: 100%;
-            padding: 2.4rem 3.2rem;
+    }
+    &__watch-demo {
+        width: 100%;
+        padding: 2.4rem 3.2rem;
+        @include flex($gap: 0.5rem);
+        i {
+            font-size: $font-size-lg;
             @include tablet {
-                width: fit-content;
-                padding: 1.6rem 3.2rem;
-            }
-            @include desktop {
-                width: fit-content;
-                padding: 1.6rem 3.2rem;
+                font-size: $font-size-md;
             }
         }
-        &__watch-demo {
-            width: 100%;
-            padding: 2.4rem 3.2rem;
-            @include flex($gap: 0.5rem);
-            i {
-                font-size: 2.4rem;
-                @include tablet {
-                    font-size: 2rem;
-                }
-            }
-            @include tablet {
-                width: fit-content;
-                padding: 1.6rem 3.2rem;
-            }
-            @include desktop {
-                width: fit-content;
-                padding: 1.6rem 3.2rem;
-            }
+        @include tablet {
+            width: fit-content;
+            padding: 1.6rem 3.2rem;
+        }
+        @include desktop {
+            width: fit-content;
+            padding: 1.6rem 3.2rem;
         }
     }
 }
 .co-partners {
-    padding-top: 6rem;
+    padding-top: 6.2rem;
     width: 100%;
     @include flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 3rem;
     &__img {
         height: 2rem;
         width: fit-content;
@@ -164,17 +165,17 @@
     @include tablet {
         margin: auto;
         max-width: 70%;
-        padding: 13.4rem 0;
+        padding: 13.4rem 0 0 0;
         @include flex;
         flex-wrap: wrap;
-        gap: 2rem;
+        gap: 3rem;
         &__img {
             height: 3rem;
             width: fit-content;
         }
     }
     @include desktop {
-        padding: 10rem 0rem;
+        padding: 12rem 0 0 0;
         width: 100%;
         @include flex($justify-content: space-around);
         flex-wrap: wrap;

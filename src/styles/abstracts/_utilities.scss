@@ -1,3 +1,4 @@
+@use './mixins/' as *;
 @use './variables/' as *;
 
 .circular-md {
@@ -74,4 +75,28 @@
     background: linear-gradient(to left, $slate-blue, $french-rose);
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.section-heading {
+    font-size: $font-size-sm;
+    letter-spacing: 0.4rem;
+
+    @include tablet {
+        font-size: $font-size-lg;
+    }
+
+    @include desktop {
+        font-size: $font-size-lg;
+    }
+}
+.section-sub-heading {
+    font-size: $font-size-2xl;
+    line-height: normal;
+
+    @include tablet {
+        font-size: $font-size-3xl;
+    }
+    @include desktop {
+        font-size: $font-size-4xl;
+    }
 }

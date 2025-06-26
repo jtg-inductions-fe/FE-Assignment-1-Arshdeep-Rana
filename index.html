@@ -16,12 +16,18 @@
         <header class="header white-bg container">
             <!-- Website logo -->
             <a href="#" class="header__logo">
-                <i class="icon-Vector-9 gradient-purple-to-pink"></i>
+                <i
+                    class="icon-Vector-9 gradient-purple-to-pink"
+                    aria-hidden="true"
+                ></i>
             </a>
 
             <!--Hamburger button-->
             <button class="header__hamburger js-header__hamburger">
-                <i class="icon-Vector purple-text js-sidebar__icon"></i>
+                <i
+                    class="icon-Vector purple-text js-sidebar__icon"
+                    aria-hidden="true"
+                ></i>
             </button>
 
             <!--Navigation Links-->
@@ -64,7 +70,7 @@
                 <div class="hero__triangles">
                     <img
                         src="/assets/images/hero/triangles.png"
-                        alt="Triangles Pointing upwards."
+                        aria-hidden="true"
                     />
                 </div>
 
@@ -73,7 +79,10 @@
                     <span class="explore-button__content pink-text"
                         >Explore the world!</span
                     >
-                    <i class="icon-work-1 explore-button__icon pink-text"></i>
+                    <i
+                        class="icon-work-1 explore-button__icon pink-text"
+                        aria-hidden="true"
+                    ></i>
                 </button>
 
                 <h1 class="hero__heading circular-md">
@@ -82,20 +91,21 @@
                     of the world
                 </h1>
 
-                <h3 class="hero__sub-heading grey-text inter">
+                <p class="hero__sub-heading grey-text inter">
                     We always make our customer happy by providing as many
                     choices as possible
-                </h3>
+                </p>
 
                 <div class="hero__buttons actions">
                     <button class="actions__get-started button--primary button">
                         Get Started
                     </button>
                     <button
-                        class="actions__watch-demo watch__demo button button--secondary"
+                        class="actions__watch-demo watch__demo button button--secondary purple-text"
                     >
                         <i
                             class="icon-play-circle5-1 watch-demo__icon purple-text"
+                            aria-hidden="true"
                         ></i>
                         <span class="watch-demo__text purple-text"
                             >Watch Demo</span
@@ -116,19 +126,19 @@
             <div class="co-partners__img">
                 <img
                     src="/assets/images/hero/company2.png"
-                    alt="Company logo of Expedia, it's a logo and text, the logo is of a airplane taking off"
+                    alt="Company logo of Expedia, it's a logo and text, the logo is of a airplane taking off."
                 />
             </div>
             <div class="co-partners__img">
                 <img
                     src="/assets/images/hero/company3.png"
-                    alt="Company logo of Booking.com, bold text only"
+                    alt="Company logo of Booking.com, bold text only."
                 />
             </div>
             <div class="co-partners__img">
                 <img
                     src="/assets/images/hero/company4.png"
-                    alt="Company logo of airbnb, logo and text(lowercase), the logo is shaped like uppercase a"
+                    alt="Company logo of airbnb, logo and text(lowercase), the logo is shaped like uppercase a."
                 />
             </div>
             <div class="co-partners__img">
@@ -136,6 +146,88 @@
                     src="/assets/images/hero/company5.png"
                     alt="Company logo of Rbitz , logo and text(uppercase and bold), the logo is 2 arrows pointing towards end of each other, kind of like a loop."
                 />
+            </div>
+        </section>
+
+        <!-- Services section -->
+        <section class="services container">
+            <div class="services__content">
+                <!-- Services heading -->
+                <h2 class="section-heading pink-text circular-md">SERVICES</h2>
+
+                <!-- Services sub heading -->
+                <p class="section-sub-heading circular-md">
+                    Our top value categories for you
+                </p>
+            </div>
+
+            <!-- Services card container -->
+            <div class="services__cards-container">
+                <!-- Services tour guide card -->
+                <div class="services__card card card--lg">
+                    <!-- Services card 1 image -->
+                    <div class="card__img">
+                        <img
+                            src="/assets/images/services/destination.png"
+                            alt="Globe with two pin points connected by dotted line."
+                        />
+                    </div>
+
+                    <div class="card__content-wrapper">
+                        <!-- Services card 1 heading -->
+                        <h3 class="card__title circular-md">Best Tour Guide</h3>
+
+                        <!-- Services card 1 description -->
+                        <p class="card__desc inter grey-text">
+                            What looked like a small patch of purple grass,
+                            above five feet.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="services__card card card--lg">
+                    <!-- Services card 2 image -->
+                    <div class="card__img">
+                        <img
+                            src="/assets/images/services/booking.png"
+                            alt="Icon of a transaction and a check on calender depicting easy booking."
+                        />
+                    </div>
+
+                    <div class="card__content-wrapper">
+                        <!-- Services card 2 heading -->
+                        <h3 class="card__title circular-md">Easy Booking</h3>
+
+                        <!-- Services card 2 description -->
+                        <p class="card__desc inter grey-text">
+                            Square, was moving across the sand in their
+                            direction.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="services__card card card--lg">
+                    <!-- Services card 3 image -->
+                    <div class="card__img">
+                        <img
+                            src="/assets/images/services/cloudy.png"
+                            alt="Icon of a cloud with sun on its corner."
+                        />
+                    </div>
+
+                    <div class="card__content-wrapper">
+                        <!-- Services card 3 heading -->
+                        <h3 class="card__title circular-md">
+                            Weather Forecast
+                        </h3>
+
+                        <!-- Services card 3 description -->
+                        <p class="card__desc inter grey-text">
+                            What looked like a small patch of purple grass,
+                            above five feet.
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
 
