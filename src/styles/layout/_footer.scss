@@ -1,28 +1,30 @@
 @use '../abstracts/' as *;
 
 .footer {
-    padding-top: 8rem;
+    padding-top: 7rem;
 
     @include tablet {
         @include flex(start, baseline, column, 6.4rem, nowrap);
+        padding-top: 7rem;
     }
 
     @include desktop {
-        padding-top: 28rem;
+        padding-top: 20rem;
         @include flex(space-between, baseline, row, 6.4rem, nowrap);
     }
     &__logo {
         font-size: $font-size-xl;
+        @include flex;
     }
     &__heading {
         font-size: $font-size-lg;
     }
     &__mobile {
-        padding-top: 8.5rem;
+        padding-top: 9.5rem;
         @include flex(
             $flex-direction: column,
             $align-items: baseline,
-            $gap: 7.1rem
+            $gap: 6.5rem
         );
         width: 100%;
         @include tablet {
@@ -49,12 +51,17 @@
             $align-items: baseline,
             $gap: 3.2rem
         );
+        @include desktop {
+            max-width: 57rem;
+        }
     }
     &__heading-wrapper {
-        @include flex(start, $gap: 1.6rem);
+        @include flex($gap: 1.6rem);
+        width: fit-content;
     }
     &__desc {
         font-size: $font-size-sm;
+        font-weight: 400;
         @include tablet {
             font-size: $font-size-lg;
         }
@@ -68,6 +75,9 @@
             $flex-direction: column,
             $gap: 3.2rem
         );
+        @include tablet {
+            gap: 3rem;
+        }
     }
     &__accordian-wrapper {
         width: 100%;
