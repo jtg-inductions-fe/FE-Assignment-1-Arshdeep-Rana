@@ -39,13 +39,14 @@
     }
 
     &--sm {
+        white-space: nowrap;
         @include flex(
             $flex-direction: column,
             $justify-content: start,
             $flex-wrap: nowrap,
             $gap: 1.6rem
         );
-        max-height: 15.1rem;
+        min-height: 15.1rem;
         padding: 3.2rem;
         width: 100%;
         flex-basis: 100%;
