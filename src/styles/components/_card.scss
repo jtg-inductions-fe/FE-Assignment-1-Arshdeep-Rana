@@ -1,71 +1,41 @@
-@use '../abstracts/mixins/' as *;
-@use '../abstracts/variables/' as *;
-
-.card-container {
-    width: 100%;
-    @include flex(center, center);
-    flex-direction: column;
-    gap: 1.6rem;
-    flex-wrap: wrap;
-}
-
-.travel-card {
-    position: relative;
-    border: 1px solid #1918251a;
-    width: 100%;
+@use '../abstracts/' as *;
+.card {
     border-radius: 3.2rem;
-    @include flex(center, center);
-    flex-direction: column;
-    gap: 1.6rem;
+    border: $grey-border;
+    transition: 0.5s;
 
-    height: 15.1rem;
-    padding: 3.2rem;
-
-    &__title {
-        @include text(
-            $circular-md,
-            $outrageous-orange,
-            3.5rem,
-            $font-weight-400,
-            0
-        );
+    &:hover {
+        box-shadow: $box-shadow-hover-effect;
     }
 
-    &__desc {
-        @include text($inter, $black, 1.8rem, $font-weight-400, 0);
-    }
-}
-
-.travel-card:hover {
-    box-shadow:
-        0px 0px 0px 0px #0000001a,
-        0px 41px 89px 0px #0000001a;
-}
-
-@include tablet {
-    .travel-card {
-        width: 40rem;
-    }
-    .card-container {
-        flex-direction: row;
-    }
-}
-
-@include desktop {
-    .travel-card {
-        width: 20.9rem;
+    &--lg {
         text-align: center;
-        &__title {
-            font-size: 3.5rem;
-        }
+        line-height: normal;
 
-        &__sub-title {
-            font-size: 1.8rem;
+        @include flex(
+            $flex-direction: column,
+            $justify-content: start,
+            $flex-wrap: nowrap,
+            $gap: 3.2rem
+        );
+        padding: 3.2rem;
+        width: 100%;
+        flex-basis: 100%;
+        align-self: stretch;
+
+        @include tablet {
+            width: fit-content;
+            padding: 6.4rem;
+            gap: 6.4rem;
+            max-width: 28.8rem;
+            max-height: 44.3rem;
         }
-    }
-    .card-container {
-        flex-direction: row;
-        justify-content: start;
-        max-width: 45rem;
+        @include desktop {
+            width: fit-content;
+            padding: 6.4rem;
+            gap: 6.4rem;
+            max-width: 38.6rem;
+            max-height: 44.3rem;
+        }
     }
 }

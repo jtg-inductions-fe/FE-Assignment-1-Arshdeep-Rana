@@ -2,6 +2,15 @@
 
 .footer {
     padding-top: 8rem;
+
+    @include tablet {
+        @include flex(start, baseline, column, 6.4rem, nowrap);
+    }
+
+    @include desktop {
+        padding-top: 28rem;
+        @include flex(space-between, baseline, row, 6.4rem, nowrap);
+    }
     &__logo {
         font-size: $font-size-xl;
     }
@@ -46,6 +55,12 @@
     }
     &__desc {
         font-size: $font-size-sm;
+        @include tablet {
+            font-size: $font-size-lg;
+        }
+        @include desktop {
+            font-size: $font-size-lg;
+        }
     }
     &__content {
         @include flex(
@@ -68,6 +83,35 @@
             color: $slate-blue;
         }
     }
+
+    &__tablet {
+        width: 100%;
+        @include flex(space-between, baseline, row, 3.2rem, nowrap);
+        display: none;
+        @include tablet {
+            display: flex;
+        }
+        @include desktop {
+            display: flex;
+            width: fit-content;
+        }
+    }
+
+    &__column {
+        @include flex(start, left, column, 3.2rem, nowrap);
+
+        &-heading {
+            font-size: $font-size-lg;
+        }
+    }
+    &__list {
+        @include flex(start, left, column, 3.2rem, nowrap);
+        &-item {
+            font-size: $font-size-md;
+            color: $dark-grey;
+            @include flex(start, baseline, row, 0.8rem, wrap);
+        }
+    }
 }
 
 .panel {
@@ -83,5 +127,9 @@
             $gap: 2rem
         );
         font-size: $font-size-sm;
+        &-item {
+            width: 100%;
+            border-bottom: $grey-border;
+        }
     }
 }
