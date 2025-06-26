@@ -1,26 +1,35 @@
 @use '../abstracts/' as *;
 .newsletter {
     position: relative;
-    padding-top: 2rem;
+    padding-top: 0;
     text-align: center;
 
     @include tablet {
-        margin-top: 10rem;
+        padding-top: 2rem;
+        margin-top: 8rem;
     }
     @include desktop {
-        margin-top: 15rem;
+        padding-top: 2rem;
+        margin-top: 14.5rem;
     }
-
+    &__sub-heading {
+        @include desktop {
+            font-size: $font-size-xxl;
+        }
+    }
     &__headings-wrapper {
         @include flex($flex-direction: column, $gap: 3.2rem);
+        @include desktop {
+            padding: 0 11rem;
+        }
     }
 
     &-wrapper {
-        padding: 0 3.2rem;
+        padding: 2rem 3.2rem;
         @include flex($flex-direction: column, $gap: 6.4rem);
+        background-color: $custard-yellow;
+        border-radius: 3.2rem;
         @include tablet {
-            background-color: $custard-yellow;
-            border-radius: 3.2rem;
             padding: 12.8rem 6.4rem;
         }
         @include desktop {
@@ -56,15 +65,15 @@
         background-color: $white;
         flex-wrap: nowrap;
         input {
-            font-size: 1.4rem;
+            font-size: $font-size-xs;
             width: 100%;
             height: 100%;
 
             @include tablet {
-                font-size: 2.3rem;
+                font-size: $font-size-lg;
             }
             @include desktop {
-                font-size: 2.3rem;
+                font-size: $font-size-lg;
             }
         }
         @include tablet {
@@ -85,12 +94,12 @@
         border: $grey-border;
     }
     &__mail-icon {
-        font-size: 2rem;
+        font-size: $font-size-md;
         @include tablet {
-            font-size: 3rem;
+            font-size: $font-size-lxl;
         }
         @include desktop {
-            font-size: 3rem;
+            font-size: $font-size-lxl;
         }
     }
 
@@ -100,23 +109,12 @@
         border-radius: 1.6rem;
         font-size: 1.6rem;
         @include tablet {
-            font-size: 2.3rem;
+            font-size: $font-size-lg;
             width: fit-content;
         }
         @include desktop {
-            font-size: 2.3rem;
+            font-size: $font-size-lg;
             width: fit-content;
-        }
-    }
-    &__triangles {
-        position: absolute;
-        top: -1rem;
-        left: -1rem;
-        display: none;
-        @include tablet {
-            max-width: 17.9rem;
-            max-height: 17.6rem;
-            display: block;
         }
     }
 }
