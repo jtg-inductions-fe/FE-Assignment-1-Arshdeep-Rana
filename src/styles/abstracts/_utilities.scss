@@ -90,13 +90,13 @@
     }
 }
 .section-sub-heading {
-    font-size: 3.2rem;
+    font-size: $font-size-2xl;
     line-height: normal;
 
     @include tablet {
-        font-size: $font-size-xl;
+        font-size: $font-size-3xl;
     }
     @include desktop {
-        font-size: 4.4rem;
+        font-size: $font-size-4xl;
     }
 }

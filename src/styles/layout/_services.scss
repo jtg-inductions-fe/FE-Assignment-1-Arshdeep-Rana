@@ -20,17 +20,12 @@
         text-align: left;
         padding-top: 14rem;
         justify-content: space-between;
-        .services__card3 {
-            display: none;
-        }
     }
     &__content {
         @include flex($flex-direction: column, $gap: 1.8rem);
         @include desktop {
             align-items: baseline;
-            padding-top: 4rem;
-        }
-        @include desktop {
+            padding-top: 0;
             max-width: 40rem;
         }
     }
@@ -38,24 +33,20 @@
         .card__title {
             font-size: $font-size-lg;
             @include tablet {
-                font-size: $font-size-lxl;
+                font-size: $font-size-xl;
             }
             @include desktop {
-                font-size: $font-size-lxl;
+                font-size: $font-size-xl;
             }
         }
         .card__desc {
             font-size: $font-size-md;
             line-height: 2.6rem;
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 3;
-            overflow: hidden;
-            line-clamp: 3;
+            @include line-clamp;
         }
 
         .card__content-wrapper {
-            @include flex($gap: 3.2rem);
+            @include flex($flex-direction: column, $gap: 3.2rem);
         }
     }
     &__cards-container {
@@ -77,4 +68,10 @@
     height: 6.4rem;
     width: 6.4rem;
     object-fit: contain;
+}
+
+.services__card:nth-last-child(1) {
+    @include desktop {
+        display: none;
+    }
 }

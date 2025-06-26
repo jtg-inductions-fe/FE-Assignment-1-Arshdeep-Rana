@@ -78,23 +78,19 @@
     }
 
     &__heading {
-        font-size: $font-size-xl;
+        font-size: $font-size-3xl;
         @include tablet {
-            font-size: $font-size-xxl;
+            font-size: $font-size-6xl;
             padding: 0;
         }
         @include desktop {
-            font-size: $font-size-xxxl;
+            font-size: $font-size-7xl;
         }
     }
     &__sub-heading {
         padding-top: 1rem;
         font-size: $font-size-xs;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 3;
-        overflow: hidden;
-        line-clamp: 4;
+        @include line-clamp(4);
         @include tablet {
             padding: 0 6rem;
             font-size: $font-size-md;
