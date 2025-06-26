@@ -92,7 +92,7 @@
         font-size: $font-size-xs;
         display: -webkit-box;
         -webkit-box-orient: vertical;
-        -webkit-line-clamp: 3;
+        -webkit-line-clamp: 4;
         overflow: hidden;
         line-clamp: 4;
         @include tablet {

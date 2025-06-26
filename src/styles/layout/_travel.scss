@@ -2,14 +2,14 @@
 @use '../abstracts/variables/' as *;
 
 .travel {
-    padding-top: 11rem;
+    padding-top: 8rem;
     @include flex($flex-direction: column, $gap: 3.2rem);
 
     @include tablet {
-        padding-top: 21rem;
+        padding-top: 13rem;
     }
     @include desktop {
-        padding-top: 13rem;
+        padding-top: 0rem;
         flex-direction: row;
         gap: 0;
         flex-wrap: nowrap;
@@ -17,11 +17,14 @@
     }
 
     &__content {
-        padding-top: 20rem;
+        padding-top: 0;
         text-align: center;
         @include flex($flex-direction: column, $gap: 3.2rem);
+        @include tablet {
+            padding-top: 2.5rem;
+        }
         @include desktop {
-            padding-top: 5rem;
+            padding-top: 18rem;
             max-width: 45rem;
             text-align: left;
         }
@@ -40,6 +43,7 @@
         @include flex($gap: 1.6rem, $flex-direction: column);
         @include tablet {
             padding-top: 3rem;
+            gap: 3.2rem;
         }
         @include desktop {
             padding-top: 3rem;
@@ -48,9 +52,19 @@
         .card {
             &__heading {
                 font-size: 3.5rem;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3;
+                overflow: hidden;
+                line-clamp: 3;
             }
             &__sub-heading {
                 font-size: $font-size-md;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
+                line-clamp: 2;
             }
         }
     }
@@ -64,6 +78,7 @@
         }
         @include desktop {
             flex-direction: row;
+            gap: 3.2rem;
         }
     }
 

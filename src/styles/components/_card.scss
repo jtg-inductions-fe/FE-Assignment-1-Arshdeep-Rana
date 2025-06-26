@@ -3,15 +3,14 @@
     border-radius: 3.2rem;
     border: $grey-border;
     transition: 0.5s;
+    text-align: center;
+    line-height: normal;
 
     &:hover {
         box-shadow: $box-shadow-hover-effect;
     }
 
     &--lg {
-        text-align: center;
-        line-height: normal;
-
         @include flex(
             $flex-direction: column,
             $justify-content: start,
@@ -36,6 +35,28 @@
             gap: 6.4rem;
             max-width: 38.6rem;
             max-height: 44.3rem;
+        }
+    }
+
+    &--sm {
+        @include flex(
+            $flex-direction: column,
+            $justify-content: start,
+            $flex-wrap: nowrap,
+            $gap: 1.6rem
+        );
+        max-height: 15.1rem;
+        padding: 3.2rem;
+        width: 100%;
+        flex-basis: 100%;
+        align-self: stretch;
+        @include tablet {
+            width: fit-content;
+            max-width: 40rem;
+        }
+        @include desktop {
+            width: fit-content;
+            max-width: 20.9rem;
         }
     }
 }
