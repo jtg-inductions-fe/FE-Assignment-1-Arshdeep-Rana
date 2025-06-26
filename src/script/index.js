@@ -73,6 +73,7 @@ function init() {
 
 init();
 
+// Splide JS
 new Splide('.splide', {
     rewind: true,
     perPage: 1,
