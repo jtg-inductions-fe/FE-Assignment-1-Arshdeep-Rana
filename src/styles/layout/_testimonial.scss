@@ -34,7 +34,7 @@
         @include flex($flex-direction: column, $gap: 6rem);
     }
     &__heading {
-        font-size: $font-size-lxl;
+        font-size: $font-size-xl;
     }
     &__sub-heading {
         font-size: $font-size-lg;
@@ -49,6 +49,7 @@
 }
 
 .splide {
+    width: 100%;
     &__arrows,
     &__pagination {
         position: relative;
@@ -66,6 +67,7 @@
 
     &__arrows {
         padding-top: 15rem;
+        @include flex;
         @include tablet {
             padding-top: 0;
             position: static;

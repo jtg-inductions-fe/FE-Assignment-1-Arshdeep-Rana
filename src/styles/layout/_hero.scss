@@ -78,23 +78,19 @@
     }
 
     &__heading {
-        font-size: $font-size-xl;
+        font-size: $font-size-3xl;
         @include tablet {
-            font-size: $font-size-xxl;
+            font-size: $font-size-6xl;
             padding: 0;
         }
         @include desktop {
-            font-size: $font-size-xxxl;
+            font-size: $font-size-7xl;
         }
     }
     &__sub-heading {
         padding-top: 1rem;
         font-size: $font-size-xs;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 4;
-        overflow: hidden;
-        line-clamp: 4;
+        @include line-clamp(4);
         @include tablet {
             padding: 0 6rem;
             font-size: $font-size-md;
@@ -163,10 +159,9 @@
     flex-wrap: wrap;
     gap: 3rem;
     &__img {
-        max-height: 2rem;
-        width: fit-content;
+        height: 2rem;
+
         img {
-            height: 2rem;
             object-fit: contain;
         }
     }
@@ -174,13 +169,14 @@
         margin: auto;
         max-width: 70%;
         padding: 13.4rem 0 0 0;
-        @include flex($flex-wrap: wrap);
-        gap: 3.5rem;
+        @include flex;
+        flex-wrap: wrap;
+        gap: 3rem;
         &__img {
-            max-height: fit-content;
+            height: 3rem;
             max-width: fit-content;
             img {
-                height: 3rem;
+                object-fit: contain;
             }
         }
     }
@@ -189,9 +185,12 @@
         width: 100%;
         @include flex($justify-content: space-around);
         flex-wrap: wrap;
-        img {
+        height: fit-content;
+        &__img {
             height: 3.2rem;
-            width: fit-content;
+            img {
+                object-fit: contain;
+            }
         }
     }
 }
