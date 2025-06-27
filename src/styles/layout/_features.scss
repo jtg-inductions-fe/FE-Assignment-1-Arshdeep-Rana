@@ -1,0 +1,91 @@
+@use '../abstracts/' as *;
+
+.features {
+    padding-top: 10rem;
+    @include flex($flex-direction: column, $gap: 10rem);
+    text-align: center;
+
+    @include tablet {
+        padding-top: 13.1rem;
+        gap: 6.4rem;
+    }
+    @include desktop {
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        padding-top: 12.6rem;
+        justify-content: space-between;
+        gap: 10rem;
+    }
+    &__headings-wrapper {
+        @include flex($flex-direction: column, $gap: 1.6rem);
+        @include desktop {
+            align-items: baseline;
+        }
+    }
+
+    &__img {
+        max-width: 35rem;
+        max-height: 43.8rem;
+        @include tablet {
+            max-width: 69.3rem;
+            max-height: 86.9rem;
+        }
+        @include desktop {
+            flex: 1;
+            max-width: 69.3rem;
+            max-height: 86.9rem;
+        }
+    }
+    &__content {
+        .section-desc {
+            @include tablet {
+                padding: 0 5rem;
+            }
+        }
+        @include flex($flex-direction: column, $gap: 3.2rem);
+
+        @include desktop {
+            max-width: 55.6rem;
+            align-items: baseline;
+            text-align: left;
+        }
+    }
+
+    &__card-container {
+        padding-top: 2.9rem;
+        @include flex($flex-direction: column, $gap: 0.8rem, $flex-wrap: wrap);
+        width: 100%;
+        @include tablet {
+            padding-top: 3.2rem;
+        }
+        @include desktop {
+            padding-top: 3.5rem;
+            gap: 1.6rem;
+        }
+    }
+
+    &__card {
+        &-text-wrapper {
+            @include flex(
+                $flex-direction: column,
+                $gap: 0.8rem,
+                $align-items: baseline
+            );
+        }
+        &-heading {
+            font-size: $font-size-lg;
+        }
+        &-sub-heading {
+            font-size: $font-size-md;
+            @include line-clamp(3);
+        }
+        &-icon {
+            font-size: $font-size-5xl;
+            color: $white;
+            min-width: 10rem;
+            min-height: 10rem;
+            border-radius: 3.2rem;
+            @include flex;
+        }
+    }
+}
