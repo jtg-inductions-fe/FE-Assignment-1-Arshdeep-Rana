@@ -18,29 +18,33 @@
             $gap: 3.2rem
         );
         padding: 3.2rem;
-        width: 100%;
         flex-basis: 100%;
         align-self: stretch;
+        min-height: 27.9rem;
 
         @include tablet {
-            width: fit-content;
             padding: 6.4rem;
             gap: 6.4rem;
             max-width: 28.8rem;
-            max-height: 44.3rem;
+            min-height: 44.3rem;
         }
         @include desktop {
-            width: fit-content;
             padding: 6.4rem;
             gap: 6.4rem;
             max-width: 38.6rem;
-            max-height: 44.3rem;
+            min-height: 44.3rem;
         }
     }
 
     &--sm {
+        @include flex(
+            $flex-direction: column,
+            $flex-wrap: nowrap,
+            $justify-content: space-between,
+            $gap: 1.6rem
+        );
         min-height: 15.1rem;
-        padding: 3.2rem;
+        padding: 3.2rem 0;
         width: 100%;
         flex-basis: 100%;
         align-self: stretch;
