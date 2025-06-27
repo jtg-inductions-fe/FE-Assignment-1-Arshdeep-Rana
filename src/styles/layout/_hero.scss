@@ -159,10 +159,9 @@
     flex-wrap: wrap;
     gap: 3rem;
     &__img {
-        max-height: 2rem;
-        width: fit-content;
+        height: 2rem;
+
         img {
-            height: 2rem;
             object-fit: contain;
         }
     }
@@ -174,10 +173,10 @@
         flex-wrap: wrap;
         gap: 3rem;
         &__img {
-            max-height: fit-content;
+            height: 3rem;
             max-width: fit-content;
             img {
-                height: 3rem;
+                object-fit: contain;
             }
         }
     }
@@ -186,9 +185,12 @@
         width: 100%;
         @include flex($justify-content: space-around);
         flex-wrap: wrap;
-        img {
+        height: fit-content;
+        &__img {
             height: 3.2rem;
-            width: fit-content;
+            img {
+                object-fit: contain;
+            }
         }
     }
 }
