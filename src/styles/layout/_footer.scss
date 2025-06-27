@@ -14,7 +14,7 @@
         @include flex(space-between, flex-start, row, 6.4rem, nowrap);
     }
     &__logo {
-        font-size: $font-size-xl;
+        font-size: $font-size-3xl;
         @include flex;
     }
     &__heading {
@@ -44,7 +44,7 @@
         border-radius: 100%;
         @include flex;
         padding: 0;
-        font-size: 1.5rem;
+        font-size: $font-size-sm;
     }
     &__travlog {
         @include flex(

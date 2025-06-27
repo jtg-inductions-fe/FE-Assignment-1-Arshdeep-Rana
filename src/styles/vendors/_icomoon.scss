@@ -27,7 +27,12 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
+.icon-Vector-14::before {
+    content: '\e900';
+}
+.icon-Vector-13::before {
+    content: '\e901';
+}
 .icon-Vector-12::before {
     content: '\e90f';
 }
