@@ -14,7 +14,7 @@
     }
     &__sub-heading {
         @include desktop {
-            font-size: $font-size-xxl;
+            font-size: $font-size-6xl;
         }
     }
     &__headings-wrapper {
@@ -96,10 +96,10 @@
     &__mail-icon {
         font-size: $font-size-md;
         @include tablet {
-            font-size: $font-size-lxl;
+            font-size: $font-size-xl;
         }
         @include desktop {
-            font-size: $font-size-lxl;
+            font-size: $font-size-xl;
         }
     }
 

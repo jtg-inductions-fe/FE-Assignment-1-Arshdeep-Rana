@@ -2,17 +2,16 @@
 @use '../abstracts/variables/' as *;
 
 .travel {
-    padding-top: 8rem;
+    padding-top: 7rem;
     @include flex($flex-direction: column, $gap: 3.2rem);
 
     @include tablet {
-        padding-top: 13rem;
+        padding-top: 12.9rem;
     }
     @include desktop {
-        padding-top: 0rem;
+        padding-top: 0.5rem;
         flex-direction: row;
         gap: 0;
-        flex-wrap: nowrap;
         justify-content: space-between;
     }
 
@@ -24,55 +23,39 @@
             padding-top: 2.5rem;
         }
         @include desktop {
-            padding-top: 18rem;
+            gap: 3.6rem;
+            padding-top: 14rem;
             max-width: 45rem;
             text-align: left;
         }
     }
 
     &__headings-wrapper {
-        @include flex($flex-direction: column, $gap: 2rem);
+        @include flex($flex-direction: column, $gap: 1.6rem);
         @include desktop {
             align-items: baseline;
+            gap: 1.2rem;
         }
     }
 
     &__cards-container {
         position: relative;
         width: 100%;
-        @include flex($gap: 1.6rem, $flex-direction: column);
+        @include flex($gap: 1.6rem, $flex-direction: column, $flex-wrap: wrap);
         @include tablet {
             padding-top: 3rem;
             gap: 3.2rem;
         }
         @include desktop {
-            padding-top: 3rem;
+            padding-top: 2.5rem;
             gap: 3.2rem;
-        }
-        .card {
-            &__heading {
-                font-size: 3.5rem;
-                display: -webkit-box;
-                -webkit-box-orient: vertical;
-                -webkit-line-clamp: 3;
-                overflow: hidden;
-                line-clamp: 3;
-            }
-            &__sub-heading {
-                font-size: $font-size-md;
-                display: -webkit-box;
-                -webkit-box-orient: vertical;
-                -webkit-line-clamp: 2;
-                overflow: hidden;
-                line-clamp: 2;
-            }
         }
     }
 
     &__cards-group1,
     &__cards-group2 {
         width: 100%;
-        @include flex($flex-direction: column, $gap: 1.6rem);
+        @include flex($flex-direction: column, $gap: 1.6rem, $flex-wrap: wrap);
         @include tablet {
             flex-direction: row;
         }
@@ -82,19 +65,15 @@
         }
     }
 
-    &__icon {
-        height: 12rem;
-        width: 12rem;
-        position: absolute;
-        top: -5rem;
-        right: -5rem;
-        z-index: 2;
-        display: none;
-        img {
-            object-fit: cover;
+    &__card {
+        &-heading {
+            font-size: $font-size-2xl;
+            @include line-clamp(3);
+            font-weight: $font-weight-700;
         }
-        @include desktop {
-            display: block;
+        &-sub-heading {
+            font-size: $font-size-md;
+            @include line-clamp(2);
         }
     }
 }
