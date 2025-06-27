@@ -50,17 +50,6 @@
             padding-top: 2.5rem;
             gap: 3.2rem;
         }
-        .card {
-            &__heading {
-                font-size: $font-size-2xl;
-                @include line-clamp(3);
-                font-weight: $font-weight-700;
-            }
-            &__sub-heading {
-                font-size: $font-size-md;
-                @include line-clamp(2);
-            }
-        }
     }
 
     &__cards-group1,
@@ -89,6 +78,18 @@
         }
         @include desktop {
             display: block;
+        }
+    }
+
+    &__card {
+        &-heading {
+            font-size: $font-size-2xl;
+            @include line-clamp(3);
+            font-weight: $font-weight-700;
+        }
+        &-sub-heading {
+            font-size: $font-size-md;
+            @include line-clamp(2);
         }
     }
 }
