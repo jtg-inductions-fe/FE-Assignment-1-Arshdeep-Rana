@@ -90,27 +90,13 @@
     }
 }
 .section-sub-heading {
-    font-size: 3.2rem;
+    font-size: $font-size-2xl;
     line-height: normal;
 
     @include tablet {
-        font-size: $font-size-xl;
+        font-size: $font-size-3xl;
     }
     @include desktop {
-        font-size: 4.4rem;
-    }
-}
-.section-desc {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;
-    overflow: hidden;
-    line-clamp: 5;
-    font-size: $font-size-sm;
-    @include tablet {
-        font-size: $font-size-md;
-    }
-    @include desktop {
-        font-size: $font-size-md;
+        font-size: $font-size-4xl;
     }
 }
