@@ -11,7 +11,7 @@
     }
     @include desktop {
         flex-direction: row-reverse;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         padding-top: 12.6rem;
         justify-content: space-between;
         gap: 10rem;
@@ -31,6 +31,7 @@
             max-height: 86.9rem;
         }
         @include desktop {
+            flex: 1;
             max-width: 69.3rem;
             max-height: 86.9rem;
         }
@@ -63,8 +64,8 @@
         }
     }
 
-    .card {
-        &__text-wrapper {
+    &__card {
+        &-text-wrapper {
             @include flex(
                 $flex-direction: column,
                 $gap: 0.8rem,
@@ -78,7 +79,7 @@
             font-size: $font-size-md;
             @include line-clamp(3);
         }
-        &__icon-container {
+        &-icon {
             font-size: $font-size-5xl;
             color: $white;
             width: 10rem;
