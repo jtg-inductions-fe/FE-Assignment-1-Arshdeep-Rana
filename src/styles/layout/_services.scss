@@ -30,7 +30,7 @@
         }
     }
     &__card {
-        .card__title {
+        &-title {
             font-size: $font-size-lg;
             @include tablet {
                 font-size: $font-size-xl;
@@ -39,13 +39,13 @@
                 font-size: $font-size-xl;
             }
         }
-        .card__desc {
+        &-desc {
             font-size: $font-size-md;
             line-height: 2.6rem;
             @include line-clamp;
         }
 
-        .card__content-wrapper {
+        &-content-wrapper {
             @include flex($flex-direction: column, $gap: 3.2rem);
         }
     }
@@ -59,7 +59,6 @@
         @include desktop {
             width: fit-content;
             flex-direction: row;
-            // flex-wrap: nowrap;
         }
     }
 }

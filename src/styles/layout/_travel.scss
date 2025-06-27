@@ -50,17 +50,6 @@
             padding-top: 2.5rem;
             gap: 3.2rem;
         }
-        .card {
-            &__heading {
-                font-size: $font-size-2xl;
-                @include line-clamp(3);
-                font-weight: $font-weight-700;
-            }
-            &__sub-heading {
-                font-size: $font-size-md;
-                @include line-clamp(2);
-            }
-        }
     }
 
     &__cards-group1,
@@ -76,19 +65,15 @@
         }
     }
 
-    &__icon {
-        height: 12rem;
-        width: 12rem;
-        position: absolute;
-        top: -3rem;
-        right: -5rem;
-        z-index: 2;
-        display: none;
-        img {
-            object-fit: cover;
+    &__card {
+        &-heading {
+            font-size: $font-size-2xl;
+            @include line-clamp(3);
+            font-weight: $font-weight-700;
         }
-        @include desktop {
-            display: block;
+        &-sub-heading {
+            font-size: $font-size-md;
+            @include line-clamp(2);
         }
     }
 }
