@@ -8,8 +8,11 @@
         gap: 5.2rem;
     }
     @include desktop {
-        padding-top: 14rem;
+        padding-top: 13.5rem;
         gap: 5.1rem;
+        background-image: url('/assets/images/testimonial/testimonial-bg.png');
+        background-position: center;
+        background-repeat: no-repeat;
     }
     &__headings-wrapper {
         @include flex($flex-direction: column, $gap: 1.6rem);
@@ -38,6 +41,13 @@
     }
     &__sub-heading {
         font-size: $font-size-lg;
+    }
+    &__desc {
+        padding: 0 21rem;
+        line-height: 3.5rem;
+        @include desktop {
+            font-size: $font-size-lg;
+        }
     }
     &__rating {
         font-size: $font-size-lg;
