@@ -1,19 +1,20 @@
 @use '../abstracts/' as *;
 
 .features {
-    padding-top: 12rem;
+    padding-top: 10rem;
     @include flex($flex-direction: column, $gap: 10rem);
     text-align: center;
 
     @include tablet {
-        padding-top: 14rem;
+        padding-top: 13.1rem;
         gap: 6.4rem;
     }
     @include desktop {
         flex-direction: row-reverse;
-        flex-wrap: nowrap;
-        padding-top: 13.4rem;
+        flex-wrap: wrap;
+        padding-top: 12.6rem;
         justify-content: space-between;
+        gap: 10rem;
     }
     &__headings-wrapper {
         @include flex($flex-direction: column, $gap: 1.6rem);
@@ -30,6 +31,7 @@
             max-height: 86.9rem;
         }
         @include desktop {
+            flex: 1;
             max-width: 69.3rem;
             max-height: 86.9rem;
         }
@@ -50,19 +52,20 @@
     }
 
     &__card-container {
-        padding-top: 2.7rem;
-        @include flex($flex-direction: column, $gap: 0.8rem);
+        padding-top: 2.9rem;
+        @include flex($flex-direction: column, $gap: 0.8rem, $flex-wrap: wrap);
         width: 100%;
         @include tablet {
-            padding-top: 3rem;
+            padding-top: 3.2rem;
         }
         @include desktop {
+            padding-top: 3.5rem;
             gap: 1.6rem;
         }
     }
 
-    .card {
-        &__text-wrapper {
+    &__card {
+        &-text-wrapper {
             @include flex(
                 $flex-direction: column,
                 $gap: 0.8rem,
@@ -74,9 +77,10 @@
         }
         &-sub-heading {
             font-size: $font-size-md;
+            @include line-clamp(3);
         }
-        &__icon-container {
-            font-size: 4.8rem;
+        &-icon {
+            font-size: $font-size-5xl;
             color: $white;
             width: 10rem;
             height: 10rem;

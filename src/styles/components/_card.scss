@@ -18,35 +18,34 @@
             $gap: 3.2rem
         );
         padding: 3.2rem;
-        width: 100%;
         flex-basis: 100%;
         align-self: stretch;
-
+        min-height: 27.9rem;
+        flex: 1;
+        flex-basis: 40%;
         @include tablet {
-            width: fit-content;
             padding: 6.4rem;
             gap: 6.4rem;
             max-width: 28.8rem;
-            max-height: 44.3rem;
+            min-height: 44.3rem;
         }
         @include desktop {
-            width: fit-content;
             padding: 6.4rem;
             gap: 6.4rem;
             max-width: 38.6rem;
-            max-height: 44.3rem;
+            min-height: 44.3rem;
         }
     }
 
     &--sm {
         @include flex(
             $flex-direction: column,
-            $justify-content: start,
             $flex-wrap: nowrap,
+            $justify-content: space-between,
             $gap: 1.6rem
         );
-        max-height: 15.1rem;
-        padding: 3.2rem;
+        min-height: 15.1rem;
+        padding: 3.2rem 0;
         width: 100%;
         flex-basis: 100%;
         align-self: stretch;
@@ -60,14 +59,15 @@
         }
     }
 
-    &--sm-horizontal {
+    &--horizontal {
         width: 100%;
         max-height: 29rem;
         @include flex(
             $flex-direction: column,
-            $align-items: baseline,
-            $gap: 3.2rem
+            $align-items: flex start,
+            $gap: 3.5rem
         );
+        text-align: left;
         padding: 3.2rem;
 
         @include tablet {
@@ -76,7 +76,10 @@
             align-items: center;
         }
         @include desktop {
+            flex-direction: row;
+            justify-content: start;
             max-height: 16.4rem;
+            align-items: center;
         }
     }
 }
