@@ -1,11 +1,11 @@
 @use '../abstracts/' as *;
 .newsletter {
     position: relative;
-    padding-top: 0;
+    padding-top: 0.4rem;
     text-align: center;
 
     @include tablet {
-        padding-top: 2rem;
+        padding-top: 3rem;
         margin-top: 8rem;
     }
     @include desktop {
@@ -18,7 +18,7 @@
         }
     }
     &__headings-wrapper {
-        @include flex($flex-direction: column, $gap: 3.2rem);
+        @include flex($flex-direction: column, $gap: 2.5rem);
         @include desktop {
             padding: 0 11rem;
         }
@@ -26,7 +26,7 @@
 
     &-wrapper {
         padding: 2rem 3.2rem;
-        @include flex($flex-direction: column, $gap: 5.4rem);
+        @include flex($flex-direction: column, $gap: 6.5rem);
         background-color: $custard-yellow;
         border-radius: 3.2rem;
         @include tablet {
