@@ -2,15 +2,15 @@
 
 .footer {
     padding-bottom: 6.4rem;
-    padding-top: 7rem;
+    padding-top: 7.3rem;
 
     @include tablet {
         @include flex(start, flex-start, column, 6.4rem, nowrap);
-        padding-top: 7rem;
+        padding-top: 7.3rem;
     }
 
     @include desktop {
-        padding-top: 20rem;
+        padding-top: 19.1rem;
         @include flex(space-between, flex-start, row, 6.4rem, nowrap);
     }
     &__logo {
@@ -21,11 +21,11 @@
         font-size: $font-size-lg;
     }
     &__mobile {
-        padding-top: 9.5rem;
+        padding-top: 9rem;
         @include flex(
             $flex-direction: column,
             $align-items: baseline,
-            $gap: 6.5rem
+            $gap: 6.3rem
         );
         width: 100%;
         @include tablet {
@@ -50,10 +50,11 @@
         @include flex(
             $flex-direction: column,
             $align-items: baseline,
-            $gap: 3.5rem
+            $gap: 3rem
         );
         @include desktop {
             max-width: 57rem;
+            gap: 7rem;
         }
     }
     &__heading-wrapper {
@@ -63,11 +64,14 @@
     &__desc {
         font-size: $font-size-sm;
         font-weight: 400;
+        line-height: 2.7rem;
         @include tablet {
             font-size: $font-size-lg;
+            line-height: 3.4rem;
         }
         @include desktop {
             font-size: $font-size-lg;
+            line-height: 3.3rem;
         }
     }
     &__content {
@@ -77,7 +81,10 @@
             $gap: 3.2rem
         );
         @include tablet {
-            gap: 3rem;
+            gap: 3.7rem;
+        }
+        @include desktop {
+            gap: 3.7rem;
         }
     }
     &__accordian-wrapper {
@@ -113,7 +120,7 @@
     &__column {
         margin-top: 0;
 
-        @include flex(start, left, column, 2.8rem, nowrap);
+        @include flex(space-between, left, column, 2.8rem, nowrap);
 
         &-heading {
             font-size: $font-size-lg;
@@ -125,6 +132,10 @@
             font-size: $font-size-md;
             color: $dark-grey;
             @include flex(start, baseline, row, 0.8rem, wrap);
+            transition: 0.4s;
+            &:hover {
+                color: $slate-blue;
+            }
         }
     }
 }
