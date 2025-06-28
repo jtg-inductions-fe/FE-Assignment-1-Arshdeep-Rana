@@ -10,6 +10,7 @@
         flex-wrap: nowrap;
         justify-content: space-between;
     }
+
     &__triangles {
         display: none;
         @include tablet {
@@ -19,9 +20,6 @@
             bottom: 0;
         }
         @include desktop {
-            display: block;
-            position: absolute;
-            left: 4rem;
             bottom: -8rem;
         }
     }
@@ -33,7 +31,7 @@
             padding: 6rem 5rem 0 5rem;
         }
         @include desktop {
-            padding-top: 2rem;
+            padding: 2rem 0 0 0;
         }
     }
 
@@ -49,10 +47,10 @@
         }
 
         @include desktop {
-            padding-top: 0;
+            padding: 0;
             text-align: left;
             align-items: baseline;
-            gap: 5.2rem;
+            gap: 5rem;
             max-width: 42rem;
         }
     }
@@ -74,7 +72,6 @@
         font-size: $font-size-3xl;
         @include tablet {
             font-size: $font-size-6xl;
-            padding: 0;
         }
         @include desktop {
             font-size: $font-size-7xl;
@@ -90,7 +87,6 @@
         }
         @include desktop {
             padding: 0 4rem 0 0;
-            font-size: $font-size-md;
         }
     }
     &__buttons {
@@ -109,18 +105,12 @@
         padding-top: 1rem;
     }
     @include desktop {
-        width: fit-content;
-        flex-direction: row;
         padding-top: 2rem;
     }
     &__get-started {
         width: 100%;
         padding: 2.4rem 3.2rem;
         @include tablet {
-            width: fit-content;
-            padding: 1.6rem 3.2rem;
-        }
-        @include desktop {
             width: fit-content;
             padding: 1.6rem 3.2rem;
         }
@@ -136,10 +126,6 @@
             }
         }
         @include tablet {
-            width: fit-content;
-            padding: 1.6rem 3.2rem;
-        }
-        @include desktop {
             width: fit-content;
             padding: 1.6rem 3.2rem;
         }
@@ -174,10 +160,10 @@
         }
     }
     @include desktop {
+        margin: 0;
         padding: 12rem 0 0 0;
-        width: 100%;
-        @include flex($justify-content: space-around);
-        flex-wrap: wrap;
+        max-width: 100%;
+        justify-content: space-around;
         height: fit-content;
         &__img {
             height: 3.2rem;

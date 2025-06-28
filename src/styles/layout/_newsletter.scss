@@ -10,6 +10,7 @@
     }
     @include desktop {
         padding-top: 15.8rem;
+        margin-top: 0;
     }
     &__sub-heading {
         @include desktop {
@@ -31,23 +32,12 @@
         @include tablet {
             padding: 12.8rem 6.4rem;
         }
-        @include desktop {
-            background-color: $custard-yellow;
-            border-radius: 3.2rem;
-            padding: 12.8rem 6.4rem;
-        }
     }
 
     &__form {
         width: 100%;
         @include flex($flex-direction: column, $gap: 3.2rem);
         @include tablet {
-            flex-direction: row;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-        @include desktop {
             flex-direction: row;
             justify-content: space-between;
             flex-wrap: wrap;
@@ -113,8 +103,6 @@
         }
         @include desktop {
             padding: 3.2rem 6.4rem;
-            font-size: $font-size-lg;
-            width: fit-content;
         }
     }
 }
