@@ -69,13 +69,19 @@ function init() {
     hamburger?.addEventListener('click', toggleSidebar);
 }
 
-init();
+window.addEventListener('DOMContentLoaded', () => {
+    init();
+});
 
-// Splide JS
-new Splide('.splide', {
-    rewind: true,
-    perPage: 1,
-}).mount();
+// Instantiating splide class, and calling the mount() method.
+window.addEventListener('DOMContentLoaded', () => {
+    const testimonialSplide = new Splide('.splide', {
+        rewind: true,
+        perPage: 1,
+    });
+
+    testimonialSplide.mount();
+});
 
 var acc = document.getElementsByClassName('footer__accordian');
 var i;

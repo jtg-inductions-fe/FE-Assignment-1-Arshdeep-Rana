@@ -9,7 +9,7 @@
         margin-top: 8rem;
     }
     @include desktop {
-        padding-top: 2rem;
+        padding-top: 1.6rem;
         margin-top: 14.5rem;
     }
     &__sub-heading {
@@ -26,7 +26,7 @@
 
     &-wrapper {
         padding: 2rem 3.2rem;
-        @include flex($flex-direction: column, $gap: 6.4rem);
+        @include flex($flex-direction: column, $gap: 5.4rem);
         background-color: $custard-yellow;
         border-radius: 3.2rem;
         @include tablet {
@@ -113,6 +113,7 @@
             width: fit-content;
         }
         @include desktop {
+            padding: 3.2rem 6.4rem;
             font-size: $font-size-lg;
             width: fit-content;
         }
