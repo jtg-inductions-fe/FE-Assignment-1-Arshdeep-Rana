@@ -83,14 +83,18 @@ window.addEventListener('DOMContentLoaded', () => {
     testimonialSplide.mount();
 });
 
+// Footer section: Handling accordion toggle behavior for footer links
+
+// Getting elements with the class called 'footer__accordian'
 var acc = document.getElementsByClassName('footer__accordian');
 var i;
 
+// Loop through all accordion elements
 for (i = 0; i < acc.length; i++) {
+    // Add a click event listener to each accordion
     acc[i].addEventListener('click', function () {
         this.classList.toggle('footer__accordian--active');
         var panel = this.nextElementSibling;
-
         if (panel.style.maxHeight) {
             panel.style.maxHeight = null;
         } else {
