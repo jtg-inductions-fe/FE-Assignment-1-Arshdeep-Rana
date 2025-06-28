@@ -4,19 +4,12 @@
 
 .hero {
     position: relative;
-    padding-top: $header-h-mobile;
     @include flex($flex-direction: column, $gap: 3.2rem);
-    @include tablet {
-        padding-top: $header-h-tablet;
-    }
-
     @include desktop {
-        padding-top: $header-h-desktop;
         flex-direction: row-reverse;
         flex-wrap: nowrap;
         justify-content: space-between;
     }
-
     &__triangles {
         display: none;
         @include tablet {

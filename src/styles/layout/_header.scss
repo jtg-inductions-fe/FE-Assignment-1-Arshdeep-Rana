@@ -2,8 +2,8 @@
 @use '../abstracts/mixins/' as *;
 
 .header {
-    width: 100vw;
-    position: fixed;
+    position: sticky;
+    top: 0;
     z-index: map-get($map: $z-index, $key: header);
     backdrop-filter: blur(20px);
     padding-top: 3.5rem;
@@ -83,7 +83,7 @@
         transition:
             transform 0.3s ease,
             opacity 0.3s ease;
-
+        background-color: white;
         a {
             font-size: $font-size-sm;
             color: inherit;
@@ -93,6 +93,7 @@
             }
         }
         @include tablet {
+            background-color: inherit;
             padding: 0;
             opacity: 1;
             transition: none;
@@ -109,6 +110,7 @@
             order: 3;
         }
         @include desktop {
+            background-color: inherit;
             padding: 0;
             opacity: 1;
             transition: none;
@@ -126,6 +128,7 @@
         }
 
         .nav-links__container {
+            background-color: white;
             @include flex($flex-direction: column, $gap: 5rem);
             transition:
                 transform 0.3s ease,
@@ -148,6 +151,7 @@
                 }
             }
             @include desktop {
+                background-color: inherit;
                 @include flex($gap: 6.4rem);
             }
         }
