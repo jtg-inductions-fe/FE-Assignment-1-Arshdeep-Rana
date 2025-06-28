@@ -1,5 +1,6 @@
+import '@splidejs/splide/css';
+import Splide from '@splidejs/splide';
 import '../styles/main.scss';
-
 const BREAKPOINT_TABLET = '(min-width: 600px)';
 
 const hamburger = document.querySelector('.js-header__hamburger');
@@ -70,4 +71,16 @@ function init() {
     hamburger?.addEventListener('click', toggleSidebar);
 }
 
-init();
+window.addEventListener('DOMContentLoaded', () => {
+    init();
+});
+
+// Instantiating splide class, and calling the mount() method.
+window.addEventListener('DOMContentLoaded', () => {
+    const testimonialSplide = new Splide('.splide', {
+        rewind: true,
+        perPage: 1,
+    });
+
+    testimonialSplide.mount();
+});
