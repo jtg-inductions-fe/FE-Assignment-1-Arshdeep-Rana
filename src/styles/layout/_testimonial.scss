@@ -1,18 +1,32 @@
 @use '../abstracts/' as *;
 
 .testimonial {
-    padding-top: 18rem;
+    padding-top: 16.2rem;
     @include flex($flex-direction: column, $gap: 6rem);
     @include tablet {
         padding-top: 10.5rem;
         gap: 5.2rem;
+        background-image: url('assets/images/testimonial/testimonial-bg.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
     }
     @include desktop {
-        padding-top: 14rem;
+        padding-top: 13.5rem;
         gap: 5.1rem;
+        background-image: url('assets/images/testimonial/testimonial-bg.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
     }
     &__headings-wrapper {
         @include flex($flex-direction: column, $gap: 1.6rem);
+        @include tablet {
+            gap: 1rem;
+        }
+        @include desktop {
+            gap: 1.2rem;
+        }
     }
 }
 
@@ -26,9 +40,9 @@
         gap: 5.5rem;
     }
     &__pic {
-        height: 12.8rem;
-        width: 12.8rem;
-        border-radius: 100%;
+        max-height: 12.8rem;
+        max-width: 12.8rem;
+        border-radius: 50%;
     }
     &__content {
         @include flex($flex-direction: column, $gap: 6rem);
@@ -39,46 +53,56 @@
     &__sub-heading {
         font-size: $font-size-lg;
     }
+    &__desc {
+        line-height: 3rem;
+        @include tablet {
+            line-height: 3.5rem;
+            font-size: $font-size-lg;
+            max-width: 62rem;
+        }
+        @include desktop {
+            line-height: 3.5rem;
+            font-size: $font-size-lg;
+
+            max-width: 88rem;
+        }
+    }
     &__rating {
         font-size: $font-size-lg;
         @include flex($gap: 2rem);
     }
     &__heading-rating-wrapper {
-        @include flex($flex-direction: column, $gap: 2.4rem);
+        @include flex($flex-direction: column, $gap: 3rem);
     }
 }
 
 .splide {
     width: 100%;
-    &__arrows,
-    &__pagination {
-        position: relative;
-    }
-
-    &__pagination {
-        padding-top: 8rem;
-        @include tablet {
-            padding-top: 12rem;
-        }
-        @include desktop {
-            padding-top: 10rem;
-        }
-    }
-
     &__arrows {
+        position: relative;
         padding-top: 15rem;
         @include flex;
         @include tablet {
             padding-top: 0;
-            position: static;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            @include flex(space-between);
         }
         @include desktop {
             padding-top: 0;
-            position: static;
+            position: absolute;
+            top: 34%;
+            left: 0;
+            width: 100%;
+            @include flex(space-between);
         }
     }
 
     &__arrow {
+        @include flex;
+        flex: 1;
         &--prev {
             border: $grey-border;
         }
@@ -101,6 +125,8 @@
     }
 
     &__pagination {
+        position: relative;
+        padding-top: 6rem;
         @include flex($gap: 2rem);
         &__page {
             width: 2.4rem;
