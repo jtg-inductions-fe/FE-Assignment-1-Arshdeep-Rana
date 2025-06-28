@@ -27,11 +27,9 @@
             padding: 6.4rem;
             gap: 6.4rem;
             max-width: 28.8rem;
-            min-height: 44.3rem;
+            max-height: 44.3rem;
         }
         @include desktop {
-            padding: 6.4rem;
-            gap: 6.4rem;
             max-width: 38.6rem;
             min-height: 44.3rem;
         }
@@ -41,7 +39,7 @@
         @include flex(
             $flex-direction: column,
             $flex-wrap: nowrap,
-            $justify-content: space-between,
+            $justify-content: space-evenly,
             $gap: 1.6rem
         );
         min-height: 15.1rem;
@@ -54,7 +52,6 @@
             max-width: 40rem;
         }
         @include desktop {
-            width: fit-content;
             max-width: 20.9rem;
         }
     }
