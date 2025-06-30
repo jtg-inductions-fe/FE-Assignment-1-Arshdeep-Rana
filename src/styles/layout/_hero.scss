@@ -16,7 +16,7 @@
         @include tablet {
             display: block;
             position: absolute;
-            left: 4rem;
+            left: 3rem;
             bottom: 0;
         }
         @include desktop {
@@ -108,6 +108,7 @@
         padding-top: 2rem;
     }
     &__get-started {
+        z-index: 5;
         width: 100%;
         padding: 2.4rem 3.2rem;
         @include tablet {

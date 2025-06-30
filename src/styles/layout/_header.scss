@@ -42,7 +42,10 @@
         z-index: map-get($map: $z-index, $key: hamburger);
         @include flex();
         font-size: $font-size-3xl;
-
+        &:focus-visible {
+            outline: 2px solid $french-rose;
+            outline-offset: 2px;
+        }
         @include tablet {
             order: 1;
         }
@@ -113,6 +116,7 @@
         }
 
         .nav-links__container {
+            visibility: hidden;
             background-color: white;
             @include flex($flex-direction: column, $gap: 5rem);
             transition:
@@ -131,11 +135,13 @@
                 right: -6.4rem;
                 &--open {
                     transform: translateX(0);
+                    visibility: visible;
                     opacity: 1;
                     pointer-events: auto;
                 }
             }
             @include desktop {
+                visibility: visible;
                 @include flex($gap: 6.4rem);
                 position: relative;
                 width: fit-content;
@@ -154,6 +160,7 @@
             transform: translateX(0);
             opacity: 1;
             pointer-events: auto;
+            visibility: visible;
         }
     }
 

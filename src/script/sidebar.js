@@ -71,3 +71,17 @@ function init() {
 window.addEventListener('DOMContentLoaded', () => {
     init();
 });
+
+window.addEventListener('keyup', () => {
+    if (
+        navLinks?.classList.contains('nav-links--open') ||
+        navLinksContainer?.classList.contains('nav-links__container--open')
+    ) {
+        if (
+            document.activeElement ==
+            document.querySelector('.hero__explore-button')
+        ) {
+            hamburger.focus();
+        }
+    }
+});
