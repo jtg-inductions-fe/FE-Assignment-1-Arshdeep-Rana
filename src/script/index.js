@@ -78,3 +78,12 @@ window.addEventListener('DOMContentLoaded', () => {
     });
     testimonialSplide.mount();
 });
+// Instantiating splide class, and calling the mount() method.
+window.addEventListener('DOMContentLoaded', () => {
+    init();
+    const testimonialSplide = new Splide('.splide', {
+        rewind: true,
+        perPage: 1,
+    });
+    testimonialSplide.mount();
+});
