@@ -32,11 +32,6 @@
         @include tablet {
             padding: 12.8rem 6.4rem;
         }
-        @include desktop {
-            background-color: $custard-yellow;
-            border-radius: 3.2rem;
-            padding: 12.8rem 6.4rem;
-        }
     }
 
     &__form {
@@ -64,6 +59,14 @@
         transition: 0.4s;
         background-color: $white;
         flex-wrap: nowrap;
+        @include tablet {
+            flex-basis: 60%;
+            flex-shrink: 0;
+            flex-grow: 1;
+        }
+        @include desktop {
+            width: 75%;
+        }
         input {
             font-size: $font-size-xs;
             width: 100%;
@@ -72,17 +75,6 @@
             @include tablet {
                 font-size: $font-size-lg;
             }
-            @include desktop {
-                font-size: $font-size-lg;
-            }
-        }
-        @include tablet {
-            flex-basis: 60%;
-            flex-shrink: 0;
-            flex-grow: 1;
-        }
-        @include desktop {
-            width: 75%;
         }
     }
 

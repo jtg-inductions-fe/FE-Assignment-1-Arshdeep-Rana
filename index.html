@@ -659,8 +659,8 @@
                     </h4>
                 </div>
 
-                <div class="newsletter__form">
-                    <div class="newsletter__input">
+                <form class="newsletter__form">
+                    <label class="newsletter__input">
                         <i
                             class="icon-Vector-8 newsletter__mail-icon"
                             aria-hidden="true"
@@ -669,12 +669,18 @@
                             class="circular-md"
                             type="email"
                             placeholder="Your Email"
+                            required
+                            name="email"
+                            aria-label="Email address"
                         />
-                    </div>
-                    <button class="button--primary button newsletter__button">
+                    </label>
+                    <button
+                        class="button--primary button newsletter__button"
+                        type="submit"
+                    >
                         Subscribe
                     </button>
-                </div>
+                </form>
             </div>
         </section>
 
