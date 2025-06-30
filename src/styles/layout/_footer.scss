@@ -1,0 +1,164 @@
+@use '../abstracts/' as *;
+
+.footer {
+    padding-bottom: 6.4rem;
+    padding-top: 7.3rem;
+
+    @include tablet {
+        @include flex(start, flex-start, column, 6.4rem, nowrap);
+        padding-top: 7.3rem;
+    }
+
+    @include desktop {
+        padding-top: 19.1rem;
+        @include flex(space-between, flex-start, row, 6.4rem, nowrap);
+    }
+    &__logo {
+        font-size: $font-size-3xl;
+        @include flex;
+    }
+    &__heading {
+        font-size: $font-size-lg;
+    }
+    &__mobile {
+        padding-top: 9rem;
+        @include flex(
+            $flex-direction: column,
+            $align-items: baseline,
+            $gap: 6.3rem
+        );
+        width: 100%;
+        @include tablet {
+            display: none;
+        }
+        @include desktop {
+            display: none;
+        }
+    }
+    &__socials {
+        @include flex($gap: 3.2rem, $flex-wrap: wrap);
+    }
+    &__socials-container {
+        height: 3.2rem;
+        width: 3.2rem;
+        border-radius: 100%;
+        @include flex;
+        padding: 0;
+        font-size: $font-size-sm;
+        &:focus-visible {
+            outline: 2px solid $outrageous-orange;
+            outline-offset: 2px;
+        }
+    }
+    &__travlog {
+        @include flex(
+            $flex-direction: column,
+            $align-items: baseline,
+            $gap: 3rem
+        );
+        @include desktop {
+            max-width: 57rem;
+            gap: 7rem;
+        }
+    }
+    &__heading-wrapper {
+        @include flex($gap: 1.8rem);
+        width: fit-content;
+    }
+    &__desc {
+        font-size: $font-size-sm;
+        font-weight: $font-weight-400;
+        line-height: 2.7rem;
+        @include line-clamp(5);
+        @include tablet {
+            font-size: $font-size-lg;
+            line-height: 3.4rem;
+        }
+        @include desktop {
+            font-size: $font-size-lg;
+            line-height: 3.3rem;
+        }
+    }
+    &__content {
+        @include flex(
+            $align-items: baseline,
+            $flex-direction: column,
+            $gap: 3.2rem
+        );
+        @include tablet {
+            gap: 3.7rem;
+        }
+        @include desktop {
+            gap: 3.7rem;
+        }
+    }
+    &__accordion-wrapper {
+        width: 100%;
+        transition: 0.5s;
+    }
+    &__accordion {
+        font-size: $font-size-lg;
+        @include flex(space-between);
+        padding: 0;
+        width: 100%;
+
+        &--active {
+            color: $slate-blue;
+        }
+    }
+
+    &__tablet {
+        width: 100%;
+        @include flex(start, flex-start, row, 3.2rem, wrap);
+        display: none;
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+        }
+        @include desktop {
+            display: flex;
+            width: fit-content;
+            gap: 6.4rem;
+        }
+    }
+
+    &__column {
+        @include flex(start, flex-start, column, 2.8rem, nowrap);
+
+        &-heading {
+            font-size: $font-size-lg;
+        }
+    }
+    &__list {
+        @include flex(start, baseline, column, 3.2rem, nowrap);
+        &-item {
+            font-size: $font-size-md;
+            color: $dark-grey;
+            @include flex(start, baseline, row, 0.8rem, wrap);
+            transition: 0.4s;
+            &:hover {
+                color: $slate-blue;
+            }
+        }
+    }
+}
+
+.panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    &__list {
+        padding-top: 2rem;
+        width: 100%;
+        @include flex(
+            $align-items: baseline,
+            $flex-direction: column,
+            $gap: 2rem
+        );
+        font-size: $font-size-sm;
+        &-item {
+            width: 100%;
+            border-bottom: $grey-border;
+        }
+    }
+}
