@@ -6,8 +6,8 @@
     cursor: pointer;
     transition: 0.4s;
     &:focus-visible {
-        outline: 2px solid $outrageous-orange;
-        outline-style: dashed;
+        outline: 2px solid $french-rose;
+        outline-offset: 2px;
     }
 
     &--primary {
@@ -20,7 +20,6 @@
         border: $grey-border;
     }
 }
-
 .button:hover {
     box-shadow: $box-shadow-hover-effect;
 }

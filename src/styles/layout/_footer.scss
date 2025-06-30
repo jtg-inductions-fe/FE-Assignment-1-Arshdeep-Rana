@@ -45,6 +45,10 @@
         @include flex;
         padding: 0;
         font-size: $font-size-sm;
+        &:focus-visible {
+            outline: 2px solid $outrageous-orange;
+            outline-offset: 2px;
+        }
     }
     &__travlog {
         @include flex(
@@ -87,11 +91,11 @@
             gap: 3.7rem;
         }
     }
-    &__accordian-wrapper {
+    &__accordion-wrapper {
         width: 100%;
         transition: 0.5s;
     }
-    &__accordian {
+    &__accordion {
         font-size: $font-size-lg;
         @include flex(space-between);
         padding: 0;

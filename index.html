@@ -12,7 +12,7 @@
         <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
         <link rel="stylesheet" href="./src/styles/main.scss" />
     </head>
-    <body>
+    <body id="top">
         <!-- Header section -->
         <header class="header white-bg container">
             <!-- Website logo -->
@@ -38,7 +38,7 @@
                 <ul
                     class="nav-links__container white-bg js-nav-links__container"
                 >
-                    <li><a href="#">Home</a></li>
+                    <li><a href="#top">Home</a></li>
                     <li><a href="#services">Discover</a></li>
                     <li><a href="#features">Special Deals</a></li>
                     <li><a href="#footer">Contact</a></li>
@@ -704,71 +704,92 @@
                 </div>
 
                 <div class="footer__socials">
-                    <button
+                    <a
                         class="button--primary button footer__socials-container purple-bg"
+                        aria-label="Facebook"
+                        href="#"
                     >
                         <i class="icon-facebook white-text"></i>
-                    </button>
-                    <button
+                    </a>
+                    <a
                         class="button--primary button footer__socials-container purple-bg"
+                        aria-label="Twitter"
+                        href="#"
                     >
-                        <i class="icon-Vector-13 white-text"></i>
-                    </button>
-                    <button
+                        <i
+                            class="icon-Vector-13 white-text"
+                            aria-hidden="true"
+                        ></i>
+                    </a>
+                    <a
                         class="button--primary button footer__socials-container purple-bg"
+                        aria-label="Instagram"
+                        href="#"
                     >
-                        <i class="icon-Vector-14 white-text"></i>
-                    </button>
+                        <i
+                            class="icon-Vector-14 white-text"
+                            aria-hidden="true"
+                        ></i>
+                    </a>
                 </div>
             </div>
 
             <div class="footer__mobile">
-                <div class="footer__accordian-wrapper">
-                    <button class="footer__accordian circular-md">
+                <div class="footer__accordion-wrapper">
+                    <button class="footer__accordion circular-md">
                         <span>Company</span>
-                        <i class="icon-arrow-circle-down9-1"></i>
+                        <i
+                            class="icon-arrow-circle-down9-1"
+                            aria-hidden="true"
+                        ></i>
                     </button>
                     <div class="panel">
                         <ul class="panel__list inter">
                             <li class="panel__list-item">
-                                <a href="">About</a>
+                                <a href="#">About</a>
                             </li>
                             <li class="panel__list-item">
-                                <a href="">Career</a>
+                                <a href="#">Career</a>
                             </li>
                             <li class="panel__list-item">
-                                <a href="">Mobile</a>
+                                <a href="#">Mobile</a>
                             </li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="footer__accordian-wrapper">
-                    <button class="footer__accordian circular-md">
+                <div class="footer__accordion-wrapper">
+                    <button class="footer__accordion circular-md">
                         <span>Contact Us</span>
-                        <i class="icon-arrow-circle-down9-1"></i>
+                        <i
+                            class="icon-arrow-circle-down9-1"
+                            aria-hidden="true"
+                        ></i>
                     </button>
                     <div class="panel">
                         <ul class="panel__list inter">
                             <li class="panel__list-item">
-                                <a href="">Why Travlog?</a>
+                                <a href="#">Why Travlog?</a>
                             </li>
                             <li class="panel__list-item">
-                                <a href="">Partner with us</a>
+                                <a href="#">Partner with us</a>
                             </li>
                             <li class="panel__list-item">
-                                <a href="">FAQ's</a>
+                                <a href="#">FAQ's</a>
                             </li>
                             <li class="panel__list-item">
-                                <a href="">Blog</a>
+                                <a href="#">Blog</a>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="footer__accordian-wrapper">
-                    <button class="footer__accordian circular-md">
+                <div class="footer__accordion-wrapper">
+                    <button class="footer__accordion circular-md">
                         <span>Meet Us</span>
-                        <i class="icon-arrow-circle-down9-1"></i>
+                        <i
+                            class="icon-arrow-circle-down9-1"
+                            aria-hidden="true"
+                        ></i>
                     </button>
                     <div class="panel">
                         <ul class="panel__list inter">
@@ -777,7 +798,9 @@
                             </li>
                             <li class="panel__list-item">info@travlog.com</li>
                             <li class="panel__list-item">
-                                <a href=""> 205. R Street, New York BD23200 </a>
+                                <a href="#">
+                                    205. R Street, New York BD23200
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -791,13 +814,13 @@
                     </div>
                     <ul class="footer__list inter">
                         <li class="footer__list-item">
-                            <a href=""> About </a>
+                            <a href="#">About</a>
                         </li>
                         <li class="footer__list-item">
-                            <a href=""> Career </a>
+                            <a href="#">Career</a>
                         </li>
                         <li class="footer__list-item">
-                            <a href=""> Mobile </a>
+                            <a href="#">Mobile</a>
                         </li>
                     </ul>
                 </div>
@@ -807,16 +830,16 @@
                     </div>
                     <ul class="footer__list inter">
                         <li class="footer__list-item">
-                            <a href=""> Why Travlog? </a>
+                            <a href="#">Why Travlog?</a>
                         </li>
                         <li class="footer__list-item">
-                            <a href=""> Partner with us </a>
+                            <a href="#">Partner with us</a>
                         </li>
                         <li class="footer__list-item">
-                            <a href=""> FAQ's </a>
+                            <a href="#">FAQ's</a>
                         </li>
                         <li class="footer__list-item">
-                            <a href="">Blog</a>
+                            <a href="#">Blog</a>
                         </li>
                     </ul>
                 </div>
@@ -826,13 +849,13 @@
                     </div>
                     <ul class="footer__list inter">
                         <li class="footer__list-item">
-                            <a href=""> +00 92 1234 56789 </a>
+                            <a href="#">+00 92 1234 56789</a>
                         </li>
                         <li class="footer__list-item">
-                            <a href=""> info@travlog.com </a>
+                            <a href="#">info@travlog.com</a>
                         </li>
                         <li class="footer__list-item">
-                            <a href=""> 205. R Street, New York BD23200 </a>
+                            <a href="#">205. R Street, New York BD23200</a>
                         </li>
                     </ul>
                 </div>
