@@ -1,5 +1,3 @@
-// Footer section: Handling accordion toggle behavior for footer links
-
 // Getting elements with the class called 'footer__accordion'
 const acc = document.getElementsByClassName('footer__accordion');
 
