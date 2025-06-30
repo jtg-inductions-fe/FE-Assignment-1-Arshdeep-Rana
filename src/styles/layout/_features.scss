@@ -82,8 +82,8 @@
         &-icon {
             font-size: $font-size-5xl;
             color: $white;
-            min-width: 10rem;
-            min-height: 10rem;
+            width: 10rem;
+            height: 10rem;
             border-radius: 3.2rem;
             @include flex;
         }
