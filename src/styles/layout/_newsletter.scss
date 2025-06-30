@@ -32,6 +32,9 @@
         @include tablet {
             padding: 12.8rem 6.4rem;
         }
+        @include desktop {
+            padding: 12.8rem 6.4rem;
+        }
     }
 
     &__form {
@@ -73,6 +76,9 @@
             height: 100%;
 
             @include tablet {
+                font-size: $font-size-lg;
+            }
+            @include desktop {
                 font-size: $font-size-lg;
             }
         }
