@@ -6,10 +6,9 @@
     @include tablet {
         padding-top: 10.5rem;
         gap: 5.2rem;
-        background-image: url('assets/images/testimonial/testimonial-bg.png');
-        background-position: center;
-        background-repeat: no-repeat;
         background-size: 100%;
+        background: none url('assets/images/testimonial/testimonial-bg.png')
+            no-repeat center;
     }
     @include desktop {
         padding-top: 13.5rem;
@@ -63,7 +62,6 @@
         @include desktop {
             line-height: 3.5rem;
             font-size: $font-size-lg;
-
             max-width: 88rem;
         }
     }
