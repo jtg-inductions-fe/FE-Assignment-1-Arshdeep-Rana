@@ -11,7 +11,7 @@
 
     @include desktop {
         padding-top: 19.1rem;
-        @include flex(space-between, flex-start, row, 6.4rem, nowrap);
+        @include flex(space-between, flex-start, row, 6rem, nowrap);
     }
     &__logo {
         font-size: $font-size-3xl;
@@ -31,12 +31,9 @@
         @include tablet {
             display: none;
         }
-        @include desktop {
-            display: none;
-        }
     }
     &__socials {
-        @include flex($gap: 3.2rem);
+        @include flex($gap: 3.2rem, $flex-wrap: wrap);
     }
     &__socials-container {
         height: 3.2rem;
@@ -45,6 +42,10 @@
         @include flex;
         padding: 0;
         font-size: $font-size-sm;
+        &:focus-visible {
+            outline: 2px solid $outrageous-orange;
+            outline-offset: 2px;
+        }
     }
     &__travlog {
         @include flex(
@@ -63,14 +64,14 @@
     }
     &__desc {
         font-size: $font-size-sm;
-        font-weight: 400;
+        font-weight: $font-weight-400;
         line-height: 2.7rem;
+        @include line-clamp(5);
         @include tablet {
             font-size: $font-size-lg;
             line-height: 3.4rem;
         }
         @include desktop {
-            font-size: $font-size-lg;
             line-height: 3.3rem;
         }
     }
@@ -83,15 +84,12 @@
         @include tablet {
             gap: 3.7rem;
         }
-        @include desktop {
-            gap: 3.7rem;
-        }
     }
-    &__accordian-wrapper {
+    &__accordion-wrapper {
         width: 100%;
         transition: 0.5s;
     }
-    &__accordian {
+    &__accordion {
         font-size: $font-size-lg;
         @include flex(space-between);
         padding: 0;
@@ -104,30 +102,31 @@
 
     &__tablet {
         width: 100%;
-        @include flex(start, flex-start, row, 3.2rem, nowrap);
+        @include flex(start, flex-start, row, 3.2rem, wrap);
         display: none;
         @include tablet {
             display: flex;
             justify-content: space-between;
         }
         @include desktop {
-            display: flex;
-            width: fit-content;
-            gap: 6.4rem;
+            max-width: 56.4rem;
+            justify-content: start;
         }
     }
 
     &__column {
-        margin-top: 0;
-
-        @include flex(space-between, left, column, 2.8rem, nowrap);
+        @include flex(start, flex-start, column, 2.8rem, nowrap);
+        flex: 1;
 
         &-heading {
             font-size: $font-size-lg;
         }
+        @include tablet {
+            max-width: 16.6rem;
+        }
     }
     &__list {
-        @include flex(start, left, column, 3.2rem, nowrap);
+        @include flex(start, baseline, column, 3.2rem, nowrap);
         &-item {
             font-size: $font-size-md;
             color: $dark-grey;
