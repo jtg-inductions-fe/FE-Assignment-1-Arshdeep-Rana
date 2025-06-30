@@ -10,6 +10,7 @@
         />
         <meta name="keywords" content="travel, hotels, holiday, vacation" />
         <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="./src/styles/main.scss" />
     </head>
     <body>
         <!-- Header section -->
@@ -640,6 +641,46 @@
                         ></i>
                     </button>
                 </div>
+            </div>
+        </section>
+
+        <section class="newsletter container">
+            <div class="newsletter-wrapper">
+                <div class="newsletter__headings-wrapper">
+                    <h3
+                        class="newsletter__heading section-heading pink-text circular-md"
+                    >
+                        SUBSCRIBE TO OUR NEWSLETTER
+                    </h3>
+                    <h4
+                        class="newsletter__sub-heading section-sub-heading circular-md"
+                    >
+                        Prepare yourself & let's explore the beauty of the world
+                    </h4>
+                </div>
+
+                <form class="newsletter__form">
+                    <div class="newsletter__input">
+                        <i
+                            class="icon-Vector-8 newsletter__mail-icon"
+                            aria-hidden="true"
+                        ></i>
+                        <input
+                            class="circular-md"
+                            type="email"
+                            placeholder="Your Email"
+                            required
+                            name="email"
+                            aria-label="Email address"
+                        />
+                    </div>
+                    <button
+                        class="button--primary button newsletter__button"
+                        type="submit"
+                    >
+                        Subscribe
+                    </button>
+                </form>
             </div>
         </section>
 
