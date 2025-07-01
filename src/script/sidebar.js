@@ -71,7 +71,11 @@ function init() {
 window.addEventListener('DOMContentLoaded', () => {
     init();
 });
-
+/**
+ * Event listener : Handles TAB key
+ * when sidebar is open the focus is trapped in the header
+ * As soon as focus leaves header we focus hamburger close button
+ */
 window.addEventListener('keyup', () => {
     if (
         navLinks?.classList.contains('nav-links--open') ||
