@@ -1,0 +1,23 @@
+/* 
+    Mixin for display flex
+    $justify-content - justify-content property of flex containers (default : center)
+    $align-items - align-items property of flex containers (default : center)
+    $flex-direction- flex-direction property of flex containers (default : row)
+    $gap - gap property of flex containers (default : 0)
+    $flex-wrap - flex wrap property of flex containers (default : nowrap)
+*/
+
+@mixin flex(
+    $justify-content: center,
+    $align-items: center,
+    $flex-direction: row,
+    $gap: 0,
+    $flex-wrap: nowrap
+) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-direction: $flex-direction;
+    gap: $gap;
+    flex-wrap: $flex-wrap;
+}

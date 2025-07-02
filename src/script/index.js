@@ -1,1 +1,3 @@
-import '../styles/main.scss';
+import './accordion';
+import './sidebar';
+import './splide';

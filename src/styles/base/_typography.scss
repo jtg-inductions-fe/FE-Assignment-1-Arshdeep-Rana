@@ -1,0 +1,17 @@
+@use '../abstracts/variables/' as *;
+@use '../abstracts/mixins/' as *;
+
+@include font-face($circular-md, $path-circular-md, $font-weight-400, normal);
+@include font-face(
+    $circular-bold1,
+    $path-circular-bold1,
+    $font-weight-700,
+    normal
+);
+@include font-face(
+    $circular-bold2,
+    $path-circular-bold2,
+    $font-weight-900,
+    normal
+);
+@include font-face($inter, $path-inter, $font-weight-400, normal);

@@ -1,0 +1,112 @@
+@use './mixins/' as *;
+@use './variables/' as *;
+
+.circular-md {
+    font-family: $circular-md;
+}
+
+.inter {
+    font-family: $inter;
+}
+.overflow-hidden {
+    overflow: hidden;
+}
+.font-weight-400 {
+    font-weight: $font-weight-400;
+}
+
+.purple-text {
+    color: $slate-blue;
+}
+
+.yellow-text {
+    color: $kournikova-yellow;
+}
+
+.white-text {
+    color: $white;
+}
+
+.black-text {
+    color: $black;
+}
+
+.orange-text {
+    color: $outrageous-orange;
+}
+
+.pink-text {
+    color: $french-rose;
+}
+
+.grey-text {
+    color: $midnight-express-50;
+}
+
+.purple-bg {
+    background-color: $slate-blue;
+}
+
+.yellow-bg {
+    background-color: $kournikova-yellow;
+}
+
+.orange-bg {
+    background-color: $outrageous-orange;
+}
+
+.pink-bg {
+    background-color: $french-rose;
+}
+
+.white-bg {
+    background-color: $white;
+}
+
+.black-bg {
+    background-color: $black;
+}
+
+.transparent-bg {
+    background-color: transparent;
+}
+
+.gradient-purple-to-pink {
+    background: linear-gradient(to left, $slate-blue, $french-rose);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-heading {
+    font-size: $font-size-sm;
+    letter-spacing: 0.4rem;
+
+    @include tablet {
+        font-size: $font-size-lg;
+    }
+
+    @include desktop {
+        font-size: $font-size-lg;
+    }
+}
+.section-sub-heading {
+    font-size: $font-size-2xl;
+    line-height: normal;
+
+    @include tablet {
+        font-size: $font-size-3xl;
+    }
+    @include desktop {
+        font-size: $font-size-4xl;
+    }
+}
+.section-desc {
+    @include line-clamp(4);
+    font-size: $font-size-sm;
+    @include tablet {
+        font-size: $font-size-md;
+    }
+    @include desktop {
+        font-size: $font-size-md;
+    }
+}

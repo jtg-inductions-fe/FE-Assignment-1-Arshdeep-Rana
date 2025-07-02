@@ -1,0 +1,196 @@
+@use '../abstracts/mixins/' as *;
+@use '../abstracts/variables/' as *;
+@use '../components/button';
+
+.hero {
+    position: relative;
+    padding-top: $header-h-mobile;
+    @include flex($flex-direction: column, $gap: 3.2rem);
+    @include tablet {
+        padding-top: $header-h-tablet;
+    }
+
+    @include desktop {
+        padding-top: $header-h-desktop;
+        flex-direction: row-reverse;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    &__triangles {
+        display: none;
+        @include tablet {
+            display: block;
+            position: absolute;
+            left: 4rem;
+            bottom: 0;
+        }
+        @include desktop {
+            display: block;
+            position: absolute;
+            left: 4rem;
+            bottom: -8rem;
+        }
+    }
+
+    &__img {
+        padding-top: 4rem;
+
+        @include tablet {
+            padding: 6rem 5rem 0 5rem;
+        }
+        @include desktop {
+            padding-top: 2rem;
+        }
+    }
+
+    &__content {
+        @include flex($flex-direction: column, $gap: 1.6rem);
+        padding: 0 1rem;
+        text-align: center;
+        line-height: normal;
+
+        @include tablet {
+            gap: 4.4rem;
+            padding: 3rem 16rem;
+        }
+
+        @include desktop {
+            padding-top: 0;
+            text-align: left;
+            align-items: baseline;
+            gap: 5.2rem;
+            max-width: 42rem;
+        }
+    }
+
+    &__explore-button {
+        font-size: $font-size-xs;
+        @include flex($gap: 0.5rem);
+        i {
+            font-size: $font-size-lg;
+        }
+
+        @include desktop {
+            margin-top: 1.2rem;
+            font-size: $font-size-sm;
+        }
+    }
+
+    &__heading {
+        font-size: $font-size-3xl;
+        @include tablet {
+            font-size: $font-size-6xl;
+            padding: 0;
+        }
+        @include desktop {
+            font-size: $font-size-7xl;
+        }
+    }
+    &__sub-heading {
+        padding-top: 1rem;
+        font-size: $font-size-xs;
+        @include line-clamp(4);
+        @include tablet {
+            padding: 0 6rem;
+            font-size: $font-size-md;
+        }
+        @include desktop {
+            padding: 0 4rem 0 0;
+            font-size: $font-size-md;
+        }
+    }
+    &__buttons {
+        font-size: $font-size-xs;
+    }
+}
+.actions {
+    padding-top: 2.9rem;
+    width: 100%;
+    @include flex($flex-direction: column, $gap: 2.4rem, $flex-wrap: nowrap);
+    white-space: nowrap;
+
+    @include tablet {
+        width: fit-content;
+        flex-direction: row;
+        padding-top: 1rem;
+    }
+    @include desktop {
+        width: fit-content;
+        flex-direction: row;
+        padding-top: 2rem;
+    }
+    &__get-started {
+        width: 100%;
+        padding: 2.4rem 3.2rem;
+        @include tablet {
+            width: fit-content;
+            padding: 1.6rem 3.2rem;
+        }
+        @include desktop {
+            width: fit-content;
+            padding: 1.6rem 3.2rem;
+        }
+    }
+    &__watch-demo {
+        width: 100%;
+        padding: 2.4rem 3.2rem;
+        @include flex($gap: 0.5rem);
+        i {
+            font-size: $font-size-lg;
+            @include tablet {
+                font-size: $font-size-md;
+            }
+        }
+        @include tablet {
+            width: fit-content;
+            padding: 1.6rem 3.2rem;
+        }
+        @include desktop {
+            width: fit-content;
+            padding: 1.6rem 3.2rem;
+        }
+    }
+}
+.co-partners {
+    padding-top: 6.2rem;
+    width: 100%;
+    @include flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    &__img {
+        height: 2rem;
+
+        img {
+            object-fit: contain;
+        }
+    }
+    @include tablet {
+        margin: auto;
+        max-width: 70%;
+        padding: 13.4rem 0 0 0;
+        @include flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+        &__img {
+            height: 3rem;
+            max-width: fit-content;
+            img {
+                object-fit: contain;
+            }
+        }
+    }
+    @include desktop {
+        padding: 12rem 0 0 0;
+        width: 100%;
+        @include flex($justify-content: space-around);
+        flex-wrap: wrap;
+        height: fit-content;
+        &__img {
+            height: 3.2rem;
+            img {
+                object-fit: contain;
+            }
+        }
+    }
+}

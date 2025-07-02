@@ -1,0 +1,76 @@
+@use '../abstracts/mixins/' as *;
+@use '../abstracts/variables/' as *;
+@use '../abstracts/utilities';
+
+.services {
+    position: relative;
+    padding-top: 6.2rem;
+    text-align: center;
+    @include flex(
+        $flex-direction: column,
+        $flex-wrap: nowrap,
+        $gap: 3.2rem,
+        $justify-content: space-between
+    );
+    @include tablet {
+        padding-top: 12.8rem;
+    }
+    @include desktop {
+        flex-direction: row;
+        text-align: left;
+        padding-top: 12.7rem;
+        justify-content: space-between;
+    }
+    &__content {
+        @include flex($flex-direction: column, $gap: 1.8rem);
+        @include desktop {
+            align-items: baseline;
+            padding-top: 0;
+            max-width: 40rem;
+        }
+    }
+    &__card {
+        &-title {
+            font-size: $font-size-lg;
+            @include tablet {
+                font-size: $font-size-xl;
+            }
+            @include desktop {
+                font-size: $font-size-xl;
+            }
+        }
+        &-desc {
+            font-size: $font-size-md;
+            line-height: 2.6rem;
+            @include line-clamp;
+        }
+
+        &-content-wrapper {
+            @include flex($flex-direction: column, $gap: 3.2rem);
+        }
+    }
+    &__cards-container {
+        width: 100%;
+        @include flex($flex-direction: column, $gap: 1.6rem, $flex-wrap: wrap);
+        @include tablet {
+            flex-direction: row;
+            padding-top: 3rem;
+        }
+        @include desktop {
+            width: fit-content;
+            flex-direction: row;
+        }
+    }
+}
+
+.card__img {
+    height: 6.4rem;
+    width: 6.4rem;
+    object-fit: contain;
+}
+
+.services__card:nth-last-child(1) {
+    @include desktop {
+        display: none;
+    }
+}

@@ -1,0 +1,119 @@
+@use '../abstracts/' as *;
+.newsletter {
+    position: relative;
+    padding-top: 0.4rem;
+    text-align: center;
+
+    @include tablet {
+        padding-top: 3rem;
+        margin-top: 8rem;
+    }
+    @include desktop {
+        padding-top: 1.6rem;
+        margin-top: 14.5rem;
+    }
+    &__sub-heading {
+        @include desktop {
+            font-size: $font-size-6xl;
+        }
+    }
+    &__headings-wrapper {
+        @include flex($flex-direction: column, $gap: 2.5rem);
+        @include desktop {
+            padding: 0 11rem;
+        }
+    }
+
+    &-wrapper {
+        padding: 2rem 3.2rem;
+        @include flex($flex-direction: column, $gap: 6.5rem);
+        background-color: $custard-yellow;
+        border-radius: 3.2rem;
+        @include tablet {
+            padding: 12.8rem 6.4rem;
+        }
+        @include desktop {
+            padding: 12.8rem 6.4rem;
+        }
+    }
+
+    &__form {
+        width: 100%;
+        @include flex($flex-direction: column, $gap: 3.2rem);
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        @include desktop {
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+    }
+    &__input {
+        color: $dark-grey;
+        @include flex($justify-content: start, $gap: 1.6rem);
+        width: 100%;
+        border-radius: 1.6rem;
+        padding: 2.4rem 3.2rem;
+        transition: 0.4s;
+        background-color: $white;
+        flex-wrap: nowrap;
+        @include tablet {
+            flex-basis: 60%;
+            flex-shrink: 0;
+            flex-grow: 1;
+        }
+        @include desktop {
+            width: 75%;
+        }
+        input {
+            font-size: $font-size-xs;
+            width: 100%;
+            height: 100%;
+
+            @include tablet {
+                font-size: $font-size-lg;
+            }
+            @include desktop {
+                font-size: $font-size-lg;
+            }
+        }
+    }
+
+    &__input:hover {
+        box-shadow: $box-shadow-hover-effect;
+    }
+    &__input:focus-within {
+        box-shadow: $box-shadow-hover-effect;
+        border: $grey-border;
+    }
+    &__mail-icon {
+        font-size: $font-size-md;
+        @include tablet {
+            font-size: $font-size-xl;
+        }
+        @include desktop {
+            font-size: $font-size-xl;
+        }
+    }
+
+    &__button {
+        padding: 2.4rem 6.4rem;
+        width: 100%;
+        border-radius: 1.6rem;
+        font-size: 1.6rem;
+        @include tablet {
+            font-size: $font-size-lg;
+            width: fit-content;
+        }
+        @include desktop {
+            padding: 3.2rem 6.4rem;
+            font-size: $font-size-lg;
+            width: fit-content;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+@use './colors' as *;
+$box-shadow-hover-effect:
+    0px 0px 0px 0px $shadow-color-1,
+    0px 5px 11px 0px $shadow-color-1,
+    0px 20px 20px 0px $shadow-color-2,
+    0px 45px 27px 0px $shadow-color-3,
+    0px 81px 32px 0px $shadow-color-4,
+    0px 126px 35px 0px $shadow-color-5;
