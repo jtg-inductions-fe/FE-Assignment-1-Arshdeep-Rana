@@ -84,14 +84,6 @@
             transform 0.3s ease,
             opacity 0.3s ease;
 
-        a {
-            font-size: $font-size-sm;
-            color: inherit;
-            transition: 0.5s;
-            &:hover {
-                color: $black;
-            }
-        }
         @include tablet {
             padding: 0;
             opacity: 1;
@@ -124,8 +116,15 @@
             right: auto;
             order: 2;
         }
+        a {
+            font-size: $font-size-sm;
+            transition: 0.5s;
+            &:hover {
+                color: $black;
+            }
+        }
 
-        .nav-links__container {
+        &__container {
             @include flex($flex-direction: column, $gap: 5rem);
             transition:
                 transform 0.3s ease,
@@ -166,4 +165,8 @@
     &__login:hover {
         color: $slate-blue;
     }
+}
+
+.nav-link--active {
+    color: $black;
 }

@@ -71,3 +71,61 @@ function init() {
 window.addEventListener('DOMContentLoaded', () => {
     init();
 });
+
+// All the containers that are linked to header
+const sectionsToObserve = [
+    document.querySelector('#top'),
+    document.querySelector('#services'),
+    document.querySelector('#features'),
+    document.querySelector('#footer'),
+];
+
+// event listener on window for scroll to change the current active element
+window.addEventListener(
+    'scroll',
+    () => {
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    // if the current container on screen is one of the container linked to nav links we activate it
+                    if (entry.target.id == 'top') {
+                        document.querySelectorAll('.nav-link').forEach((e) => {
+                            e.classList.remove('nav-link--active');
+                        });
+                        document
+                            .querySelector('.nav__link-home')
+                            .classList.toggle('nav-link--active');
+                    } else if (entry.target.id == 'services') {
+                        document.querySelectorAll('.nav-link').forEach((e) => {
+                            e.classList.remove('nav-link--active');
+                        });
+                        document
+                            .querySelector('.nav__link-discover')
+                            .classList.toggle('nav-link--active');
+                    } else if (entry.target.id == 'features') {
+                        document.querySelectorAll('.nav-link').forEach((e) => {
+                            e.classList.remove('nav-link--active');
+                        });
+                        document
+                            .querySelector('.nav__link-special')
+                            .classList.toggle('nav-link--active');
+                    } else if (entry.target.id == 'footer') {
+                        document.querySelectorAll('.nav-link').forEach((e) => {
+                            e.classList.remove('nav-link--active');
+                        });
+                        document
+                            .querySelector('.nav__link-contact')
+                            .classList.toggle('nav-link--active');
+                    }
+                }
+            });
+        });
+
+        sectionsToObserve.forEach((s) => {
+            if (s.id) {
+                obs.observe(s);
+            }
+        });
+    },
+    { threshold: 0.5 },
+);

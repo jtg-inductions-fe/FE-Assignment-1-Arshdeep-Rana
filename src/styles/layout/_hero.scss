@@ -65,6 +65,7 @@
     }
 
     &__explore-button {
+        box-shadow: $box-shadow-hover-effect;
         font-size: $font-size-xs;
         @include flex($gap: 0.5rem);
         i {
