@@ -12,7 +12,7 @@
         <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
         <link rel="stylesheet" href="./src/styles/main.scss" />
     </head>
-    <body id="top">
+    <body>
         <!-- Header section -->
         <header class="header container transparent-bg">
             <!-- Website logo -->
@@ -38,25 +38,43 @@
                 <ul
                     class="nav-links__container white-bg js-nav-links__container"
                 >
-                    <li><a href="#top">Home</a></li>
-                    <li><a href="#services">Discover</a></li>
-                    <li><a href="#features">Special Deals</a></li>
-                    <li><a href="#footer">Contact</a></li>
+                    <li>
+                        <a
+                            href="#top"
+                            class="nav__link-home nav-link nav-link--active"
+                            >Home</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#services" class="nav__link-discover nav-link"
+                            >Discover</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#features" class="nav__link-special nav-link"
+                            >Special Deals</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#footer" class="nav__link-contact nav-link"
+                            >Contact</a
+                        >
+                    </li>
                 </ul>
                 <!--Auth btns-->
                 <div class="header__auth">
-                    <button class="header__login button button--secondary">
+                    <a class="header__login button button--secondary">
                         Log In
-                    </button>
-                    <button class="header__signup button button--primary">
+                    </a>
+                    <a class="header__signup button button--primary">
                         Sign Up
-                    </button>
+                    </a>
                 </div>
             </nav>
         </header>
 
         <!-- Hero Section -->
-        <section class="container hero">
+        <section class="container hero" id="top">
             <!-- Hero section main image container -->
             <div class="hero__img">
                 <img
@@ -623,7 +641,7 @@
                 <div class="splide__pagination"></div>
                 <div class="splide__arrows">
                     <button
-                        class="splide__arrow splide__arrow--prev button--secondary button"
+                        class="splide__arrow splide__arrow--prev button--primary button white-text"
                     >
                         <i
                             class="icon-Bold-Outline-1"
@@ -794,9 +812,15 @@
                     <div class="panel">
                         <ul class="panel__list inter">
                             <li class="panel__list-item">
-                                <a href="#">+00 92 1234 56789</a>
+                                <a href="tel:+00 92 1234 56789"
+                                    >+00 92 1234 56789</a
+                                >
                             </li>
-                            <li class="panel__list-item">info@travlog.com</li>
+                            <li class="panel__list-item">
+                                <a href="mailto:info@travlog.com"
+                                    >info@travlog.com</a
+                                >
+                            </li>
                             <li class="panel__list-item">
                                 <a href="#">
                                     205. R Street, New York BD23200
@@ -849,10 +873,14 @@
                     </div>
                     <ul class="footer__list inter">
                         <li class="footer__list-item">
-                            <a href="#">+00 92 1234 56789</a>
+                            <a href="tel:+00 92 1234 56789"
+                                >+00 92 1234 56789</a
+                            >
                         </li>
                         <li class="footer__list-item">
-                            <a href="#">info@travlog.com</a>
+                            <a href="mailto:info@travlog.com"
+                                >info@travlog.com</a
+                            >
                         </li>
                         <li class="footer__list-item">
                             <a href="#">205. R Street, New York BD23200</a>

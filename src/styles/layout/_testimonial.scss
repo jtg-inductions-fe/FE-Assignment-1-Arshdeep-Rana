@@ -92,9 +92,6 @@
     &__arrow {
         @include flex;
         flex: 1;
-        &--prev {
-            border: $grey-border;
-        }
 
         &--prev,
         &--next {
@@ -105,6 +102,11 @@
                 width: 10rem;
                 height: 10rem;
             }
+        }
+        &--prev:hover,
+        &--next:hover {
+            background-color: $white;
+            color: $black;
         }
     }
 

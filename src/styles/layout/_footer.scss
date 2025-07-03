@@ -105,7 +105,7 @@
         @include flex(start, flex-start, row, 3.2rem, wrap);
         display: none;
         @include tablet {
-            @include flex(start, flex-start, $gap: 14.4rem);
+            @include flex(start, flex-start, $gap: 14.4rem, $flex-wrap: wrap);
         }
         @include desktop {
             gap: 3.5rem;

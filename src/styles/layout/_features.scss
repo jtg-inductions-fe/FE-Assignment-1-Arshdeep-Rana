@@ -81,7 +81,9 @@
             font-size: $font-size-5xl;
             color: $white;
             min-width: 10rem;
+            max-width: 11rem;
             min-height: 10rem;
+            max-height: 11rem;
             border-radius: 3.2rem;
             @include flex;
         }
