@@ -2,10 +2,10 @@
 
 /* 
     Mixin for responsiveness on tablet screens
-    Contains a media query for screens greater than breakpoint for mobile and less than that of desktop 
+    Contains a media query for screens greater than breakpoint for mobile 
 */
 @mixin tablet {
-    @media (width <= map-get($breakpoints, tablet)) and (width > map-get($breakpoints, mobile)) {
+    @media (width > map-get($breakpoints, mobile)) {
         @content;
     }
 }

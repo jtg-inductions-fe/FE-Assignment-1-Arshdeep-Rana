@@ -5,13 +5,13 @@
     padding-top: 7.3rem;
 
     @include tablet {
-        @include flex(start, flex-start, column, 6.4rem, nowrap);
-        padding-top: 7.3rem;
+        @include flex(start, flex-start, column, 6.4rem);
+        padding-top: 6.5rem;
     }
 
     @include desktop {
-        padding-top: 19.1rem;
-        @include flex(space-between, flex-start, row, 6.4rem, nowrap);
+        padding-top: 19.7rem;
+        @include flex(start, flex-start, row, 9rem);
     }
     &__logo {
         font-size: $font-size-3xl;
@@ -29,9 +29,6 @@
         );
         width: 100%;
         @include tablet {
-            display: none;
-        }
-        @include desktop {
             display: none;
         }
     }
@@ -75,7 +72,6 @@
             line-height: 3.4rem;
         }
         @include desktop {
-            font-size: $font-size-lg;
             line-height: 3.3rem;
         }
     }
@@ -86,9 +82,6 @@
             $gap: 3.2rem
         );
         @include tablet {
-            gap: 3.7rem;
-        }
-        @include desktop {
             gap: 3.7rem;
         }
     }
@@ -112,21 +105,22 @@
         @include flex(start, flex-start, row, 3.2rem, wrap);
         display: none;
         @include tablet {
-            display: flex;
-            justify-content: space-between;
+            @include flex(start, flex-start, $gap: 14.4rem, $flex-wrap: wrap);
         }
         @include desktop {
-            display: flex;
-            width: fit-content;
-            gap: 6.4rem;
+            gap: 3.5rem;
         }
     }
 
     &__column {
         @include flex(start, flex-start, column, 2.8rem, nowrap);
+        flex: 1;
 
         &-heading {
             font-size: $font-size-lg;
+        }
+        @include tablet {
+            max-width: 16.6rem;
         }
     }
     &__list {
