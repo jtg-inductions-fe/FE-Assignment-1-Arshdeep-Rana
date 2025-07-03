@@ -18,15 +18,16 @@
     @include desktop {
         flex-direction: row;
         text-align: left;
-        padding-top: 12.7rem;
+        padding-top: 9.5rem;
         justify-content: space-between;
     }
     &__content {
         @include flex($flex-direction: column, $gap: 1.8rem);
         @include desktop {
             align-items: baseline;
-            padding-top: 0;
+            padding-top: 3.2rem;
             max-width: 40rem;
+            gap: 1.4rem;
         }
     }
     &__card {
@@ -35,14 +36,11 @@
             @include tablet {
                 font-size: $font-size-xl;
             }
-            @include desktop {
-                font-size: $font-size-xl;
-            }
         }
         &-desc {
             font-size: $font-size-md;
             line-height: 2.6rem;
-            @include line-clamp;
+            @include line-clamp(4);
         }
 
         &-content-wrapper {
@@ -58,7 +56,6 @@
         }
         @include desktop {
             width: fit-content;
-            flex-direction: row;
         }
     }
 }
